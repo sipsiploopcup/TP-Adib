@@ -64,6 +64,29 @@ avec un obstacle connu reste à documenter. Les scans CSV précédemment
 enregistrés sont conservés ; leur acquisition nécessite de sélectionner
 à nouveau la sortie CSV dans le programme embarqué.
 
+La sortie CSV a ensuite été remise sur l'ESP32 et neuf acquisitions
+supplémentaires ont été enregistrées. L'étudiant confirme des rotations
+vers la gauche ainsi que des déplacements, sans poses relatives mesurées.
+Pour fusionner les 12 fichiers disponibles, nous estimons donc leurs poses
+par recalage ICP avec plusieurs initialisations en translation et rotation.
+Le scan du 2 novembre à 17:04:38 sert de référence conventionnelle.
+Les scans peu compatibles avec cette référence sont réévalués sur l'union
+des scans initialement mieux alignés. La pièce rectangulaire peut créer
+des poses alternatives ; les diagnostics d'ambiguïté sont exportés.
+
+La fusion contient 5 444 points de distance non nulle, avec provenance et
+intensité conservées. Les coordonnées finales sont en mètres, dans un même
+repère. Les fichiers d'origine restent inchangés. Le voisinage à moins de
+60 cm du capteur est exclu du recalage, mais conservé dans l'export.
+Le recouvrement à 20 cm est compris entre 58 % et 100 % ; les résultats
+constituent des estimations à vérifier visuellement, pas des poses mesurées.
+Les zones masquées ne sont pas complétées artificiellement.
+
+Les résultats sont dans [resultats/](./resultats/README.md). Huit tests passent,
+dont trois sur des données synthétiques de recalage. Une vérification des
+exports confirme le nombre de points, leur provenance et l'application des
+transformations enregistrées. Une validation physique reste nécessaire.
+
 ## 3. Construction d'une grid map 2D
 
 ## 4. Extraction et manipulation de segments

@@ -6,6 +6,24 @@ L'utilisateur est étudiant (EIGSI). Il réalise ce TP en Python et avance une �
 
 Cet état remplace les notes initiales conservées ci-dessous.
 
+Mise à jour après les dernières acquisitions et la fusion :
+
+- 12 CSV réels sont disponibles. La sortie CSV est de nouveau active sur
+  l'ESP32. L'étudiant confirme aussi des déplacements ; les poses ne sont
+  donc pas supposées être uniquement des rotations de 90°.
+- `merge_scans.py` fusionne les 12 scans par ICP multidépart. Les sorties
+  sont dans `resultats/` : 5 444 points valides, image et poses estimées.
+  Référence : `scan_20261102_170438_115290.csv`. Les poses restent à valider
+  physiquement et les zones non observées ne sont pas inventées.
+- Huit tests passent. SciPy a été ajouté aux dépendances.
+- L'utilisateur demande maintenant de pousser le projet vers
+  https://github.com/sipsiploopcup/TP-Adib.git ; l'ancien dépôt reste configuré.
+- Une erreur de décompression PyInstaller a été résolue en libérant environ
+  890 Mo d'archives d'installation Arduino en cache. Compilation,
+  téléversement et acquisition ont ensuite réussi.
+
+Les points suivants décrivent l'avancement antérieur à cette mise à jour.
+
 - L'acquisition CSV (`acquisition.py`) et le visualiseur (`geometry.py`,
   `viewer.py`) sont implémentés. Cinq tests passent dans `.venv`.
 - Trois scans réels sont conservés : 454, 455 et 455 points. Les deux premiers

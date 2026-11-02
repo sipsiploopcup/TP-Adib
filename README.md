@@ -12,10 +12,11 @@ pip install -r requirements.txt
 
 ## Enregistrer un scan réel
 
-Le programme actuellement téléversé utilise **Teleplot**, conformément à la
-consigne du professeur. Pour utiliser le lecteur CSV ci-dessous, il faut
-d'abord remettre la sortie CSV sur l'ESP32. Les trois scans déjà enregistrés
-restent disponibles dans [scans/](./scans/).
+Teleplot a été utilisé pour la visualisation demandée par le professeur,
+puis la sortie **CSV** a été remise sur l'ESP32 pour les acquisitions.
+Les 12 scans enregistrés sont disponibles dans [scans/](./scans/).
+Après toute nouvelle utilisation de Teleplot, remettre la sortie CSV sur
+l'ESP32 avant d'utiliser le lecteur ci-dessous.
 
 Dans le programme ESP32, utiliser `ld06.printScanCSV(Serial)` à la place
 de `ld06.printScanTeleplot(Serial)`, puis téléverser. Fermer le Serial Monitor
@@ -95,6 +96,37 @@ restent inchangés. [CODEX_HANDOFF.md](./CODEX_HANDOFF.md) précise l'avancement
 et les étapes restantes.
 
 ## Fichiers
+
+### Fusion des scans enregistrés
+
+```bash
+python merge_scans.py scans/scan_*.csv --reference scans/scan_20261102_170438_115290.csv --output resultats --show
+```
+
+Le script estime les poses par ICP avec plusieurs rotations/translations
+initiales, puis réévalue les scans difficiles sur l'union des scans mieux
+alignés. Il génère [un nuage fusionné](./resultats/chambre_fusionnee.csv),
+[une image](./resultats/chambre_fusionnee.png) et
+[les poses et indicateurs d'alignement](./resultats/alignements.json).
+Les déplacements n'ayant pas été mesurés, ces poses sont estimées et doivent
+être contrôlées, notamment dans une pièce présentant des symétries.
+
+Les points nuls sont exclus ; tous les autres points sont conservés, avec
+leur scan source. Aucune interpolation de mur n'est ajoutée. Pour tracer
+le résultat dans Excel, utiliser `x_m` et `y_m` (colonnes H et I).
+Ce résultat combine plusieurs origines de mesure : il constitue un nuage
+cartésien commun, pas un nouveau scan polaire provenant d'un capteur unique.
+Pour corriger les poses manuellement avec l'outil existant :
+
+```bash
+python viewer.py scans/scan_*.csv --poses resultats/poses_estimees.json
+```
+
+Après correction, relancer la fusion automatique recalculerait les poses.
+Le fichier de poses du visualiseur et les exports fusionnés ne sont pas
+synchronisés automatiquement.
+
+### Modules du projet
 
 | Fichier | Rôle |
 |---|---|
