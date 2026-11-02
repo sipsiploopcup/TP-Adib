@@ -105,9 +105,9 @@ python merge_scans.py scans/scan_*.csv --reference scans/scan_20261102_170438_11
 
 Le script estime les poses par ICP avec plusieurs rotations/translations
 initiales, puis réévalue les scans difficiles sur l'union des scans mieux
-alignés. Il génère [un nuage fusionné](./resultats/chambre_fusionnee.csv),
-[une image](./resultats/chambre_fusionnee.png) et
-[les poses et indicateurs d'alignement](./resultats/alignements.json).
+alignés. Il génère un nuage fusionné CSV, une image et les poses et indicateurs
+d'alignement dans `resultats/`. À la demande de l'étudiant, ces résultats
+restent locaux et sont exclus de Git ; la commande ci-dessus les régénère.
 Les déplacements n'ayant pas été mesurés, ces poses sont estimées et doivent
 être contrôlées, notamment dans une pièce présentant des symétries.
 

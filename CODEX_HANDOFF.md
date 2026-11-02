@@ -8,6 +8,10 @@ Cet état remplace les notes initiales conservées ci-dessous.
 
 Mise à jour après les dernières acquisitions et la fusion :
 
+- Correction de publication demandée : conserver sur TP-Adib le code,
+  les documents et les scans bruts, mais exclure les fichiers générés de
+  `resultats/`. Ceux-ci restent présents sur le Mac et sont ignorés par Git.
+
 - 12 CSV réels sont disponibles. La sortie CSV est de nouveau active sur
   l'ESP32. L'étudiant confirme aussi des déplacements ; les poses ne sont
   donc pas supposées être uniquement des rotations de 90°.

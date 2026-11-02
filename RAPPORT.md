@@ -82,7 +82,8 @@ Le recouvrement à 20 cm est compris entre 58 % et 100 % ; les résultats
 constituent des estimations à vérifier visuellement, pas des poses mesurées.
 Les zones masquées ne sont pas complétées artificiellement.
 
-Les résultats sont dans [resultats/](./resultats/README.md). Huit tests passent,
+Les résultats sont générés localement dans `resultats/` et exclus de Git
+à la demande de l'étudiant. Huit tests passent,
 dont trois sur des données synthétiques de recalage. Une vérification des
 exports confirme le nombre de points, leur provenance et l'application des
 transformations enregistrées. Une validation physique reste nécessaire.
