@@ -1,9 +1,13 @@
 # Scan fusionné de la chambre
 
-Ce dépôt contient uniquement le résultat de la fusion des 12 scans LiDAR :
+Ce dépôt contient le résultat de la fusion des 12 scans LiDAR et les trois
+classeurs Excel réalisés à partir des acquisitions :
 
 - [Image du nuage fusionné](./chambre_fusionnee.png)
 - [CSV fusionné — 5 444 points valides](./chambre_fusionnee.csv)
+- [Scan 1 — Excel](./Scan%201.xlsx)
+- [Scan 2 — Excel](./scan%202.xlsx)
+- [Scan 3 — Excel](./scan%203.xlsx)
 
 Les coordonnées communes sont dans les colonnes `x_m` et `y_m`, en mètres.
 Chaque ligne conserve le nom du scan source et ses mesures locales.
