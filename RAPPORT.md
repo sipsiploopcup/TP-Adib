@@ -34,21 +34,6 @@ réussi sur le port `/dev/cu.usbserial-1420` : le fichier
 colonnes prévues. Le relevé de la pose et la validation de l'orientation
 avec un obstacle connu restent à réaliser.
 
-Trois fichiers issus du matériel sont conservés :
-
-| Fichier | Points | Utilisation |
-| --- | --- | --- |
-| `scans/scan_20261102_124403_644384.csv` | 454 | Premier test |
-| `scans/scan_20261102_125238_358741.csv` | 455 | Second test, après déplacement non mesuré |
-| `scans/scan_20261102_130244_385674.csv` | 455 | Référence choisie pour la suite : pose conventionnelle (0, 0, 0°) |
-
-L'étudiant indique que la salle est rectangulaire et que l'avant du LiDAR
-est aligné sur celui du robot. Les poses relatives des deux premiers essais
-ne sont pas connues : ils ne constituent pas encore un jeu de scans alignés.
-L'acquisition tentée après le déplacement suivant n'a pas abouti ; aucun
-scan de cette nouvelle position n'est disponible. La collecte de plusieurs
-positions avec déplacements mesurés reste à faire.
-
 ## 2. Visualisation des nuages de points
 
 Nous réutilisons les coordonnées cartésiennes calculées par la bibliothèque,
@@ -70,6 +55,14 @@ Deux tests synthétiques vérifient le changement d'unités, le signe de Y,
 l'exclusion des distances nulles et l'ordre rotation puis translation.
 La correspondance visuelle avec la salle et l'orientation réelle reste à
 confirmer par l'étudiant ; aucun alignement automatique n'est réalisé.
+
+À la demande du professeur, la visualisation en direct utilise désormais
+Teleplot : le programme ESP32 transmet `printScanTeleplot(Serial)` sur USB
+à 115200 bauds. L'extension Teleplot 1.1.4 de VS Code a été installée et
+l'étudiant confirme que l'affichage fonctionne. La vérification métrique
+avec un obstacle connu reste à documenter. Les scans CSV précédemment
+enregistrés sont conservés ; leur acquisition nécessite de sélectionner
+à nouveau la sortie CSV dans le programme embarqué.
 
 ## 3. Construction d'une grid map 2D
 

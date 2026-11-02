@@ -12,6 +12,11 @@ pip install -r requirements.txt
 
 ## Enregistrer un scan réel
 
+Le programme actuellement téléversé utilise **Teleplot**, conformément à la
+consigne du professeur. Pour utiliser le lecteur CSV ci-dessous, il faut
+d'abord remettre la sortie CSV sur l'ESP32. Les trois scans déjà enregistrés
+restent disponibles dans [scans/](./scans/).
+
 Dans le programme ESP32, utiliser `ld06.printScanCSV(Serial)` à la place
 de `ld06.printScanTeleplot(Serial)`, puis téléverser. Fermer le Serial Monitor
 Arduino et immobiliser le capteur pendant l'acquisition.
@@ -60,6 +65,34 @@ par 1000 pour passer en mètres et inversion de `y_lib_mm` pour suivre le
 repère mathématique présenté dans le TP. Ce choix suppose les décalages
 de pose embarqués laissés à zéro, comme dans le programme de test utilisé.
 Les mesures de distance nulle sont exclues de l'affichage.
+
+## Visualisation en direct avec Teleplot
+
+1. Ouvrir [le programme fourni](./docs/ESP32_LD06_Test.ino) dans Arduino IDE.
+2. Conserver `ld06.printScanTeleplot(Serial);`, sélectionner **ESP32 Dev Module**
+   et téléverser à **115200 bauds**.
+3. Fermer le Serial Monitor et le Serial Plotter d'Arduino.
+4. Installer l'extension VS Code **Teleplot** (`alexnesnes.teleplot`).
+5. Ouvrir la palette de commandes, choisir **teleplot: Start teleplot session**,
+   sélectionner le port USB de l'ESP32 et **115200 bauds**, puis connecter.
+
+L'affichage en direct a été confirmé par l'étudiant. La sortie Teleplot
+contient des x/y, contrairement au CSV qui conserve aussi angle, distance
+et intensité. Une seule application peut utiliser le port série à la fois.
+
+Configuration utilisée : Arduino IDE 2.3.8, cœur ESP32 3.3.12, LD06 1.0.0,
+Teleplot pour VS Code 1.1.4. Le programme Wi-Fi
+[ESP32RobotControl.ino](./docs/ESP32RobotControl.ino) a également été compilé
+et téléversé avec Async TCP 3.5.0 et ESP Async WebServer 3.12.1, avant retour
+à Teleplot. Son affichage Wi-Fi n'a pas été validé.
+
+## Ressources du TP
+
+[docs/](./docs/) contient les documents, programmes, bibliothèques et archives
+ZIP du TP. Les métadonnées Git imbriquées et les fichiers système macOS ont
+été exclus, y compris dans les copies des ZIP ; les originaux téléchargés
+restent inchangés. [CODEX_HANDOFF.md](./CODEX_HANDOFF.md) précise l'avancement
+et les étapes restantes.
 
 ## Fichiers
 
