@@ -9,9 +9,15 @@ classeurs Excel réalisés à partir des acquisitions :
 - [Scan 2 — Excel](./scan%202.xlsx)
 - [Scan 3 — Excel](./scan%203.xlsx)
 
-Les coordonnées communes sont dans les colonnes `x_m` et `y_m`, en mètres.
-Chaque ligne conserve le nom du scan source et ses mesures locales.
-Pour Excel, tracer `y_m` en fonction de `x_m` dans un graphique XY.
+Le CSV conserve uniquement les six colonnes des acquisitions originales :
+`point_index,angle_deg,dist_mm,intensity,x_lib_mm,y_lib_mm`.
+Les 5 444 points sont conservés sans modification de leurs valeurs locales.
+Le nom du scan source, les coordonnées globales et le diagnostic d'alignement
+ont été retirés à la demande de l'étudiant.
+
+Les X/Y du CSV sont en millimètres dans le repère de chaque acquisition.
+Ils ne permettent donc pas de reproduire directement l'image fusionnée,
+qui a été générée auparavant avec les poses estimées dans un repère commun.
 
 Les déplacements et rotations ont été estimés automatiquement par recalage.
 L'alignement reste à vérifier visuellement ; les zones non observées n'ont
