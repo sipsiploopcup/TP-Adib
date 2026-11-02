@@ -8,6 +8,7 @@ classeurs Excel réalisés à partir des acquisitions :
 - [Scan 1 — Excel](./Scan%201.xlsx)
 - [Scan 2 — Excel](./scan%202.xlsx)
 - [Scan 3 — Excel](./scan%203.xlsx)
+- [Scan fusion — Excel](./scan%20fusion.xlsx)
 
 Les coordonnées communes sont dans les colonnes `x_m` et `y_m`, en mètres.
 Chaque ligne conserve le nom du scan source et ses mesures locales.
