@@ -1,0 +1,542 @@
+{
+  "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+  "units": "m",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_124403_644384.csv",
+      "pose": [
+        0.0737834677171555,
+        2.6066601007441763,
+        115.73166181345684
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.120636546685653e-07,
+      "segment_count": 11
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 451,
+      "valid_points": 451,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_125238_358741.csv",
+      "pose": [
+        0.22291092359519893,
+        2.917129153913748,
+        98.58794514024517
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.958444977748213e-07,
+      "segment_count": 14
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_130244_385674.csv",
+      "pose": [
+        0.4086411507331098,
+        2.4948671301604333,
+        -0.34321120648569586
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.003163616716581e-07,
+      "segment_count": 15
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 453,
+      "valid_points": 453,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170036_490062.csv",
+      "pose": [
+        0.18699421370599578,
+        2.1319834929398196,
+        -11.416182575706076
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.876169782408764e-07,
+      "segment_count": 14
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170347_052425.csv",
+      "pose": [
+        0.019273051549040243,
+        0.028979856180705504,
+        -88.19487054743429
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.133535430072776e-07,
+      "segment_count": 11
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170438_115290.csv",
+      "pose": [
+        0.0,
+        -8.326672684688674e-17,
+        5.82047860165561e-16
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 1.831026719408895e-15,
+      "segment_count": 8
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170547_135900.csv",
+      "pose": [
+        0.0156797021609405,
+        0.0026360814310863456,
+        90.10058139945609
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.012553413381047e-07,
+      "segment_count": 8
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170622_894860.csv",
+      "pose": [
+        -0.0723419997963497,
+        -0.01186272537646435,
+        178.2984898437946
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.927754725293919e-07,
+      "segment_count": 9
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170707_527011.csv",
+      "pose": [
+        -0.06039829528068097,
+        -0.005471234095751815,
+        -179.28993541165462
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.017002231039347e-07,
+      "segment_count": 11
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170743_662993.csv",
+      "pose": [
+        2.735243711360188,
+        -1.216235630318327,
+        -174.41852058192268
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.026590915931592e-07,
+      "segment_count": 14
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170811_045727.csv",
+      "pose": [
+        2.7318798554194688,
+        -1.2117464335303496,
+        -174.36297742740305
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.15938920903757e-07,
+      "segment_count": 22
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170911_554109.csv",
+      "pose": [
+        5.445291087990366,
+        1.4202501940609658,
+        87.48231017692689
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.542246404762464e-07,
+      "segment_count": 19
+    }
+  ],
+  "input_segments": 156,
+  "output_segments": 91,
+  "merge_angle_deg": 8.0,
+  "merge_distance_m": 0.08,
+  "merge_gap_m": 0.2,
+  "extraction": {
+    "max_error_m": 0.05,
+    "max_gap_m": 0.5,
+    "min_points": 6,
+    "min_length_m": 0.25,
+    "merge_angle_deg": 10
+  },
+  "trim_crossings": false,
+  "intersections": [
+    {
+      "segment_a": 1,
+      "segment_b": 3,
+      "x": -1.1599023312837822,
+      "y": -5.908226335199771
+    },
+    {
+      "segment_a": 1,
+      "segment_b": 5,
+      "x": -1.1266430191184267,
+      "y": 0.7114611819905603
+    },
+    {
+      "segment_a": 1,
+      "segment_b": 8,
+      "x": -1.1438612517603612,
+      "y": -2.7155285020179756
+    },
+    {
+      "segment_a": 1,
+      "segment_b": 20,
+      "x": -1.1322665826493183,
+      "y": -0.4078113129573797
+    },
+    {
+      "segment_a": 1,
+      "segment_b": 23,
+      "x": -1.1299829589787402,
+      "y": 0.04670425341779616
+    },
+    {
+      "segment_a": 2,
+      "segment_b": 11,
+      "x": 4.650635184816822,
+      "y": 6.9592728399449735
+    },
+    {
+      "segment_a": 2,
+      "segment_b": 18,
+      "x": 7.889352305528282,
+      "y": 6.946578915944295
+    },
+    {
+      "segment_a": 2,
+      "segment_b": 19,
+      "x": 6.999315311833384,
+      "y": 6.950067353351658
+    },
+    {
+      "segment_a": 2,
+      "segment_b": 35,
+      "x": 0.4106931040462669,
+      "y": 6.9758909947681875
+    },
+    {
+      "segment_a": 2,
+      "segment_b": 68,
+      "x": -0.19148256739566027,
+      "y": 6.978251179966041
+    },
+    {
+      "segment_a": 3,
+      "segment_b": 6,
+      "x": 1.909700097179095,
+      "y": -5.959249006693142
+    },
+    {
+      "segment_a": 3,
+      "segment_b": 8,
+      "x": -1.2701835195087385,
+      "y": -5.906393250632687
+    },
+    {
+      "segment_a": 3,
+      "segment_b": 15,
+      "x": 5.558320087351015,
+      "y": -6.019896059039889
+    },
+    {
+      "segment_a": 3,
+      "segment_b": 26,
+      "x": 0.006483241017278596,
+      "y": -5.927613897360362
+    },
+    {
+      "segment_a": 4,
+      "segment_b": 15,
+      "x": 6.567625927039101,
+      "y": -5.970603183464907
+    },
+    {
+      "segment_a": 4,
+      "segment_b": 17,
+      "x": 6.60533518574429,
+      "y": -3.501636810874629
+    },
+    {
+      "segment_a": 4,
+      "segment_b": 27,
+      "x": 6.570382864768051,
+      "y": -5.790096146789364
+    },
+    {
+      "segment_a": 4,
+      "segment_b": 43,
+      "x": 6.579406621394226,
+      "y": -5.199277010336854
+    },
+    {
+      "segment_a": 4,
+      "segment_b": 52,
+      "x": 6.644601358860488,
+      "y": -0.9307334218122847
+    },
+    {
+      "segment_a": 4,
+      "segment_b": 79,
+      "x": 6.67629279580153,
+      "y": 1.1442236256921214
+    },
+    {
+      "segment_a": 5,
+      "segment_b": 23,
+      "x": -1.1419775694238186,
+      "y": 0.04646330892528172
+    },
+    {
+      "segment_a": 5,
+      "segment_b": 42,
+      "x": -1.0151902760233804,
+      "y": 5.544719127574776
+    },
+    {
+      "segment_a": 6,
+      "segment_b": 29,
+      "x": 5.746584551408889,
+      "y": -5.952898761575097
+    },
+    {
+      "segment_a": 7,
+      "segment_b": 35,
+      "x": 0.7207241913419213,
+      "y": 6.955663436052272
+    },
+    {
+      "segment_a": 7,
+      "segment_b": 68,
+      "x": -0.14525810012672924,
+      "y": 6.968790921143192
+    },
+    {
+      "segment_a": 8,
+      "segment_b": 32,
+      "x": -1.17705070374982,
+      "y": -3.5538846704644906
+    },
+    {
+      "segment_a": 9,
+      "segment_b": 10,
+      "x": 8.892799629925655,
+      "y": 2.5787080451257793
+    },
+    {
+      "segment_a": 11,
+      "segment_b": 18,
+      "x": 6.905322768321302,
+      "y": 6.900743288519449
+    },
+    {
+      "segment_a": 15,
+      "segment_b": 27,
+      "x": 6.559319682591542,
+      "y": -5.971008847098217
+    },
+    {
+      "segment_a": 15,
+      "segment_b": 29,
+      "x": 6.277576925573084,
+      "y": -5.984768710679464
+    },
+    {
+      "segment_a": 18,
+      "segment_b": 19,
+      "x": 7.379090671933948,
+      "y": 6.92281117194648
+    },
+    {
+      "segment_a": 23,
+      "segment_b": 30,
+      "x": -1.0472380202841207,
+      "y": 0.04836641138058662
+    },
+    {
+      "segment_a": 25,
+      "segment_b": 30,
+      "x": -1.0456906230760263,
+      "y": -0.0596086829772807
+    },
+    {
+      "segment_a": 25,
+      "segment_b": 59,
+      "x": 0.11927287882409932,
+      "y": -0.03769705888948516
+    },
+    {
+      "segment_a": 27,
+      "segment_b": 43,
+      "x": 6.593433519103223,
+      "y": -5.413156125995335
+    },
+    {
+      "segment_a": 28,
+      "segment_b": 46,
+      "x": 2.136654913286012,
+      "y": -1.0915159854612664
+    },
+    {
+      "segment_a": 53,
+      "segment_b": 80,
+      "x": -0.36995697118967436,
+      "y": 2.502008582503871
+    }
+  ],
+  "support_segment_counts": [
+    9,
+    10,
+    7,
+    14,
+    4,
+    3,
+    3,
+    4,
+    7,
+    2,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    2,
+    2,
+    3,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "method": "association gloutonne et ACP sur toutes les extrémités d'origine",
+  "limits": "Méthode proposée sans le document détaillé du TP. Poses fusionnées estimées ; obstacles non classifiés. Les lacunes <= merge_gap_m peuvent être reliées."
+}

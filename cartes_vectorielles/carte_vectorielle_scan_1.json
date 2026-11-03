@@ -1,0 +1,53 @@
+{
+  "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+  "units": "m",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+      "sheet": "scan_20261102_130244_385674",
+      "input_points": 455,
+      "valid_points": 454,
+      "zero_distance_ignored": 1,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique",
+      "segment_count": 15
+    }
+  ],
+  "input_segments": 15,
+  "output_segments": 15,
+  "merge_angle_deg": 8.0,
+  "merge_distance_m": 0.08,
+  "merge_gap_m": 0.2,
+  "extraction": {
+    "max_error_m": 0.05,
+    "max_gap_m": 0.5,
+    "min_points": 6,
+    "min_length_m": 0.25,
+    "merge_angle_deg": 10
+  },
+  "trim_crossings": false,
+  "intersections": [],
+  "support_segment_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "method": "association gloutonne et ACP sur toutes les extrémités d'origine",
+  "limits": "Méthode proposée sans le document détaillé du TP. Poses fusionnées estimées ; obstacles non classifiés. Les lacunes <= merge_gap_m peuvent être reliées."
+}

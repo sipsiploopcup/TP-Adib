@@ -119,6 +119,63 @@ point est retenu.
 python -m pytest tests/test_segments.py -q
 ```
 
+## Cartes vectorielles
+
+Le [programme](./vectormap.py) consolide les segments compatibles après
+leur placement dans un repère commun. Les mesures sont grises, les segments
+bleus, les intersections orange et les origines LiDAR rouges.
+
+| Carte | Segments avant → après | Image | Coordonnées en mètres | Paramètres et intersections |
+| --- | --- | --- | --- | --- |
+| Scan 1 | 15 → 15 | [PNG](./cartes_vectorielles/carte_vectorielle_scan_1.png) | [CSV](./cartes_vectorielles/carte_vectorielle_scan_1.csv) | [JSON](./cartes_vectorielles/carte_vectorielle_scan_1.json) |
+| Scan 2 | 8 → 7 | [PNG](./cartes_vectorielles/carte_vectorielle_scan_2.png) | [CSV](./cartes_vectorielles/carte_vectorielle_scan_2.csv) | [JSON](./cartes_vectorielles/carte_vectorielle_scan_2.json) |
+| Scan 3 | 9 → 9 | [PNG](./cartes_vectorielles/carte_vectorielle_scan_3.png) | [CSV](./cartes_vectorielles/carte_vectorielle_scan_3.csv) | [JSON](./cartes_vectorielles/carte_vectorielle_scan_3.json) |
+| Fusion | 156 → 91 | [PNG](./cartes_vectorielles/carte_vectorielle_fusion.png) | [CSV](./cartes_vectorielles/carte_vectorielle_fusion.csv) | [JSON](./cartes_vectorielles/carte_vectorielle_fusion.json) |
+
+Le document détaillé de construction du TP n'est pas fourni. La méthode
+proposée utilise l'extraction locale précédente, les poses du classeur et
+une association gloutonne suivie d'un ajustement ACP. Une fusion exige un
+angle de 8° au maximum, une distance entre segments finis de 20 cm au
+maximum et un écart de chaque extrémité à l'autre droite de 8 cm au maximum.
+L'ACP commune conserve toutes les extrémités d'origine à poids égal ; leur
+écart maximal à la droite ajustée doit rester inférieur ou égal à 8 cm.
+Les options `--angle`, `--distance` et `--gap` règlent ces seuils.
+
+Les lacunes de 20 cm ou moins peuvent être reliées. Les ouvertures plus
+grandes restent séparées. Les cartes individuelles ont chacune leur repère
+local ; Fusion utilise les 12 poses estimées du classeur. Des doublons
+subsistent et les obstacles ne sont pas classifiés en murs ou mobilier.
+
+```bash
+python vectormap.py "Scan 1.xlsx" --output cartes_vectorielles/carte_vectorielle_scan_1 --title "Carte vectorielle — Scan 1"
+python vectormap.py "scan 2.xlsx" --output cartes_vectorielles/carte_vectorielle_scan_2 --title "Carte vectorielle — Scan 2"
+python vectormap.py "scan 3.xlsx" --output cartes_vectorielles/carte_vectorielle_scan_3 --title "Carte vectorielle — Scan 3"
+python vectormap.py "scan fusion.xlsx" --output cartes_vectorielles/carte_vectorielle_fusion --title "Carte vectorielle — Fusion"
+```
+
+Ajouter `--no-show` pour exporter sans fenêtre. Pour un scan seul,
+`--pose X Y THETA` choisit la pose (mètres, mètres, degrés antihoraires).
+`VectorMap.update(points, pose)` permet d'ajouter un scan en mémoire. La
+CLI consolide tous les segments en une fois dans un ordre déterministe ;
+des mises à jour successives peuvent produire un regroupement différent.
+
+Les intersections sont recensées dans le JSON avec les numéros des segments
+du CSV, à partir de 1. Aucune branche n'est supprimée par défaut. L'option
+`--trim-crossings` applique le découpage de l'exercice : chaque segment est
+coupé par les autres segments d'entrée dans l'ordre de sortie, en gardant
+son plus long côté. En cas d'égalité à 1 micromètre près, le côté du premier
+point est retenu ; les extrémités sont ordonnées lexicographiquement. Une
+intersection à une extrémité ou des segments colinéaires ne changent rien.
+Ce mode est optionnel car un croisement ne prouve pas qu'une branche est
+erronée. Les quatre cartes publiées utilisent le mode sans découpage.
+
+Les CSV contiennent `x1,y1,x2,y2` en mètres. Les JSON conservent sources,
+poses, seuils, effectifs et intersections. Les classeurs restent inchangés.
+
+```bash
+python -m pytest tests/test_vectormap.py -q
+```
+
 ## Visualiseur interactif
 
 Le [visualiseur](./viewer.py) permet d'afficher plusieurs scans d'acquisition,
