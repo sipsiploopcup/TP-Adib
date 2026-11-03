@@ -3,8 +3,8 @@
 La première référence traitée est une **grid map**. Une méthode fonctionnelle
 est suffisante pour cette partie : les différentes pistes de l'énoncé ne sont
 pas toutes obligatoires. La [carte vectorielle](./JOUR2_VECTORIELLE.md) dispose
-également d'un module distinct. Le troisième type de référence mentionné dans
-l'introduction de l'énoncé reste à traiter selon ses consignes complètes.
+également d'un module distinct. La [localisation entre scans et la comparaison
+commune](./JOUR2_SCANS_COMPARAISON.md) complètent le troisième type de référence.
 Le lien Moodle n'a pas pu être consulté.
 
 ## Méthode

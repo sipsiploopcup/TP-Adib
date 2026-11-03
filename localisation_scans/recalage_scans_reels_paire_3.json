@@ -1,0 +1,90 @@
+{
+  "reference": {
+    "source": "/Users/amazighe/Desktop/scan 2.xlsx",
+    "sheet": "scan_20261102_170547_135900",
+    "input_points": 454,
+    "valid_points": 454,
+    "zero_distance_ignored": 0
+  },
+  "query": {
+    "source": "/Users/amazighe/Desktop/scan 3.xlsx",
+    "sheet": "scan_20261102_170622_894860",
+    "input_points": 454,
+    "valid_points": 454,
+    "zero_distance_ignored": 0
+  },
+  "bootstrap": {
+    "pose": [
+      -0.00390967157096825,
+      0.07045959097801208,
+      88.20699964006215
+    ],
+    "score": 0.004964960932556668,
+    "overlap_20cm": 1.0,
+    "median_error_m": 0.03878292927158474,
+    "ambiguous": false,
+    "alternate": {
+      "pose": [
+        0.9347460974914878,
+        -5.608791850689773,
+        -92.46938001804868
+      ],
+      "score": 0.08168007191111223,
+      "overlap_20cm": 0.7569832402234636,
+      "median_error_m": 0.07155279813874639
+    },
+    "review_required": false
+  },
+  "bootstrap_time_s": 2.612774955999999,
+  "methods": {
+    "recherche": {
+      "pose": [
+        -0.00390967,
+        0.08045959,
+        87.60699964000003
+      ],
+      "rmse_distance_map_m": 0.05594655754565984,
+      "overlap_20cm": 0.9977973568281938,
+      "status": "candidate",
+      "points": 454,
+      "evaluated_poses": 23409,
+      "runtime_s": 10.788360745999999,
+      "on_search_boundary": false,
+      "initial_pose": [
+        -0.00390967157096825,
+        0.07045959097801208,
+        88.20699964006215
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    "ICP": {
+      "pose": [
+        -0.002015035819950142,
+        0.06967333316524284,
+        88.19911423275387
+      ],
+      "initial_pose": [
+        -0.00390967157096825,
+        0.07045959097801208,
+        88.20699964006215
+      ],
+      "runtime_s": 0.005420520999997791,
+      "rmse_distance_map_m": 0.06271111973276461,
+      "overlap_20cm": 0.9977973568281938,
+      "status": "candidate",
+      "points": 454,
+      "iterations": 5,
+      "correspondences_last_iteration": 363,
+      "converged": true,
+      "outside_comparison_window": false,
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    }
+  },
+  "physical_ground_truth": false,
+  "translation_error_m": null,
+  "angle_error_deg": null,
+  "reference_uncertainty": "Poses réelles non mesurées ; incertitude non quantifiée.",
+  "note": "Amorçage ICP multidépart puis même pose initiale pour les deux raffinements. Diagnostic visuel, pas comparaison indépendante des algorithmes d'initialisation. Proximité physique et cohérence de l'alignement à vérifier."
+}

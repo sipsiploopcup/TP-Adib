@@ -70,6 +70,44 @@ python localisation_vectorielle.py evaluate "scan fusion.xlsx" --title Fusion --
 python -m pytest tests/test_localisation_vectorielle.py -q
 ```
 
+## Jour 2 — Entre scans et comparaison commune
+
+Les outils [localisation_scans.py](./localisation_scans.py) et
+[localisation_paires.py](./localisation_paires.py) permettent de recaler les
+scans par recherche de pose ou ICP. Ils sont accompagnés d'une
+[comparaison commune](./comparaison_localisation.py) sur 144 essais.
+Le [protocole détaillé](./JOUR2_SCANS_COMPARAISON.md) explique la simulation,
+les points réels réservés, les poses initiales identiques et les incertitudes.
+
+- [Trois paires réelles Scan 1/2/3 — image comparative](./localisation_scans/recalage_scans_reels.png)
+- [Résultats des paires — CSV](./localisation_scans/recalage_scans_reels.csv)
+- [Diagnostics et amorçages des paires — JSON](./localisation_scans/recalage_scans_reels.json)
+- [Comparaison des méthodes — bilan chiffré](./comparaison/comparaison_localisation.md)
+- [Les 144 essais — CSV](./comparaison/comparaison_localisation.csv)
+- [Sensibilité à l'initialisation — graphique](./comparaison/comparaison_localisation.png)
+- [Sensibilité par niveau — CSV](./comparaison/comparaison_localisation_sensibilite.csv)
+- [Superposition des scans simulés](./comparaison/comparaison_localisation_scans_simulation.png)
+
+La simulation utilise des poses exactes et un bruit radial de 5 mm. Les
+trois niveaux d'initialisation atteignent jusqu'à 1,80 m et 25° d'erreur
+initiale. Sur la plage testée, les quatre méthodes respectent les seuils
+de 0,10 m et 1° pour chaque essai ; cela ne garantit pas une localisation
+globale hors de cette plage. Les références, requêtes et poses connues sont
+conservées dans les exports NPZ de [comparaison/](./comparaison/).
+
+Les scans réels ne disposent pas de poses physiques mesurées : aucune
+erreur de pose ni incertitude métrique n'est inventée. Les trois paires
+utilisent un amorçage ICP multidépart partagé avant les raffinements ;
+leurs recouvrements et résidus sont des diagnostics. Ce protocole visuel
+est distinct de la comparaison contrôlée des 144 essais.
+
+```bash
+python comparaison_localisation.py --scans "Scan 1.xlsx" "scan 2.xlsx" "scan 3.xlsx" --output comparaison/comparaison_localisation
+python localisation_scans.py "scan 2.xlsx" "scan 3.xlsx" --initial 0 0 90 --output localisation_scans/localisation_scans_paire_2_3
+python localisation_paires.py "Scan 1.xlsx" "scan 2.xlsx" "scan 3.xlsx" --output localisation_scans/recalage_scans_reels
+python -m pytest tests/test_localisation_scans.py tests/test_comparaison_localisation.py tests/test_localisation_paires.py -q
+```
+
 ## Données et résultats
 
 Ce dépôt contient le résultat de la fusion des 12 scans LiDAR et les trois

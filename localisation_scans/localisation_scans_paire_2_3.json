@@ -1,0 +1,67 @@
+{
+  "reference": {
+    "source": "/Users/amazighe/Desktop/scan 2.xlsx",
+    "sheet": "scan_20261102_170547_135900",
+    "input_points": 454,
+    "valid_points": 454,
+    "zero_distance_ignored": 0
+  },
+  "query": {
+    "source": "/Users/amazighe/Desktop/scan 3.xlsx",
+    "sheet": "scan_20261102_170622_894860",
+    "input_points": 454,
+    "valid_points": 454,
+    "zero_distance_ignored": 0
+  },
+  "methods": {
+    "search": {
+      "pose": [
+        0.0,
+        0.08,
+        87.60000000000002
+      ],
+      "rmse_distance_map_m": 0.055983359645635805,
+      "overlap_20cm": 0.9977973568281938,
+      "status": "candidate",
+      "points": 454,
+      "evaluated_poses": 23244,
+      "runtime_s": 10.355941422,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "xy_range_m": 2,
+      "angle_range_deg": 30
+    },
+    "icp": {
+      "pose": [
+        -0.002231192153560756,
+        0.0690077831852102,
+        88.2054749373791
+      ],
+      "initial_pose": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "runtime_s": 0.02225869200000119,
+      "rmse_distance_map_m": 0.06288005429847106,
+      "overlap_20cm": 0.9977973568281938,
+      "status": "candidate",
+      "points": 454,
+      "iterations": 21,
+      "correspondences_last_iteration": 363,
+      "converged": true,
+      "outside_comparison_window": false,
+      "xy_range_m": 2,
+      "angle_range_deg": 30
+    }
+  },
+  "physical_ground_truth": false,
+  "translation_error_m": null,
+  "angle_error_deg": null,
+  "reference_uncertainty": "Poses non mesurées ; incertitude métrique et angulaire non quantifiée.",
+  "note": "Transformation requête vers référence. Proximité réelle des acquisitions à confirmer. Le résidu de recalage n'est pas une erreur de pose mesurée."
+}
