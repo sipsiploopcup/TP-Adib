@@ -10,6 +10,18 @@
 Le rapport présente les cinq étapes du TP, les résultats réels, les tests
 et les limites des poses estimées et des méthodes retenues.
 
+## Rapport du TP n° 2 — Adib OUAMOU
+
+- [Rapport PDF (15 pages)](./rapport_tp2/TP2_Adib_OUAMOU.pdf)
+- [Sources LaTeX et figures — archive pour Overleaf](./rapport_tp2/TP2_Adib_OUAMOU_sources.zip)
+- [Fichier LaTeX](./rapport_tp2/TP2_Adib_OUAMOU.tex)
+- [Instructions de compilation](./rapport_tp2/README.txt)
+
+Le rapport présente les trois types de localisation, la comparaison de
+144 essais, la sensibilité à l'initialisation et les trois paires réelles.
+Il distingue les poses connues en simulation, les transformations contrôlées
+de points réels et les recalages physiques sans poses mesurées.
+
 ## Jour 2 — Localisation sur carte d'occupation
 
 Le [programme](./localisation_grid.py) cherche une pose par recherche
