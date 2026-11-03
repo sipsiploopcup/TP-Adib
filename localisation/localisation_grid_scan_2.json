@@ -1,0 +1,212 @@
+{
+  "protocol": "Points réels : 80 % carte, 20 % réservés par acquisition, repères virtuels imposés. Une acquisition par requête ; pose initiale = pose de base du repère fourni.",
+  "source": "/Users/amazighe/Desktop/scan 2.xlsx",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/scan 2.xlsx",
+      "sheet": "scan_20261102_170547_135900",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique",
+      "reference_points": 363,
+      "reserved_points": 91
+    }
+  ],
+  "reference_points": 363,
+  "reserved_points_total": 91,
+  "query_points_per_case": [
+    91,
+    91,
+    91,
+    91,
+    91
+  ],
+  "query_points": 91,
+  "cases_with_reference_coverage": 5,
+  "physical_ground_truth": false,
+  "cases": [
+    {
+      "case": 1,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": 0.0,
+      "true_y_m": 0.0,
+      "true_theta_deg": 0.0,
+      "estimated_x_m": -0.05,
+      "estimated_y_m": 0.0,
+      "estimated_theta_deg": 1.0,
+      "translation_error_m": 0.05,
+      "angle_error_deg": 1.0,
+      "pose": [
+        -0.05,
+        0.0,
+        1.0
+      ],
+      "rmse_distance_map_m": 0.07796739556825506,
+      "overlap_20cm": 0.989010989010989,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22854,
+      "runtime_s": 0.20895762900000003,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.978021978021978,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.09869255608826603
+    },
+    {
+      "case": 2,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": 0.7,
+      "true_y_m": -0.5,
+      "true_theta_deg": 12.0,
+      "estimated_x_m": 0.66,
+      "estimated_y_m": -0.49,
+      "estimated_theta_deg": 13.0,
+      "translation_error_m": 0.04123105625617653,
+      "angle_error_deg": 1.0,
+      "pose": [
+        0.66,
+        -0.49,
+        13.0
+      ],
+      "rmse_distance_map_m": 0.0779385276092737,
+      "overlap_20cm": 0.989010989010989,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22644,
+      "runtime_s": 0.207846419,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.978021978021978,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.098692556088266
+    },
+    {
+      "case": 3,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": -0.8,
+      "true_y_m": 0.6,
+      "true_theta_deg": -15.0,
+      "estimated_x_m": -0.86,
+      "estimated_y_m": 0.58,
+      "estimated_theta_deg": -14.0,
+      "translation_error_m": 0.06324555320336754,
+      "angle_error_deg": 1.0,
+      "pose": [
+        -0.86,
+        0.58,
+        -14.0
+      ],
+      "rmse_distance_map_m": 0.07803238249950625,
+      "overlap_20cm": 0.989010989010989,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23559,
+      "runtime_s": 0.2214855149999999,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.978021978021978,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.09869255608826609
+    },
+    {
+      "case": 4,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": 1.1,
+      "true_y_m": 0.8,
+      "true_theta_deg": 20.0,
+      "estimated_x_m": 1.04,
+      "estimated_y_m": 0.82,
+      "estimated_theta_deg": 21.0,
+      "translation_error_m": 0.06324555320336761,
+      "angle_error_deg": 1.0,
+      "pose": [
+        1.04,
+        0.82,
+        21.0
+      ],
+      "rmse_distance_map_m": 0.07798622058690317,
+      "overlap_20cm": 0.989010989010989,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23004,
+      "runtime_s": 0.20854389500000003,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.978021978021978,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.09869255608826615
+    },
+    {
+      "case": 5,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": -1.2,
+      "true_y_m": -0.9,
+      "true_theta_deg": -22.0,
+      "estimated_x_m": -1.23,
+      "estimated_y_m": -0.92,
+      "estimated_theta_deg": -21.0,
+      "translation_error_m": 0.036055512754639925,
+      "angle_error_deg": 1.0,
+      "pose": [
+        -1.23,
+        -0.92,
+        -21.0
+      ],
+      "rmse_distance_map_m": 0.07798322990539308,
+      "overlap_20cm": 0.989010989010989,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22749,
+      "runtime_s": 0.2059355599999999,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.978021978021978,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.098692556088266
+    }
+  ],
+  "mean_translation_error_m": 0.050755535083510314,
+  "max_translation_error_m": 0.06324555320336761,
+  "mean_angle_error_deg": 1.0,
+  "max_angle_error_deg": 1.0,
+  "mean_runtime_s": 0.21055380359999995,
+  "success_10cm_1deg": 5,
+  "limits": "Test de récupération géométrique sur des acquisitions partagées en deux. Pas de mesure de précision physique ni cinq acquisitions indépendantes pour un scan seul. Pour Fusion : référence et poses de base issues du recalage estimé ; seules les transformations imposées sont contrôlées. Le score utilise les impacts, sans modèle complet des espaces libres."
+}

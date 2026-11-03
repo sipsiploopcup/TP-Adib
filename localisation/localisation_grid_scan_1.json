@@ -1,0 +1,212 @@
+{
+  "protocol": "Points réels : 80 % carte, 20 % réservés par acquisition, repères virtuels imposés. Une acquisition par requête ; pose initiale = pose de base du repère fourni.",
+  "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+      "sheet": "scan_20261102_130244_385674",
+      "input_points": 455,
+      "valid_points": 454,
+      "zero_distance_ignored": 1,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique",
+      "reference_points": 363,
+      "reserved_points": 91
+    }
+  ],
+  "reference_points": 363,
+  "reserved_points_total": 91,
+  "query_points_per_case": [
+    91,
+    91,
+    91,
+    91,
+    91
+  ],
+  "query_points": 91,
+  "cases_with_reference_coverage": 5,
+  "physical_ground_truth": false,
+  "cases": [
+    {
+      "case": 1,
+      "query_source": "Scan 1.xlsx",
+      "true_x_m": 0.0,
+      "true_y_m": 0.0,
+      "true_theta_deg": 0.0,
+      "estimated_x_m": 0.0,
+      "estimated_y_m": 0.03,
+      "estimated_theta_deg": -0.8000000000000114,
+      "translation_error_m": 0.03,
+      "angle_error_deg": 0.8000000000000114,
+      "pose": [
+        0.0,
+        0.03,
+        -0.8000000000000114
+      ],
+      "rmse_distance_map_m": 0.07063043027802275,
+      "overlap_20cm": 0.978021978021978,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23099,
+      "runtime_s": 0.22105570500000005,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.967032967032967,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.08617168506338152
+    },
+    {
+      "case": 2,
+      "query_source": "Scan 1.xlsx",
+      "true_x_m": 0.7,
+      "true_y_m": -0.5,
+      "true_theta_deg": 12.0,
+      "estimated_x_m": 0.7,
+      "estimated_y_m": -0.48,
+      "estimated_theta_deg": 11.199999999999989,
+      "translation_error_m": 0.020000000000000018,
+      "angle_error_deg": 0.8000000000000114,
+      "pose": [
+        0.7,
+        -0.48,
+        11.199999999999989
+      ],
+      "rmse_distance_map_m": 0.0707404625353067,
+      "overlap_20cm": 0.978021978021978,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23104,
+      "runtime_s": 0.21520677499999996,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.967032967032967,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.0861716850633815
+    },
+    {
+      "case": 3,
+      "query_source": "Scan 1.xlsx",
+      "true_x_m": -0.8,
+      "true_y_m": 0.6,
+      "true_theta_deg": -15.0,
+      "estimated_x_m": -0.79,
+      "estimated_y_m": 0.64,
+      "estimated_theta_deg": -15.800000000000011,
+      "translation_error_m": 0.041231056256176644,
+      "angle_error_deg": 0.8000000000000114,
+      "pose": [
+        -0.79,
+        0.64,
+        -15.800000000000011
+      ],
+      "rmse_distance_map_m": 0.07058678654492523,
+      "overlap_20cm": 0.978021978021978,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23159,
+      "runtime_s": 0.22488460799999999,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.967032967032967,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.08617168506338155
+    },
+    {
+      "case": 4,
+      "query_source": "Scan 1.xlsx",
+      "true_x_m": 1.1,
+      "true_y_m": 0.8,
+      "true_theta_deg": 20.0,
+      "estimated_x_m": 1.11,
+      "estimated_y_m": 0.81,
+      "estimated_theta_deg": 19.19999999999999,
+      "translation_error_m": 0.014142135623730963,
+      "angle_error_deg": 0.8000000000000114,
+      "pose": [
+        1.11,
+        0.81,
+        19.19999999999999
+      ],
+      "rmse_distance_map_m": 0.07065771590437121,
+      "overlap_20cm": 0.978021978021978,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 21914,
+      "runtime_s": 0.2147978730000002,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.967032967032967,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.08617168506338159
+    },
+    {
+      "case": 5,
+      "query_source": "Scan 1.xlsx",
+      "true_x_m": -1.2,
+      "true_y_m": -0.9,
+      "true_theta_deg": -22.0,
+      "estimated_x_m": -1.21,
+      "estimated_y_m": -0.86,
+      "estimated_theta_deg": -22.80000000000001,
+      "translation_error_m": 0.041231056256176644,
+      "angle_error_deg": 0.8000000000000114,
+      "pose": [
+        -1.21,
+        -0.86,
+        -22.80000000000001
+      ],
+      "rmse_distance_map_m": 0.07067351348923248,
+      "overlap_20cm": 0.978021978021978,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23264,
+      "runtime_s": 0.2286282609999999,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.967032967032967,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.08617168506338155
+    }
+  ],
+  "mean_translation_error_m": 0.029320849627216854,
+  "max_translation_error_m": 0.041231056256176644,
+  "mean_angle_error_deg": 0.8000000000000114,
+  "max_angle_error_deg": 0.8000000000000114,
+  "mean_runtime_s": 0.2209146444,
+  "success_10cm_1deg": 5,
+  "limits": "Test de récupération géométrique sur des acquisitions partagées en deux. Pas de mesure de précision physique ni cinq acquisitions indépendantes pour un scan seul. Pour Fusion : référence et poses de base issues du recalage estimé ; seules les transformations imposées sont contrôlées. Le score utilise les impacts, sans modèle complet des espaces libres."
+}

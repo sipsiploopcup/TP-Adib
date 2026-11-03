@@ -10,6 +10,37 @@
 Le rapport présente les cinq étapes du TP, les résultats réels, les tests
 et les limites des poses estimées et des méthodes retenues.
 
+## Jour 2 — Localisation sur carte d'occupation
+
+Le [programme](./localisation_grid.py) cherche une pose par recherche
+grossière puis fine sur un champ de distance aux cellules occupées.
+Le [protocole et les diagnostics](./JOUR2_LOCALISATION.md) précisent les
+transformations contrôlées, les points réservés et les limites de l'évaluation.
+
+| Données | Erreur moyenne de position | Erreur moyenne d'angle | Réussites ≤10 cm et ≤1° | Résultats |
+| --- | --- | --- | --- | --- |
+| Scan 1 | 2,93 cm | 0,80° | 5/5 | [Image](./localisation/localisation_grid_scan_1.png), [CSV](./localisation/localisation_grid_scan_1.csv), [JSON](./localisation/localisation_grid_scan_1.json) |
+| Scan 2 | 5,08 cm | 1,00° | 5/5 | [Image](./localisation/localisation_grid_scan_2.png), [CSV](./localisation/localisation_grid_scan_2.csv), [JSON](./localisation/localisation_grid_scan_2.json) |
+| Scan 3 | 2,42 cm | 0,80° | 5/5 | [Image](./localisation/localisation_grid_scan_3.png), [CSV](./localisation/localisation_grid_scan_3.csv), [JSON](./localisation/localisation_grid_scan_3.json) |
+| Fusion | 52,27 cm | 2,96° | 2/5 | [Image](./localisation/localisation_grid_fusion.png), [CSV](./localisation/localisation_grid_fusion.csv), [JSON](./localisation/localisation_grid_fusion.json) |
+
+Ces résultats concernent des repères virtuels imposés sur des points réels
+réservés au test, sans vérité terrain physique mesurée. Fusion reste à
+valider : deux requêtes ont une couverture insuffisante à la pose imposée
+et une troisième échoue malgré un recouvrement supérieur à 50 %. Les
+échecs sont conservés. Les cartes de référence NPZ sont dans
+[localisation/](./localisation/). Le rapport du TP n° 1 précède ce travail
+du Jour 2 et reste inchangé.
+
+```bash
+python -m pip install -r requirements.txt
+python localisation_grid.py evaluate "Scan 1.xlsx" --title "Scan 1" --output localisation/localisation_grid_scan_1
+python localisation_grid.py evaluate "scan 2.xlsx" --title "Scan 2" --output localisation/localisation_grid_scan_2
+python localisation_grid.py evaluate "scan 3.xlsx" --title "Scan 3" --output localisation/localisation_grid_scan_3
+python localisation_grid.py evaluate "scan fusion.xlsx" --title "Fusion" --output localisation/localisation_grid_fusion
+python -m pytest tests/test_localisation_grid.py -q
+```
+
 ## Données et résultats
 
 Ce dépôt contient le résultat de la fusion des 12 scans LiDAR et les trois

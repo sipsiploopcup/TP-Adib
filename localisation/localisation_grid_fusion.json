@@ -1,0 +1,413 @@
+{
+  "protocol": "Points réels : 80 % carte, 20 % réservés par acquisition, repères virtuels imposés. Une acquisition par requête ; pose initiale = pose de base du repère fourni.",
+  "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_124403_644384.csv",
+      "pose": [
+        0.0737834677171555,
+        2.6066601007441763,
+        115.73166181345684
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.120636546685653e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 451,
+      "valid_points": 451,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_125238_358741.csv",
+      "pose": [
+        0.22291092359519893,
+        2.917129153913748,
+        98.58794514024517
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.958444977748213e-07,
+      "reference_points": 360,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_130244_385674.csv",
+      "pose": [
+        0.4086411507331098,
+        2.4948671301604333,
+        -0.34321120648569586
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.003163616716581e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 453,
+      "valid_points": 453,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170036_490062.csv",
+      "pose": [
+        0.18699421370599578,
+        2.1319834929398196,
+        -11.416182575706076
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.876169782408764e-07,
+      "reference_points": 362,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170347_052425.csv",
+      "pose": [
+        0.019273051549040243,
+        0.028979856180705504,
+        -88.19487054743429
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.133535430072776e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170438_115290.csv",
+      "pose": [
+        0.0,
+        -8.326672684688674e-17,
+        5.82047860165561e-16
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 1.831026719408895e-15,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170547_135900.csv",
+      "pose": [
+        0.0156797021609405,
+        0.0026360814310863456,
+        90.10058139945609
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.012553413381047e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170622_894860.csv",
+      "pose": [
+        -0.0723419997963497,
+        -0.01186272537646435,
+        178.2984898437946
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.927754725293919e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170707_527011.csv",
+      "pose": [
+        -0.06039829528068097,
+        -0.005471234095751815,
+        -179.28993541165462
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.017002231039347e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170743_662993.csv",
+      "pose": [
+        2.735243711360188,
+        -1.216235630318327,
+        -174.41852058192268
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.026590915931592e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170811_045727.csv",
+      "pose": [
+        2.7318798554194688,
+        -1.2117464335303496,
+        -174.36297742740305
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.15938920903757e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170911_554109.csv",
+      "pose": [
+        5.445291087990366,
+        1.4202501940609658,
+        87.48231017692689
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.542246404762464e-07,
+      "reference_points": 363,
+      "reserved_points": 91
+    }
+  ],
+  "reference_points": 4352,
+  "reserved_points_total": 1092,
+  "query_points_per_case": [
+    91,
+    91,
+    91,
+    91,
+    91
+  ],
+  "query_points": null,
+  "cases_with_reference_coverage": 3,
+  "physical_ground_truth": false,
+  "cases": [
+    {
+      "case": 1,
+      "query_source": "scan_20261102_124403_644384.csv",
+      "true_x_m": 0.0737834677171555,
+      "true_y_m": 2.6066601007441763,
+      "true_theta_deg": 115.73166181345684,
+      "estimated_x_m": -1.12621653,
+      "estimated_y_m": 2.7766601,
+      "estimated_theta_deg": 112.93166180999998,
+      "translation_error_m": 1.2119818456842304,
+      "angle_error_deg": 2.8000000034568586,
+      "pose": [
+        -1.12621653,
+        2.7766601,
+        112.93166180999998
+      ],
+      "rmse_distance_map_m": 0.339794071946127,
+      "overlap_20cm": 0.5384615384615384,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23216,
+      "runtime_s": 0.22499044600000007,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0737834677171555,
+        2.6066601007441763,
+        115.73166181345684
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.15384615384615385,
+      "reference_coverage_ok": false,
+      "rmse_at_imposed_pose_m": 0.5501032452317136
+    },
+    {
+      "case": 2,
+      "query_source": "scan_20261102_125238_358741.csv",
+      "true_x_m": 0.9229109235951989,
+      "true_y_m": 2.417129153913748,
+      "true_theta_deg": 110.58794514024517,
+      "estimated_x_m": 0.65291092,
+      "estimated_y_m": 2.39712915,
+      "estimated_theta_deg": 110.18794514000001,
+      "translation_error_m": 0.27073973128810885,
+      "angle_error_deg": 0.40000000024514293,
+      "pose": [
+        0.65291092,
+        2.39712915,
+        110.18794514000001
+      ],
+      "rmse_distance_map_m": 0.3595223082785957,
+      "overlap_20cm": 0.3516483516483517,
+      "status": "insufficient_overlap",
+      "points": 91,
+      "evaluated_poses": 23370,
+      "runtime_s": 0.22281843600000006,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.22291092359519893,
+        2.917129153913748,
+        98.58794514024517
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.6153846153846154,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.3675872040978801
+    },
+    {
+      "case": 3,
+      "query_source": "scan_20261102_130244_385674.csv",
+      "true_x_m": -0.39135884926689024,
+      "true_y_m": 3.0948671301604334,
+      "true_theta_deg": -15.343211206485696,
+      "estimated_x_m": -0.42135885,
+      "estimated_y_m": 3.16486713,
+      "estimated_theta_deg": -16.143211210000004,
+      "translation_error_m": 0.07615773119996383,
+      "angle_error_deg": 0.8000000035142989,
+      "pose": [
+        -0.42135885,
+        3.16486713,
+        -16.143211210000004
+      ],
+      "rmse_distance_map_m": 0.3156883605564338,
+      "overlap_20cm": 0.7142857142857143,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23434,
+      "runtime_s": 0.23263263099999998,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.4086411507331098,
+        2.4948671301604333,
+        -0.34321120648569586
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.7032967032967034,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.31729172046790677
+    },
+    {
+      "case": 4,
+      "query_source": "scan_20261102_170036_490062.csv",
+      "true_x_m": 1.286994213705996,
+      "true_y_m": 2.9319834929398194,
+      "true_theta_deg": 8.583817424293924,
+      "estimated_x_m": 0.48699421,
+      "estimated_y_m": 2.34198349,
+      "estimated_theta_deg": 18.583817420000003,
+      "translation_error_m": 0.9940321973651459,
+      "angle_error_deg": 9.999999995706077,
+      "pose": [
+        0.48699421,
+        2.34198349,
+        18.583817420000003
+      ],
+      "rmse_distance_map_m": 0.4419067424526366,
+      "overlap_20cm": 0.3626373626373626,
+      "status": "insufficient_overlap",
+      "points": 91,
+      "evaluated_poses": 17828,
+      "runtime_s": 0.17655707599999992,
+      "on_search_boundary": true,
+      "initial_pose": [
+        0.18699421370599578,
+        2.1319834929398196,
+        -11.416182575706076
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 0.24175824175824176,
+      "reference_coverage_ok": false,
+      "rmse_at_imposed_pose_m": 0.5116826798800125
+    },
+    {
+      "case": 5,
+      "query_source": "scan_20261102_170347_052425.csv",
+      "true_x_m": -1.1807269484509597,
+      "true_y_m": -0.8710201438192945,
+      "true_theta_deg": -110.19487054743429,
+      "estimated_x_m": -1.19072695,
+      "estimated_y_m": -0.93102014,
+      "estimated_theta_deg": -109.39487055,
+      "translation_error_m": 0.060827621790314,
+      "angle_error_deg": 0.7999999974342984,
+      "pose": [
+        -1.19072695,
+        -0.93102014,
+        -109.39487055
+      ],
+      "rmse_distance_map_m": 0.030717847805235187,
+      "overlap_20cm": 1.0,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22379,
+      "runtime_s": 0.2128360960000002,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.019273051549040243,
+        0.028979856180705504,
+        -88.19487054743429
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0,
+      "reference_overlap_20cm": 1.0,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.04183904222904282
+    }
+  ],
+  "mean_translation_error_m": 0.5227478254655525,
+  "max_translation_error_m": 1.2119818456842304,
+  "mean_angle_error_deg": 2.960000000071335,
+  "max_angle_error_deg": 9.999999995706077,
+  "mean_runtime_s": 0.21396693700000005,
+  "success_10cm_1deg": 2,
+  "limits": "Test de récupération géométrique sur des acquisitions partagées en deux. Pas de mesure de précision physique ni cinq acquisitions indépendantes pour un scan seul. Pour Fusion : référence et poses de base issues du recalage estimé ; seules les transformations imposées sont contrôlées. Le score utilise les impacts, sans modèle complet des espaces libres."
+}
