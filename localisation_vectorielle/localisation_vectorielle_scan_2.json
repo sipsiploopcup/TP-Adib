@@ -1,0 +1,213 @@
+{
+  "method": "Recherche hiérarchique ; distance exacte aux segments finis, bornée à 0,6 m",
+  "source": "/Users/amazighe/Desktop/scan 2.xlsx",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/scan 2.xlsx",
+      "sheet": "scan_20261102_170547_135900",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique",
+      "reference_points": 363,
+      "reserved_points": 91,
+      "extracted_segments": 6
+    }
+  ],
+  "reference_segments": 5,
+  "reference_points": 363,
+  "reserved_points_total": 91,
+  "query_points_per_case": [
+    91,
+    91,
+    91,
+    91,
+    91
+  ],
+  "physical_ground_truth": false,
+  "cases": [
+    {
+      "case": 1,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": 0.0,
+      "true_y_m": 0.0,
+      "true_theta_deg": 0.0,
+      "translation_error_m": 0.022360679774997897,
+      "angle_error_deg": 0.0,
+      "estimated_x_m": -0.01,
+      "estimated_y_m": 0.02,
+      "estimated_theta_deg": 0.0,
+      "reference_overlap_20cm": 0.9340659340659341,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13334472614873988,
+      "pose": [
+        -0.01,
+        0.02,
+        0.0
+      ],
+      "rmse_distance_map_m": 0.13260240343082821,
+      "overlap_20cm": 0.9340659340659341,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23349,
+      "runtime_s": 1.039614426,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 2,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": 0.7,
+      "true_y_m": -0.5,
+      "true_theta_deg": 12.0,
+      "translation_error_m": 0.022360679774997918,
+      "angle_error_deg": 0.0,
+      "estimated_x_m": 0.69,
+      "estimated_y_m": -0.48,
+      "estimated_theta_deg": 12.0,
+      "reference_overlap_20cm": 0.9340659340659341,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13334472614873996,
+      "pose": [
+        0.69,
+        -0.48,
+        12.0
+      ],
+      "rmse_distance_map_m": 0.1326024034308283,
+      "overlap_20cm": 0.9340659340659341,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23379,
+      "runtime_s": 1.0353844260000002,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 3,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": -0.8,
+      "true_y_m": 0.6,
+      "true_theta_deg": -15.0,
+      "translation_error_m": 0.022360679774997918,
+      "angle_error_deg": 0.0,
+      "estimated_x_m": -0.81,
+      "estimated_y_m": 0.62,
+      "estimated_theta_deg": -15.0,
+      "reference_overlap_20cm": 0.9340659340659341,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13334472614873993,
+      "pose": [
+        -0.81,
+        0.62,
+        -15.0
+      ],
+      "rmse_distance_map_m": 0.1326024034308282,
+      "overlap_20cm": 0.9340659340659341,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23674,
+      "runtime_s": 1.0001161460000003,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 4,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": 1.1,
+      "true_y_m": 0.8,
+      "true_theta_deg": 20.0,
+      "translation_error_m": 0.022360679774997817,
+      "angle_error_deg": 0.0,
+      "estimated_x_m": 1.09,
+      "estimated_y_m": 0.82,
+      "estimated_theta_deg": 20.0,
+      "reference_overlap_20cm": 0.9340659340659341,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13334472614873996,
+      "pose": [
+        1.09,
+        0.82,
+        20.0
+      ],
+      "rmse_distance_map_m": 0.13260240343082824,
+      "overlap_20cm": 0.9340659340659341,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23044,
+      "runtime_s": 0.9679616090000005,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 5,
+      "query_source": "scan 2.xlsx",
+      "true_x_m": -1.2,
+      "true_y_m": -0.9,
+      "true_theta_deg": -22.0,
+      "translation_error_m": 0.022360679774997918,
+      "angle_error_deg": 0.0,
+      "estimated_x_m": -1.21,
+      "estimated_y_m": -0.88,
+      "estimated_theta_deg": -22.0,
+      "reference_overlap_20cm": 0.9340659340659341,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13334472614873993,
+      "pose": [
+        -1.21,
+        -0.88,
+        -22.0
+      ],
+      "rmse_distance_map_m": 0.13260240343082824,
+      "overlap_20cm": 0.9340659340659341,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22189,
+      "runtime_s": 0.9250821459999994,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    }
+  ],
+  "mean_translation_error_m": 0.022360679774997894,
+  "max_translation_error_m": 0.022360679774997918,
+  "mean_angle_error_deg": 0.0,
+  "mean_runtime_s": 0.9936317506000002,
+  "cases_with_reference_coverage": 5,
+  "success_10cm_1deg": 5,
+  "protocol": "80 % référence et 20 % réservés par acquisition ; cinq transformations imposées. Une origine par requête ; pose initiale = pose de base, sans perturbation.",
+  "limits": "Pas de vérité terrain physique. Poses Fusion estimées. La couverture est diagnostiquée, sans exclure les échecs. Les objets non représentés par des segments pénalisent le score. Temps de préparation de carte exclu du temps de recherche."
+}

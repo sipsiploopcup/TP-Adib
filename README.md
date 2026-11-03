@@ -41,6 +41,35 @@ python localisation_grid.py evaluate "scan fusion.xlsx" --title "Fusion" --outpu
 python -m pytest tests/test_localisation_grid.py -q
 ```
 
+## Jour 2 — Localisation sur carte vectorielle
+
+Le [programme](./localisation_vectorielle.py) minimise la distance exacte
+des points aux segments finis par recherche de pose grossière puis fine.
+La [méthode et le protocole](./JOUR2_VECTORIELLE.md) détaillent les paramètres,
+les références construites sans les points de test et les limites.
+
+| Données | Erreur moyenne de position | Erreur moyenne d'angle | Réussites ≤10 cm et ≤1° | Résultats |
+| --- | --- | --- | --- | --- |
+| Scan 1 | 3,52 cm | 0,40° | 5/5 | [Image](./localisation_vectorielle/localisation_vectorielle_scan_1.png), [CSV](./localisation_vectorielle/localisation_vectorielle_scan_1.csv), [JSON](./localisation_vectorielle/localisation_vectorielle_scan_1.json) |
+| Scan 2 | 2,24 cm | 0,00° | 5/5 | [Image](./localisation_vectorielle/localisation_vectorielle_scan_2.png), [CSV](./localisation_vectorielle/localisation_vectorielle_scan_2.csv), [JSON](./localisation_vectorielle/localisation_vectorielle_scan_2.json) |
+| Scan 3 | 1,33 cm | 0,40° | 5/5 | [Image](./localisation_vectorielle/localisation_vectorielle_scan_3.png), [CSV](./localisation_vectorielle/localisation_vectorielle_scan_3.csv), [JSON](./localisation_vectorielle/localisation_vectorielle_scan_3.json) |
+| Fusion | 4,56 cm | 0,40° | 4/5 | [Image](./localisation_vectorielle/localisation_vectorielle_fusion.png), [CSV](./localisation_vectorielle/localisation_vectorielle_fusion.csv), [JSON](./localisation_vectorielle/localisation_vectorielle_fusion.json) |
+
+Les cinq cas par jeu de données sont des transformations contrôlées sur des
+points réels réservés, pas une mesure de précision physique. Pour Fusion,
+les poses de base restent estimées ; le premier cas échoue avec une erreur
+de 11,05 cm et reste dans les statistiques. Les références vectorielles
+effectivement utilisées sont exportées avec le suffixe `_reference.csv`
+dans [localisation_vectorielle/](./localisation_vectorielle/).
+
+```bash
+python localisation_vectorielle.py evaluate "Scan 1.xlsx" --title "Scan 1" --output localisation_vectorielle/localisation_vectorielle_scan_1
+python localisation_vectorielle.py evaluate "scan 2.xlsx" --title "Scan 2" --output localisation_vectorielle/localisation_vectorielle_scan_2
+python localisation_vectorielle.py evaluate "scan 3.xlsx" --title "Scan 3" --output localisation_vectorielle/localisation_vectorielle_scan_3
+python localisation_vectorielle.py evaluate "scan fusion.xlsx" --title Fusion --output localisation_vectorielle/localisation_vectorielle_fusion
+python -m pytest tests/test_localisation_vectorielle.py -q
+```
+
 ## Données et résultats
 
 Ce dépôt contient le résultat de la fusion des 12 scans LiDAR et les trois

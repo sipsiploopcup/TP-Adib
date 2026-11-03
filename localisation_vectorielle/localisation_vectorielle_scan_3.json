@@ -1,0 +1,213 @@
+{
+  "method": "Recherche hiérarchique ; distance exacte aux segments finis, bornée à 0,6 m",
+  "source": "/Users/amazighe/Desktop/scan 3.xlsx",
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/scan 3.xlsx",
+      "sheet": "scan_20261102_170622_894860",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique",
+      "reference_points": 363,
+      "reserved_points": 91,
+      "extracted_segments": 7
+    }
+  ],
+  "reference_segments": 6,
+  "reference_points": 363,
+  "reserved_points_total": 91,
+  "query_points_per_case": [
+    91,
+    91,
+    91,
+    91,
+    91
+  ],
+  "physical_ground_truth": false,
+  "cases": [
+    {
+      "case": 1,
+      "query_source": "scan 3.xlsx",
+      "true_x_m": 0.0,
+      "true_y_m": 0.0,
+      "true_theta_deg": 0.0,
+      "translation_error_m": 0.01,
+      "angle_error_deg": 0.4000000000000057,
+      "estimated_x_m": 0.0,
+      "estimated_y_m": 0.01,
+      "estimated_theta_deg": -0.4000000000000057,
+      "reference_overlap_20cm": 0.945054945054945,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13006511366127246,
+      "pose": [
+        0.0,
+        0.01,
+        -0.4000000000000057
+      ],
+      "rmse_distance_map_m": 0.12728155478616537,
+      "overlap_20cm": 0.945054945054945,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22809,
+      "runtime_s": 1.118560825,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 2,
+      "query_source": "scan 3.xlsx",
+      "true_x_m": 0.7,
+      "true_y_m": -0.5,
+      "true_theta_deg": 12.0,
+      "translation_error_m": 0.014142135623730963,
+      "angle_error_deg": 0.4000000000000057,
+      "estimated_x_m": 0.69,
+      "estimated_y_m": -0.49,
+      "estimated_theta_deg": 11.599999999999994,
+      "reference_overlap_20cm": 0.945054945054945,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13006511366127246,
+      "pose": [
+        0.69,
+        -0.49,
+        11.599999999999994
+      ],
+      "rmse_distance_map_m": 0.1272931272412599,
+      "overlap_20cm": 0.945054945054945,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22794,
+      "runtime_s": 1.1010064699999997,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 3,
+      "query_source": "scan 3.xlsx",
+      "true_x_m": -0.8,
+      "true_y_m": 0.6,
+      "true_theta_deg": -15.0,
+      "translation_error_m": 0.020000000000000018,
+      "angle_error_deg": 0.4000000000000057,
+      "estimated_x_m": -0.8,
+      "estimated_y_m": 0.62,
+      "estimated_theta_deg": -15.400000000000006,
+      "reference_overlap_20cm": 0.945054945054945,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13006511366127252,
+      "pose": [
+        -0.8,
+        0.62,
+        -15.400000000000006
+      ],
+      "rmse_distance_map_m": 0.12726992308584886,
+      "overlap_20cm": 0.945054945054945,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23304,
+      "runtime_s": 1.1757002429999996,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 4,
+      "query_source": "scan 3.xlsx",
+      "true_x_m": 1.1,
+      "true_y_m": 0.8,
+      "true_theta_deg": 20.0,
+      "translation_error_m": 0.0,
+      "angle_error_deg": 0.4000000000000057,
+      "estimated_x_m": 1.1,
+      "estimated_y_m": 0.8,
+      "estimated_theta_deg": 19.599999999999994,
+      "reference_overlap_20cm": 0.945054945054945,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.1300651136612726,
+      "pose": [
+        1.1,
+        0.8,
+        19.599999999999994
+      ],
+      "rmse_distance_map_m": 0.1272565921431337,
+      "overlap_20cm": 0.945054945054945,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 22864,
+      "runtime_s": 1.1528398060000002,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    },
+    {
+      "case": 5,
+      "query_source": "scan 3.xlsx",
+      "true_x_m": -1.2,
+      "true_y_m": -0.9,
+      "true_theta_deg": -22.0,
+      "translation_error_m": 0.022360679774997918,
+      "angle_error_deg": 0.4000000000000057,
+      "estimated_x_m": -1.21,
+      "estimated_y_m": -0.88,
+      "estimated_theta_deg": -22.400000000000006,
+      "reference_overlap_20cm": 0.945054945054945,
+      "reference_coverage_ok": true,
+      "rmse_at_imposed_pose_m": 0.13006511366127252,
+      "pose": [
+        -1.21,
+        -0.88,
+        -22.400000000000006
+      ],
+      "rmse_distance_map_m": 0.12724638493167909,
+      "overlap_20cm": 0.945054945054945,
+      "status": "candidate",
+      "points": 91,
+      "evaluated_poses": 23005,
+      "runtime_s": 1.1739120010000006,
+      "on_search_boundary": false,
+      "initial_pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xy_range_m": 2.0,
+      "angle_range_deg": 30.0
+    }
+  ],
+  "mean_translation_error_m": 0.01330056307974578,
+  "max_translation_error_m": 0.022360679774997918,
+  "mean_angle_error_deg": 0.4000000000000057,
+  "mean_runtime_s": 1.144403869,
+  "cases_with_reference_coverage": 5,
+  "success_10cm_1deg": 5,
+  "protocol": "80 % référence et 20 % réservés par acquisition ; cinq transformations imposées. Une origine par requête ; pose initiale = pose de base, sans perturbation.",
+  "limits": "Pas de vérité terrain physique. Poses Fusion estimées. La couverture est diagnostiquée, sans exclure les échecs. Les objets non représentés par des segments pénalisent le score. Temps de préparation de carte exclu du temps de recherche."
+}

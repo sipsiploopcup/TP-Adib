@@ -2,9 +2,10 @@
 
 La première référence traitée est une **grid map**. Une méthode fonctionnelle
 est suffisante pour cette partie : les différentes pistes de l'énoncé ne sont
-pas toutes obligatoires. Les deux autres types de référence mentionnés dans
-l'introduction de l'énoncé ne sont pas traités par ce module ; leurs consignes
-complètes restent à préciser. Le lien Moodle n'a pas pu être consulté.
+pas toutes obligatoires. La [carte vectorielle](./JOUR2_VECTORIELLE.md) dispose
+également d'un module distinct. Le troisième type de référence mentionné dans
+l'introduction de l'énoncé reste à traiter selon ses consignes complètes.
+Le lien Moodle n'a pas pu être consulté.
 
 ## Méthode
 
