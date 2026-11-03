@@ -1,5 +1,17 @@
 # Scan fusionné de la chambre
 
+## Rapport du TP n° 1 — Adib OUAMOU
+
+- [Rapport PDF (14 pages)](./rapport/TP1_Adib_OUAMOU.pdf)
+- [Sources LaTeX et figures — archive pour Overleaf](./rapport/TP1_Adib_OUAMOU_sources.zip)
+- [Fichier LaTeX](./rapport/TP1_Adib_OUAMOU.tex)
+- [Instructions de compilation](./rapport/README.txt)
+
+Le rapport présente les cinq étapes du TP, les résultats réels, les tests
+et les limites des poses estimées et des méthodes retenues.
+
+## Données et résultats
+
 Ce dépôt contient le résultat de la fusion des 12 scans LiDAR et les trois
 classeurs Excel réalisés à partir des acquisitions :
 
