@@ -1,0 +1,31 @@
+{
+  "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+  "valid_points": 454,
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+      "sheet": "scan_20261102_130244_385674",
+      "input_points": 455,
+      "valid_points": 454,
+      "zero_distance_ignored": 1,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique",
+      "segment_count": 15
+    }
+  ],
+  "group_count": 1,
+  "cross_scan_consolidation": false,
+  "segment_count": 15,
+  "units": "m",
+  "method": "split-and-merge avec ajustement ACP",
+  "max_error_m": 0.05,
+  "max_gap_m": 0.5,
+  "min_points": 6,
+  "min_length_m": 0.25,
+  "merge_angle_deg": 10.0,
+  "limits": "Segments candidats ; obstacles, mobilier et murs ne sont pas classifiés. Les segments issus de scans différents ne sont pas fusionnés ; les poses du classeur fusionné restent estimées."
+}

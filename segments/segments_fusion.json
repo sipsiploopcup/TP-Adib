@@ -1,0 +1,221 @@
+{
+  "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+  "valid_points": 5444,
+  "groups": [
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_124403_644384.csv",
+      "pose": [
+        0.0737834677171555,
+        2.6066601007441763,
+        115.73166181345684
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.120636546685653e-07,
+      "segment_count": 11
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 451,
+      "valid_points": 451,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_125238_358741.csv",
+      "pose": [
+        0.22291092359519893,
+        2.917129153913748,
+        98.58794514024517
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.958444977748213e-07,
+      "segment_count": 14
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_130244_385674.csv",
+      "pose": [
+        0.4086411507331098,
+        2.4948671301604333,
+        -0.34321120648569586
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.003163616716581e-07,
+      "segment_count": 15
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 453,
+      "valid_points": 453,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170036_490062.csv",
+      "pose": [
+        0.18699421370599578,
+        2.1319834929398196,
+        -11.416182575706076
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.876169782408764e-07,
+      "segment_count": 14
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170347_052425.csv",
+      "pose": [
+        0.019273051549040243,
+        0.028979856180705504,
+        -88.19487054743429
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.133535430072776e-07,
+      "segment_count": 11
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170438_115290.csv",
+      "pose": [
+        0.0,
+        -8.326672684688674e-17,
+        5.82047860165561e-16
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 1.831026719408895e-15,
+      "segment_count": 8
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170547_135900.csv",
+      "pose": [
+        0.0156797021609405,
+        0.0026360814310863456,
+        90.10058139945609
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.012553413381047e-07,
+      "segment_count": 8
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170622_894860.csv",
+      "pose": [
+        -0.0723419997963497,
+        -0.01186272537646435,
+        178.2984898437946
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 6.927754725293919e-07,
+      "segment_count": 9
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170707_527011.csv",
+      "pose": [
+        -0.06039829528068097,
+        -0.005471234095751815,
+        -179.28993541165462
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.017002231039347e-07,
+      "segment_count": 11
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170743_662993.csv",
+      "pose": [
+        2.735243711360188,
+        -1.216235630318327,
+        -174.41852058192268
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.026590915931592e-07,
+      "segment_count": 14
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170811_045727.csv",
+      "pose": [
+        2.7318798554194688,
+        -1.2117464335303496,
+        -174.36297742740305
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.15938920903757e-07,
+      "segment_count": 22
+    },
+    {
+      "source": "/Users/amazighe/Desktop/scan fusion.xlsx",
+      "sheet": "chambre_fusionnee",
+      "input_points": 454,
+      "valid_points": 454,
+      "zero_distance_ignored": 0,
+      "scan_source": "scan_20261102_170911_554109.csv",
+      "pose": [
+        5.445291087990366,
+        1.4202501940609658,
+        87.48231017692689
+      ],
+      "pose_is_estimated": true,
+      "pose_method": "transformation locale/globale du classeur fusionné",
+      "pose_recovery_max_error_m": 7.542246404762464e-07,
+      "segment_count": 19
+    }
+  ],
+  "group_count": 12,
+  "cross_scan_consolidation": false,
+  "segment_count": 156,
+  "units": "m",
+  "method": "split-and-merge avec ajustement ACP",
+  "max_error_m": 0.05,
+  "max_gap_m": 0.5,
+  "min_points": 6,
+  "min_length_m": 0.25,
+  "merge_angle_deg": 10.0,
+  "limits": "Segments candidats ; obstacles, mobilier et murs ne sont pas classifiés. Les segments issus de scans différents ne sont pas fusionnés ; les poses du classeur fusionné restent estimées."
+}

@@ -68,6 +68,57 @@ ses transformations : ne pas ajouter de pose manuelle dans ce cas.
 python -m pytest tests/test_gridmap.py tests/test_viewer.py -q
 ```
 
+## Extraction et manipulation de segments
+
+Segments candidats en bleu, mesures en gris, origines LiDAR en rouge.
+
+| Acquisition | Segments | Image | Coordonnées en mètres | Paramètres |
+| --- | --- | --- | --- | --- |
+| Scan 1 | 15 | [PNG](./segments/segments_scan_1.png) | [CSV](./segments/segments_scan_1.csv) | [JSON](./segments/segments_scan_1.json) |
+| Scan 2 | 8 | [PNG](./segments/segments_scan_2.png) | [CSV](./segments/segments_scan_2.csv) | [JSON](./segments/segments_scan_2.json) |
+| Scan 3 | 9 | [PNG](./segments/segments_scan_3.png) | [CSV](./segments/segments_scan_3.csv) | [JSON](./segments/segments_scan_3.json) |
+| Fusion (12 acquisitions) | 156 | [PNG](./segments/segments_fusion.png) | [CSV](./segments/segments_fusion.csv) | [JSON](./segments/segments_fusion.json) |
+
+Le [programme](./segments.py) utilise split-and-merge avec ajustement ACP.
+Il trie chaque scan par angle, coupe les ruptures de plus de 50 cm et
+subdivise les groupes dont l'écart maximal à la droite dépasse 5 cm. Les
+voisins sont réunis si leur angle diffère de 10° au maximum et si tous
+leurs points respectent encore le seuil de 5 cm. Une rupture initiale
+interdit la fusion entre les groupes. Un segment retenu nécessite au moins
+6 points et 25 cm. Les seuils sont des choix réglables.
+
+Pour Fusion, l'extraction se fait séparément dans chaque scan local, puis
+les segments sont transformés avec les poses estimées du classeur. Les
+156 segments ne sont pas consolidés entre acquisitions : plusieurs peuvent
+représenter le même obstacle. Le programme ne classe pas murs et mobilier
+et ne complète pas les zones masquées. Cette superposition précède la
+construction d'une carte vectorielle consolidée.
+
+Les CSV contiennent `x1,y1,x2,y2` en mètres. Les JSON conservent les seuils,
+les poses, les sources et le nombre de segments par acquisition.
+
+```bash
+python segments.py "Scan 1.xlsx" --output segments/segments_scan_1 --title "Extraction de segments — Scan 1"
+python segments.py "scan 2.xlsx" --output segments/segments_scan_2 --title "Extraction de segments — Scan 2"
+python segments.py "scan 3.xlsx" --output segments/segments_scan_3 --title "Extraction de segments — Scan 3"
+python segments.py "scan fusion.xlsx" --output segments/segments_fusion --title "Extraction de segments — Fusion"
+```
+
+Ajouter `--no-show` pour exporter sans fenêtre. Les options `--max-error`,
+`--max-gap`, `--min-points` et `--min-length` règlent les seuils.
+
+Le module calcule aussi l'angle non orienté (0 à 90°), la proximité en
+angle et en distance entre segments finis, la fusion ACP, l'intersection
+et le découpage. Le découpage exige une intersection située sur les deux
+segments et intérieure au segment à couper. Une intersection à une
+extrémité ou des segments colinéaires le laissent intact. Le plus long
+côté est gardé ; en cas d'égalité à 1 micromètre près, le côté du premier
+point est retenu.
+
+```bash
+python -m pytest tests/test_segments.py -q
+```
+
 ## Visualiseur interactif
 
 Le [visualiseur](./viewer.py) permet d'afficher plusieurs scans d'acquisition,
