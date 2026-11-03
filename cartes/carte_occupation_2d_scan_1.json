@@ -1,0 +1,48 @@
+{
+  "resolution_m": 0.05,
+  "origin_xy_m": [
+    -1.7000000000000002,
+    -8.700000000000001
+  ],
+  "shape_rows_columns": [
+    268,
+    277
+  ],
+  "row_order": "y croissant (bas vers haut)",
+  "states": {
+    "-1": "inconnu ou incertain",
+    "0": "libre",
+    "1": "occupé"
+  },
+  "pose_units": "mètres, degrés antihoraires",
+  "history": [
+    {
+      "source": "/Users/amazighe/Desktop/Scan 1.xlsx",
+      "sheet": "scan_20261102_130244_385674",
+      "input_points": 455,
+      "valid_points": 454,
+      "zero_distance_ignored": 1,
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "pose_method": "pose fournie ou origine conventionnelle du scan unique"
+    }
+  ],
+  "log_odds": {
+    "free_increment": -0.4,
+    "occupied_increment": 0.85,
+    "bounds": [
+      -4,
+      4
+    ],
+    "free_threshold": 0.45,
+    "occupied_threshold": 0.65
+  },
+  "cell_counts": {
+    "-1": 49802,
+    "0": 24050,
+    "1": 384
+  }
+}

@@ -16,8 +16,57 @@ Pour Excel, tracer `y_m` en fonction de `x_m` dans un graphique XY.
 
 Les déplacements et rotations ont été estimés automatiquement par recalage.
 L'alignement reste à vérifier visuellement ; les zones non observées n'ont
-pas été complétées artificiellement. Le code et les scans bruts sont conservés
+pas été complétées artificiellement. Les scans bruts sont conservés
 séparément sur le poste local.
+
+## Cartes d'occupation 2D
+
+Cases de **5 cm**. Blanc : libre ; noir : occupé ; gris : inconnu ou incertain.
+Les flèches rouges représentent les origines et orientations du LiDAR.
+
+| Carte | Image | Grille CSV | Carte réutilisable | Métadonnées |
+| --- | --- | --- | --- | --- |
+| Scan 1 — 454 impacts | [PNG](./cartes/carte_occupation_2d_scan_1.png) | [CSV](./cartes/carte_occupation_2d_scan_1.csv) | [NPZ](./cartes/carte_occupation_2d_scan_1.npz) | [JSON](./cartes/carte_occupation_2d_scan_1.json) |
+| Scan 2 — 454 impacts | [PNG](./cartes/carte_occupation_2d_scan_2.png) | [CSV](./cartes/carte_occupation_2d_scan_2.csv) | [NPZ](./cartes/carte_occupation_2d_scan_2.npz) | [JSON](./cartes/carte_occupation_2d_scan_2.json) |
+| Scan 3 — 454 impacts | [PNG](./cartes/carte_occupation_2d_scan_3.png) | [CSV](./cartes/carte_occupation_2d_scan_3.csv) | [NPZ](./cartes/carte_occupation_2d_scan_3.npz) | [JSON](./cartes/carte_occupation_2d_scan_3.json) |
+| Fusion — 5 444 impacts, 12 origines | [PNG](./cartes/carte_occupation_2d_fusion.png) | [CSV](./cartes/carte_occupation_2d_fusion.csv) | [NPZ](./cartes/carte_occupation_2d_fusion.npz) | [JSON](./cartes/carte_occupation_2d_fusion.json) |
+
+Les trois cartes individuelles utilisent chacune l'origine conventionnelle
+`(0, 0, 0°)` et ne sont donc pas directement superposables. La carte Fusion
+utilise les 12 acquisitions contenues dans le classeur fusionné. Les couples
+de coordonnées locales et globales permettent de retrouver la transformation
+déjà appliquée à chaque acquisition et son origine LiDAR. Ces poses restent
+celles d'un alignement estimé, pas des positions mesurées.
+
+Le [programme](./gridmap.py) parcourt les rayons avec Bresenham. Les cases
+traversées reçoivent une observation libre, les impacts une observation occupée.
+Les observations sont accumulées en log-odds bornés ; un impact est prioritaire
+sur les passages libres du même scan. Les distances nulles sont ignorées.
+Les zones entre les rayons et derrière les impacts restent inconnues si elles
+n'ont pas été observées depuis une autre pose.
+
+Les CSV de grille contiennent `-1` pour inconnu/incertain, `0` pour libre,
+`1` pour occupé. La ligne zéro correspond au Y minimal. Résolution, origine,
+poses et seuils figurent dans les JSON. Les NPZ conservent les observations
+permettant de mettre la carte à jour avec un autre scan.
+
+```bash
+python -m pip install -r requirements.txt
+python gridmap.py "Scan 1.xlsx" --output cartes/carte_occupation_2d_scan_1 --title "Carte d'occupation 2D — Scan 1"
+python gridmap.py "scan 2.xlsx" --output cartes/carte_occupation_2d_scan_2 --title "Carte d'occupation 2D — Scan 2"
+python gridmap.py "scan 3.xlsx" --output cartes/carte_occupation_2d_scan_3 --title "Carte d'occupation 2D — Scan 3"
+python gridmap.py "scan fusion.xlsx" --output cartes/carte_occupation_2d_fusion --title "Carte d'occupation 2D — Fusion"
+```
+
+Ajouter `--no-show` pour exporter sans ouvrir de fenêtre. Pour mettre à jour
+une carte avec un nouveau scan local, utiliser `--map-in chemin/carte.npz`
+et `--pose X Y THETA`, en mètres et degrés antihoraires. La carte s'agrandit
+si nécessaire et conserve sa résolution. Le classeur fusionné fournit déjà
+ses transformations : ne pas ajouter de pose manuelle dans ce cas.
+
+```bash
+python -m pytest tests/test_gridmap.py tests/test_viewer.py -q
+```
 
 ## Visualiseur interactif
 
