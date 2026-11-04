@@ -5,7 +5,7 @@ B. Exploration autonome en simulation : chaque SLAM avec son propre explorateur.
 C. Rejeu des 12 scans réels : pas de vérité terrain, comparaison aux poses
    de merge_scans (ICP hors ligne), qui ne sont qu'une référence estimée.
 
-Usage : python compare_tp3.py   (depuis le dossier version_amelioree)
+Usage : python compare_tp3.py   (depuis le dossier "upgrade code with IA")
 """
 
 import json
