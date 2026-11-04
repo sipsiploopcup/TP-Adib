@@ -20,15 +20,48 @@ def valid_points(points):
     return points
 
 
-class ScanMatcher(GridMatcher):
-    """Même recherche de poses que les autres références, distance au point le plus proche."""
+def local_normals(reference, tree, neighbours=6, radius=0.15, max_flatness=0.15):
+    """Normale du mur local par ACP des voisins ; NaN si le voisinage n'est pas rectiligne."""
+    distances, indices = tree.query(reference, k=min(neighbours, len(reference)))
+    normals = np.full(reference.shape, np.nan)
+    for i, (d, idx) in enumerate(zip(distances, indices)):
+        group = reference[idx[d <= radius]]
+        if len(group) < 3:
+            continue
+        values, vectors = np.linalg.eigh(np.cov((group - group.mean(axis=0)).T))
+        if values[1] > 0 and np.sqrt(values[0] / values[1]) <= max_flatness:
+            normals[i] = vectors[:, 0]
+    return normals
 
-    def __init__(self, reference, max_distance=0.6):
+
+class ScanMatcher(GridMatcher):
+    """Même recherche de poses que les autres références.
+
+    point_to_line=True : distance mesurée le long de la normale du mur local.
+    Un LiDAR échantillonne tous les ~0,8° ; avec une distance point-à-point,
+    tourner la requête d'un pas d'échantillonnage pose ses points exactement
+    sur ceux de la référence et crée un faux minimum. La distance au mur local
+    ne dépend plus de l'échantillonnage. Repli point-à-point loin d'un mur
+    (> line_radius) ou si le voisinage n'est pas rectiligne.
+    """
+
+    def __init__(self, reference, max_distance=0.6, point_to_line=True, line_radius=0.15):
         self.reference = valid_points(reference).copy()
         if not np.isfinite(max_distance) or max_distance <= 0.2:
             raise ValueError("Distance maximale finie et supérieure à 0,2 m requise")
         self.max_distance = max_distance
         self.tree = cKDTree(self.reference)
+        self.point_to_line, self.line_radius = point_to_line, line_radius
+        self.normals = (local_normals(self.reference, self.tree) if point_to_line
+                        else np.full(self.reference.shape, np.nan))
+
+    def nearest(self, world):
+        """Distance (point-à-ligne si possible), indice du voisin et normale utilisée."""
+        distances, indices = self.tree.query(world)
+        normals = self.normals[indices]
+        usable = np.isfinite(normals[:, 0]) & (distances <= self.line_radius)
+        along = np.abs(np.sum((world - self.reference[indices]) * np.nan_to_num(normals), axis=1))
+        return np.where(usable, along, distances), indices, usable
 
     def distances(self, points, poses):
         angles = np.deg2rad(poses[:, 2])
@@ -37,7 +70,7 @@ class ScanMatcher(GridMatcher):
         world_x = cosine * x - sine * y + poses[:, 0, None]
         world_y = sine * x + cosine * y + poses[:, 1, None]
         world = np.column_stack((world_x.ravel(), world_y.ravel()))
-        distances = self.tree.query(world)[0]
+        distances = self.nearest(world)[0]
         return np.minimum(distances, self.max_distance).reshape(world_x.shape)
 
 
@@ -52,8 +85,24 @@ def rigid_fit(source, target):
     return rotation, center_t - rotation @ center_s
 
 
+def point_to_line_step(moved, targets, normals):
+    """Pas de Gauss-Newton linéarisé (petit angle) pour sum((n·(R p + t - q))²)."""
+    jacobian = np.column_stack((normals[:, 0], normals[:, 1],
+                                normals[:, 1] * moved[:, 0] - normals[:, 0] * moved[:, 1]))
+    residual = np.sum((moved - targets) * normals, axis=1)
+    dx, dy, dtheta = np.linalg.lstsq(jacobian, -residual, rcond=None)[0]
+    rotation = np.array([[np.cos(dtheta), -np.sin(dtheta)], [np.sin(dtheta), np.cos(dtheta)]])
+    return rotation, np.array([dx, dy])
+
+
 class ICPMatcher(ScanMatcher):
-    """ICP point-à-point local, avec rejet des correspondances les plus éloignées."""
+    """ICP local avec rejet des correspondances les plus éloignées.
+
+    Deux phases : point-à-point jusqu'à convergence (robuste loin de la
+    solution), puis point-à-ligne pour la précision finale (insensible au pas
+    d'échantillonnage du LiDAR). Le résultat point-à-ligne n'est gardé que
+    s'il n'augmente pas l'erreur moyenne au mur local.
+    """
 
     def match(self, points, initial=(0, 0, 0), xy_range=2.0, angle_range=30.0,
               max_iterations=80, correspondence_gate=1.2):
@@ -70,22 +119,38 @@ class ICPMatcher(ScanMatcher):
         rotation = np.array([[np.cos(theta), -np.sin(theta)], [np.sin(theta), np.cos(theta)]])
         translation = initial[:2].copy()
         converged, iterations, correspondences = False, 0, 0
-        for iteration in range(max_iterations):
+        phase, coarse = 0, None
+        for iteration in range(max_iterations + 30):
             iterations = iteration + 1
             moved = points @ rotation.T + translation
-            distances, indices = self.tree.query(moved)
+            distances, indices, usable = self.nearest(moved)
             cutoff = min(correspondence_gate, float(np.quantile(distances, 0.8)))
             mask = distances <= cutoff + 1e-12
             correspondences = int(mask.sum())
             if correspondences < 6 or np.linalg.norm(moved[mask] - moved[mask].mean(axis=0)) < 1e-9:
                 break
-            delta_r, delta_t = rigid_fit(moved[mask], self.reference[indices[mask]])
+            lines = mask & usable
+            if phase == 1 and lines.sum() >= 12:
+                delta_r, delta_t = point_to_line_step(moved[lines], self.reference[indices[lines]],
+                                                      self.normals[indices[lines]])
+            else:
+                delta_r, delta_t = rigid_fit(moved[mask], self.reference[indices[mask]])
             rotation = delta_r @ rotation
             translation = delta_r @ translation + delta_t
             angle_step = abs(np.rad2deg(np.arctan2(delta_r[1, 0], delta_r[0, 0])))
             if np.linalg.norm(delta_t) < 1e-5 and angle_step < 1e-3:
+                if phase == 0 and self.point_to_line and iteration < max_iterations + 29:
+                    phase, coarse = 1, (rotation.copy(), translation.copy())
+                    continue
                 converged = True
                 break
+            if phase == 0 and iteration >= max_iterations - 1:
+                break
+        if coarse is not None:
+            def score(r, t):
+                return np.mean(np.minimum(self.nearest(points @ r.T + t)[0], self.max_distance) ** 2)
+            if score(rotation, translation) > score(*coarse) + 1e-12:
+                rotation, translation = coarse
         angle = float(np.rad2deg(np.arctan2(rotation[1, 0], rotation[0, 0])))
         pose = [float(translation[0]), float(translation[1]), angle]
         distances = self.distances(points, np.array([pose]))[0]

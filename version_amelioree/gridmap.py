@@ -169,6 +169,34 @@ def bresenham(start, end):
             y += sy
 
 
+def trace_rays(start, ends):
+    """Bresenham exécuté sur tous les rayons à la fois (mêmes cellules que bresenham).
+
+    Renvoie (cellules traversées, cellules d'impact) en (ligne, colonne).
+    La boucle porte sur la longueur du plus long rayon, pas sur les rayons :
+    même arithmétique entière que bresenham(), appliquée en vecteurs.
+    """
+    ends = np.asarray(ends, dtype=np.int64).reshape(-1, 2)
+    y = np.full(len(ends), start[0], dtype=np.int64)
+    x = np.full(len(ends), start[1], dtype=np.int64)
+    y_end, x_end = ends[:, 0], ends[:, 1]
+    dx, dy = np.abs(x_end - x), -np.abs(y_end - y)
+    sx, sy = np.where(x < x_end, 1, -1), np.where(y < y_end, 1, -1)
+    error = dx + dy
+    active = (x != x_end) | (y != y_end)
+    visited = [np.empty((0, 2), dtype=np.int64)]
+    while active.any():
+        i = np.nonzero(active)[0]
+        visited.append(np.column_stack((y[i], x[i])))
+        twice = 2 * error[i]
+        step_x, step_y = twice >= dy[i], twice <= dx[i]
+        error[i] += np.where(step_x, dy[i], 0) + np.where(step_y, dx[i], 0)
+        x[i] += np.where(step_x, sx[i], 0)
+        y[i] += np.where(step_y, sy[i], 0)
+        active[i] = (x[i] != x_end[i]) | (y[i] != y_end[i])
+    return np.vstack(visited), ends
+
+
 @dataclass
 class OccupancyGrid:
     resolution: float = 0.05
@@ -251,16 +279,15 @@ def update_map(grid, local_points, pose=(0, 0, 0)):
     world = apply_pose(points, *pose)
     grid.ensure_bounds(np.vstack([world, pose[:2]]))
     start = grid.cell(pose[:2])
-    free, occupied = set(), set()
-    for point in world:
-        cells = list(bresenham(start, grid.cell(point)))
-        free.update(cells[:-1])
-        occupied.add(cells[-1])
+    ends = np.floor(world / grid.resolution).astype(np.int64) - grid.origin_cell
+    free, occupied = trace_rays(start, ends[:, ::-1])
+    width = grid.log_odds.shape[1]
     # Un autre rayon ne doit pas effacer un impact du même scan.
-    free.difference_update(occupied)
+    occupied = np.unique(occupied[:, 0] * width + occupied[:, 1])
+    free = np.setdiff1d(free[:, 0] * width + free[:, 1], occupied)
     for cells, increment in ((free, -0.4), (occupied, 0.85)):
-        if cells:
-            rows, columns = np.array(list(cells)).T
+        if len(cells):
+            rows, columns = np.divmod(cells, width)
             grid.log_odds[rows, columns] = np.clip(grid.log_odds[rows, columns] + increment, -4, 4)
             grid.observed[rows, columns] = True
     return grid

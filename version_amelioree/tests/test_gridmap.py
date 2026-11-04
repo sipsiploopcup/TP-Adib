@@ -111,3 +111,37 @@ def test_inconsistent_fusion_coordinates_are_rejected():
     world[2] += 2
     with pytest.raises(ValueError, match="incohérentes"):
         recover_pose(local, world)
+
+
+def test_vectorised_update_matches_per_ray_bresenham():
+    """Version améliorée : mêmes cellules que la boucle rayon par rayon d'origine."""
+    from gridmap import bresenham, update_map
+
+    def reference_update(grid, points, pose):
+        world = apply_pose(points, *pose)
+        grid.ensure_bounds(np.vstack([world, np.asarray(pose[:2])]))
+        start = grid.cell(pose[:2])
+        free, occupied = set(), set()
+        for point in world:
+            cells = list(bresenham(start, grid.cell(point)))
+            free.update(cells[:-1])
+            occupied.add(cells[-1])
+        free.difference_update(occupied)
+        for cells, increment in ((free, -0.4), (occupied, 0.85)):
+            if cells:
+                rows, columns = np.array(list(cells)).T
+                grid.log_odds[rows, columns] = np.clip(grid.log_odds[rows, columns] + increment, -4, 4)
+                grid.observed[rows, columns] = True
+        return grid
+
+    rng = np.random.default_rng(3)
+    for trial in range(20):
+        points = rng.uniform(-6, 6, (300, 2))
+        points[:5] = rng.uniform(-.01, .01, (5, 2))  # impacts dans la cellule du robot
+        poses = [rng.uniform([-1, -1, -180], [1, 1, 180]) for _ in range(3)]
+        fast, slow = OccupancyGrid(0.05), OccupancyGrid(0.05)
+        for pose in poses:
+            update_map(fast, points, pose)
+            reference_update(slow, points, pose)
+        np.testing.assert_array_equal(fast.log_odds, slow.log_odds)
+        np.testing.assert_array_equal(fast.observed, slow.observed)
