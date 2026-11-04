@@ -1,4 +1,4 @@
-"""Tests de la version Claude du SLAM (scan-sur-carte + exploration)."""
+"""Tests de la variante scan-sur-carte du SLAM et de son exploration."""
 
 import sys
 from pathlib import Path

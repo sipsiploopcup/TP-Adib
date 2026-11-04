@@ -1,4 +1,4 @@
-"""Compare le SLAM de Codex (slam.py) et la version Claude (slam_carte.py).
+"""Compare le SLAM principal (slam.py) et la variante scan-sur-carte (slam_carte.py).
 
 A. Trajet imposé en simulation : mêmes scans, même odométrie bruitée pour les deux.
 B. Exploration autonome en simulation : chaque SLAM avec son propre explorateur.
@@ -41,7 +41,7 @@ def rectangle(x0, y0, x1, y1):
 
 DESKS = [(x, y, x + 1.4, y + 0.6) for y in (2.0, 4.0) for x in (1.5, 3.8, 6.1)] + [(4.0, 6.0, 5.2, 6.6)]
 ENVIRONMENTS = {
-    "salle_codex": {
+    "salle_simple": {
         "segments": SIMULATION_SEGMENTS, "start": (0.0, 0.0, 0.0), "box": (-4, -3, 6, 5), "solids": [],
         "route": [(5, 0), (5, 4), (-3, 4), (-3, 0), (0, 0)]},
     "salle_de_classe": {
@@ -94,7 +94,7 @@ def scripted_actions(truth, route_index, route):
 
 
 def make(name):
-    if name == "codex":
+    if name == "principal":
         return IncrementalSLAM(SLAMConfig())
     return MapSLAM()
 
@@ -155,7 +155,7 @@ def bench_scripted(env_name, seed):
         truth, nominal = execute(truth, action, rng)
         data.append((scan(env, truth, seed * 1000 + len(data)), truth.copy(), nominal))
     results = {}
-    for name in ("codex", "claude"):
+    for name in ("principal", "variante"):
         slam, estimates, times, accepted = make(name), [], [], 0
         for i, (points, t, nominal) in enumerate(data):
             prediction = np.array(env["start"], float) if nominal is None else compose(slam.pose, nominal)
@@ -178,7 +178,7 @@ def bench_exploration(env_name, seed, name, max_steps=250):
     env = ENVIRONMENTS[env_name]
     rng = np.random.default_rng(seed)
     slam = make(name)
-    explorer = FrontierExplorer() if name == "codex" else NearestFrontierExplorer()
+    explorer = FrontierExplorer() if name == "principal" else NearestFrontierExplorer()
     truth, prediction = np.array(env["start"], float), np.array(env["start"], float)
     estimates, truths, times, distance, reason = [], [], [], 0.0, "max_pas"
     for step in range(max_steps):
@@ -212,8 +212,8 @@ def bench_real():
     paths = [p for p in paths if p.name == anchor] + [p for p in paths if p.name != anchor]
     out = {}
     for label_, make_slam, kwargs in (
-            ("codex", lambda: IncrementalSLAM(SLAMConfig(max_step=15, max_rotation=180)), {"wide_search": True}),
-            ("claude", MapSLAM, {"wide": True})):
+            ("principal", lambda: IncrementalSLAM(SLAMConfig(max_step=15, max_rotation=180)), {"wide_search": True}),
+            ("variante", MapSLAM, {"wide": True})):
         slam, rows = make_slam(), []
         for p in paths:
             points, _ = load_measurements(p)
@@ -268,11 +268,11 @@ def main():
         runs = [bench_scripted(env, s) for s in seeds]
         report["A_trajet_impose"][env] = clean(runs)
         last = runs[0]
-        draw(axes[row, 0], last["codex"]["_slam"], f"A {env} — Codex", last["_truth"], last["codex"]["_est"])
-        draw(axes[row, 1], last["claude"]["_slam"], f"A {env} — Claude", last["_truth"], last["claude"]["_est"])
-        expl = {name: [bench_exploration(env, s, name) for s in seeds[:2]] for name in ("codex", "claude")}
+        draw(axes[row, 0], last["principal"]["_slam"], f"A {env} — principal", last["_truth"], last["principal"]["_est"])
+        draw(axes[row, 1], last["variante"]["_slam"], f"A {env} — variante", last["_truth"], last["variante"]["_est"])
+        expl = {name: [bench_exploration(env, s, name) for s in seeds[:2]] for name in ("principal", "variante")}
         report["B_exploration"][env] = clean(expl)
-        for col, name in ((2, "codex"), (3, "claude")):
+        for col, name in ((2, "principal"), (3, "variante")):
             r = expl[name][0]
             draw(axes[row, col], r["_slam"], f"B {env} — {name} ({r['pas']} pas, {r['arret']})",
                  r["_truth"], r["_est"])
@@ -284,7 +284,7 @@ def main():
     real = bench_real()
     report["C_scans_reels"] = clean(real)
     fig, axes = plt.subplots(1, 2, figsize=(14, 7))
-    for ax, name in zip(axes, ("codex", "claude")):
+    for ax, name in zip(axes, ("principal", "variante")):
         s = real[name]["_slam"]
         draw(ax, s, f"C scans réels — {name} : {real[name]['acceptes']}/{real[name]['scans']} acceptés",
              estimates=np.array([f["pose"] for f in s.frames]))
@@ -296,7 +296,7 @@ def main():
     # Résumé lisible : moyennes sur les graines
     lines = []
     for env, runs in report["A_trajet_impose"].items():
-        for name in ("codex", "claude"):
+        for name in ("principal", "variante"):
             r = [x[name] for x in runs]
             lines.append(f"A {env:16s} {name:7s} pos moy {mean_of(r, 'erreur_pos_moy_m'):.3f} m | "
                          f"max {mean_of(r, 'erreur_pos_max_m'):.3f} m | ang moy {mean_of(r, 'erreur_angle_moy_deg'):.2f}° | "

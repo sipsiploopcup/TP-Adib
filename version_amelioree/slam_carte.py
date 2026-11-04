@@ -1,4 +1,4 @@
-"""SLAM 2D scan-sur-carte (version Claude du TP3).
+"""SLAM 2D scan-sur-carte (variante du TP3).
 
 Chaque scan est recalé sur la grille d'occupation construite avec les scans
 précédents (GridMatcher du jour 2), autour d'une prédiction d'odométrie.
