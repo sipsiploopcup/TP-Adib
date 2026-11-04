@@ -52,12 +52,14 @@
 {\LARGE Acquisition et cartographie 2D\\à partir d'un LiDAR LD06\par}
 \vspace{0.9cm}
 {\large Nuages de points, cartes d'occupation\\et cartes vectorielles\par}
+\vspace{0.6cm}
+{\large\itshape Version améliorée\par}
 \vfill
 {\large Auteur\par}
 \vspace{0.2cm}
 {\LARGE\bfseries Adib OUAMOU\par}
 \vspace{1.0cm}
-{\large 3 novembre 2026\par}
+{\large 3 novembre 2026 --- version améliorée du 4 novembre 2026\par}
 \vspace{1cm}
 \end{titlepage}
 
@@ -261,6 +263,28 @@ Fusion & 5\,444 & $291\times271$ & 46\,065 & 1\,110 \\
 \end{tabular}
 \end{table}
 
+\subsubsection*{Version améliorée : tracé des rayons vectorisé}
+Dans la version d'origine, \code{update_map} parcourait les rayons un par
+un en Python. La nouvelle fonction \code{trace_rays} exécute le même
+algorithme de Bresenham sur \emph{tous les rayons à la fois} : la boucle
+porte sur la longueur du plus long rayon, et chaque pas applique aux
+vecteurs NumPy la même arithmétique entière (erreur cumulée, pas en $x$
+et en $y$). Les cellules traversées et les cellules d'impact sont donc
+strictement les mêmes ; la règle selon laquelle un impact du même scan
+n'est pas effacé par un autre rayon est conservée.
+
+\begin{itemize}
+\item \textbf{Équivalence} : un test compare 60 mises à jour aléatoires
+(dont des impacts dans la cellule du robot) à l'implémentation d'origine ;
+les log-odds et les cellules observées sont identiques bit à bit. Les quatre
+cartes du tableau ci-dessus sont régénérées à l'identique.
+\item \textbf{Temps} : sur Scan 1 (454 impacts), une mise à jour passe de
+34 ms à 13 ms, soit un facteur 3 environ. Le gain reste modéré car les
+rayons d'une pièce sont courts (2 à 4 m, soit 40 à 80 cellules) ; il compte
+surtout au TP n° 3, où la carte est mise à jour à chaque scan et
+reconstruite après chaque fermeture de boucle.
+\end{itemize}
+
 Plusieurs impacts peuvent atteindre la même cellule ; le nombre de cellules
 occupées n'est donc pas égal au nombre de mesures. Les cartes individuelles
 utilisent chacune la pose conventionnelle $(0,0,0^\circ)$ dans leur propre
@@ -440,7 +464,10 @@ Les graphiques n'ont pas tous les mêmes limites.}
 \clearpage
 \section{Validation et analyse critique}
 \subsection{Tests logiciels}
-La suite de tests exécutée sur le projet comporte \textbf{48 tests réussis}.
+La suite de tests exécutée sur le projet comportait \textbf{48 tests réussis}
+pour le TP n° 1. Dans la version améliorée, la suite complète des trois TP
+compte \textbf{98 tests réussis}, dont le test d'équivalence du tracé de
+rayons vectorisé.
 Les jeux géométriques synthétiques servent uniquement à vérifier les
 algorithmes ; les figures du rapport utilisent les acquisitions réelles.
 
@@ -507,7 +534,8 @@ vectorielle consolidée.
 
 Les résultats comprennent trois cartes individuelles et une carte Fusion
 fondée sur douze acquisitions et 5\,444 impacts valides. Les algorithmes
-sont vérifiés par 48 tests. L'amélioration prioritaire est la validation
+sont vérifiés par 48 tests. Dans la version améliorée, la mise à jour de la
+grille est trois fois plus rapide pour des cartes identiques. L'amélioration prioritaire est la validation
 physique des poses et des surfaces dédoublées, puis la comparaison des
 méthodes aux documents détaillés du professeur lorsqu'ils seront disponibles.
 
@@ -531,15 +559,16 @@ Depuis un environnement contenant les dépendances du projet :
 python -m pip install -r requirements.txt
 python -m pytest -q
 
-python gridmap.py "Scan 1.xlsx" --no-show \
+cd version_amelioree
+python gridmap.py "donnees/Scan 1.xlsx" --no-show \
   --output resultats/carte_occupation_2d_scan_1
-python segments.py "Scan 1.xlsx" --no-show \
+python segments.py "donnees/Scan 1.xlsx" --no-show \
   --output resultats/segments_scan_1
-python vectormap.py "scan fusion.xlsx" --no-show \
+python vectormap.py "donnees/scan fusion.xlsx" --no-show \
   --title "Carte vectorielle - Fusion" \
   --output resultats/carte_vectorielle_fusion
 \end{lstlisting}
-Les chemins des classeurs sont à adapter à leur emplacement. Les figures
+Les commandes s'exécutent depuis le dossier \code{version_amelioree}. Les figures
 du rapport sont regroupées dans \code{figures/} ; le fichier \LaTeX{}
 peut être compilé depuis le dossier du rapport avec Tectonic ou une
 distribution \LaTeX{} contenant les paquets utilisés.
@@ -547,8 +576,9 @@ distribution \LaTeX{} contenant les paquets utilisés.
 Le dépôt de publication contient les classeurs Excel, les cartes, les
 segments et les outils publiés :
 \url{https://github.com/sipsiploopcup/TP-Adib}.
-Les scripts d'acquisition et de recalage ainsi que les scans bruts sont
-également conservés dans le projet local.
+Dans la version améliorée, les scripts d'acquisition et de recalage sont
+publiés avec le code, et les douze scans bruts figurent dans
+\code{version_amelioree/donnees/scans}.
 
 \section{Ressources utilisées}
 \begin{itemize}

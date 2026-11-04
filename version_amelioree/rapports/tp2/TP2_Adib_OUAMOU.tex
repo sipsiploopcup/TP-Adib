@@ -53,12 +53,14 @@
 {\LARGE Localisation et scan matching\\à partir de mesures LiDAR\par}
 \vspace{0.9cm}
 {\large Cartes d'occupation, cartes vectorielles\\et recalage entre scans\par}
+\vspace{0.6cm}
+{\large\itshape Version améliorée\par}
 \vfill
 {\large Auteur\par}
 \vspace{0.2cm}
 {\LARGE\bfseries Adib OUAMOU\par}
 \vspace{1cm}
-{\large 3 novembre 2026\par}
+{\large 3 novembre 2026 --- version améliorée du 4 novembre 2026\par}
 \vspace{1cm}
 \end{titlepage}
 
@@ -300,9 +302,21 @@ plus proche voisin :
 La fonction de coût et les trois niveaux de recherche de pose sont ceux
 des méthodes précédentes. Seule la représentation de la référence change.
 
-\subsection{ICP point-à-point}
+\textbf{Version améliorée : distance point-à-ligne.} Chaque point de
+référence reçoit la normale $\mathbf n_r$ du mur local, obtenue par analyse
+en composantes principales de ses voisins à moins de 15 cm, lorsque ce
+voisinage est rectiligne (rapport des écarts-types $\le 0{,}15$). La distance
+devient l'écart le long de cette normale :
+\[
+ d(\mathbf q)=\bigl|\mathbf n_r^{\top}(\mathbf q-\mathbf r)\bigr|
+ \quad\text{si } \|\mathbf q-\mathbf r\|\le 0{,}15\text{ m},
+\]
+et reste la distance point-à-point sinon (coins, objets isolés, points
+éloignés de tout mur). La section~\ref{sec:amelioration} en donne l'effet mesuré.
+
+\subsection{ICP en deux phases : point-à-point puis point-à-ligne}
 Une deuxième méthode, \code{ICPMatcher}, affine directement la pose initiale
-par ICP (\emph{Iterative Closest Point}). À chaque itération :
+par ICP (\emph{Iterative Closest Point}). Dans la première phase, à chaque itération :
 \begin{enumerate}[nosep]
 \item Transformer les points du scan requête avec la pose courante.
 \item Associer chaque point à son plus proche voisin dans la référence.
@@ -328,6 +342,22 @@ Au moins six correspondances sont requises. L'arrêt intervient après
 à $10^{-5}$ m en translation et $10^{-3}$ degré en rotation.
 L'ICP part uniquement de la pose initiale fournie ; aucune initialisation
 globale cachée n'est utilisée dans la comparaison commune.
+
+\textbf{Version améliorée : seconde phase point-à-ligne.} Après convergence
+de la phase point-à-point, jusqu'à 30 itérations supplémentaires minimisent
+la distance aux murs locaux, par un pas de Gauss-Newton linéarisé :
+\[
+ \min_{\delta x,\delta y,\delta\theta}\sum_i
+ \Bigl(\mathbf n_i^{\top}\bigl(\mathbf q_i-\mathbf r_i
+ +\delta\theta\,J\mathbf q_i+\delta\mathbf t\bigr)\Bigr)^2,
+ \qquad J=\begin{pmatrix}0&-1\\1&0\end{pmatrix},
+\]
+sur les correspondances dotées d'une normale fiable (au moins 12).
+Lancé seul, le point-à-ligne divergeait sur 5 essais sur 9 depuis les
+initialisations éloignées : les points glissent le long des murs.
+La phase point-à-point sert donc d'amorce robuste. Le résultat de la seconde
+phase n'est conservé que s'il ne dégrade pas le coût borné ; sinon la pose
+point-à-point est rendue.
 
 Contrairement à la recherche de poses bornée, l'ICP n'est pas contraint
 à rester dans la fenêtre $\pm2$ m/$\pm30^\circ$. Les sorties indiquent
@@ -431,10 +461,10 @@ dans les métadonnées. Les durées dépendent du poste et de sa charge.
 \toprule
 Méthode & $e_t$ moyen (m) & $e_\theta$ moyen & Temps moyen & Réussites \\
 \midrule
-Grille & 0,0245 & $0,533^\circ$ & 0,211 s & 9/9 \\
-Vectorielle & 0,0133 & $0,267^\circ$ & 1,900 s & 9/9 \\
-Recherche entre scans & 0,0108 & $0,333^\circ$ & 2,126 s & 9/9 \\
-ICP entre scans & 0,0085 & $0,277^\circ$ & 0,021 s & 9/9 \\
+Grille & 0,0245 & $0,533^\circ$ & 0,205 s & 9/9 \\
+Vectorielle & 0,0133 & $0,267^\circ$ & 1,843 s & 9/9 \\
+Recherche entre scans & 0,0080 & $0,267^\circ$ & 2,241 s & 9/9 \\
+ICP entre scans & 0,0068 & $0,111^\circ$ & 0,035 s & 9/9 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -466,9 +496,9 @@ Neuf essais par méthode et par scan.}
 \toprule
 Données & Grille & Vectorielle & Recherche scans & ICP scans \\
 \midrule
-Scan 1 & 0,0251 & 0,0407 & 0,0200 & 0,0158 \\
-Scan 2 & 0,0559 & 0,0224 & 0,0518 & 0,0294 \\
-Scan 3 & 0,0290 & 0,0114 & 0,0244 & 0,0270 \\
+Scan 1 & 0,0251 & 0,0407 & 0,0114 & 0,0158 \\
+Scan 2 & 0,0559 & 0,0224 & 0,0551 & 0,0294 \\
+Scan 3 & 0,0290 & 0,0114 & 0,0211 & 0,0270 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -481,9 +511,9 @@ en secondes, sur les points réels réservés.}
 \toprule
 Données & Grille & Vectorielle & Recherche scans & ICP scans \\
 \midrule
-Scan 1 & 0,800 (0,222) & 0,400 (2,417) & 0,800 (2,065) & 0,775 (0,014) \\
-Scan 2 & 1,000 (0,282) & 0,000 (1,142) & 1,000 (2,513) & 0,808 (0,049) \\
-Scan 3 & 0,800 (0,233) & 0,400 (1,140) & 0,800 (2,123) & 0,807 (0,020) \\
+Scan 1 & 0,800 (0,219) & 0,400 (2,395) & 0,600 (2,276) & 0,775 (0,068) \\
+Scan 2 & 1,000 (0,236) & 0,000 (1,073) & 1,000 (2,693) & 0,808 (0,029) \\
+Scan 3 & 0,800 (0,224) & 0,400 (1,154) & 0,800 (2,349) & 0,807 (0,034) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -491,7 +521,9 @@ Scan 3 & 0,800 (0,233) & 0,400 (1,140) & 0,800 (2,123) & 0,807 (0,020) \\
 Les quatre méthodes réussissent les neuf essais de chacun des trois scans
 dans cette campagne. Ces chiffres portent sur des changements de repère
 contrôlés d'une acquisition partagée en référence et test. Ils ne sont pas
-des erreurs physiques mesurées lors d'un déplacement du robot.
+des erreurs physiques mesurées lors d'un déplacement du robot. L'erreur
+angulaire d'environ $0{,}8^\circ$ commune aux méthodes à base de points est
+en grande partie un artefact de ce protocole (section~\ref{sec:amelioration}).
 
 \subsection{Sensibilité observée à l'initialisation}
 Dans les trois niveaux testés, les recherches hiérarchiques retrouvent les
@@ -531,15 +563,17 @@ l'acquisition, et non une orientation exactement mesurée entre ces fichiers.
 \toprule
 Méthode & $X$ (m) & $Y$ (m) & Angle & Temps \\
 \midrule
-Recherche & 0,000 & 0,080 & $87,600^\circ$ & 10,356 s \\
-ICP & $-0,002$ & 0,069 & $88,205^\circ$ & 0,022 s \\
+Recherche & 0,000 & 0,080 & $87,600^\circ$ & 11,979 s \\
+ICP & 0,006 & 0,076 & $87,402^\circ$ & 0,035 s \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 Les deux méthodes atteignent environ 99,8\,\% d'impacts à moins de 20 cm
-de la référence. Les résidus RMS bornés sont respectivement de 0,056 m et
-0,063 m. Ils décrivent la cohérence géométrique des points, pas une erreur
+de la référence. Les résidus RMS bornés sont respectivement de 0,053 m et
+0,054 m. Dans la version d'origine, l'ICP point-à-point donnait
+$88{,}205^\circ$ (résidu 0,063 m), à $0{,}6^\circ$ de la recherche ; les deux
+méthodes indépendantes ne diffèrent plus que de $0{,}2^\circ$. Ils décrivent la cohérence géométrique des points, pas une erreur
 de translation mesurée du robot.
 
 \begin{figure}[htbp]
@@ -571,7 +605,7 @@ Transformation & $X$ (m) & $Y$ (m) & Angle & Recouvrement \\
 \midrule
 Scan 2 vers Scan 1 & $-0,378$ & $-2,431$ & $90,692^\circ$ & 67,0\,\% \\
 Scan 3 vers Scan 1 & $-0,461$ & $-2,430$ & $178,166^\circ$ & 67,8\,\% \\
-Scan 3 vers Scan 2 & $-0,002$ & 0,070 & $88,199^\circ$ & 99,8\,\% \\
+Scan 3 vers Scan 2 & 0,006 & 0,076 & $87,402^\circ$ & 99,8\,\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -591,6 +625,69 @@ appliqués à ces paires sans vérité mesurée.
 son repère de référence : les positions ne sont pas directement comparables
 d'un panneau à l'autre. Gris : référence ; bleu et vert : requête recalée.}
 \end{figure}
+
+\section{Version améliorée : bilan avant/après}\label{sec:amelioration}
+\subsection{Effet mesuré des modifications}
+Les deux campagnes utilisent exactement les mêmes requêtes, poses vraies et
+initialisations ; seul le code de \code{localisation_scans.py} change.
+La grille et la carte vectorielle ne sont pas modifiées et donnent des
+résultats identiques.
+
+\begin{table}[htbp]
+\centering
+\caption{Méthodes entre scans : erreurs moyennes de position (cm) et d'angle,
+avant $\rightarrow$ après. Neuf essais par case ; 9/9 réussites partout.}
+\begin{tabular}{lll}
+\toprule
+Données & Recherche entre scans & ICP entre scans \\
+\midrule
+Simulation & 1,08 $\rightarrow$ \textbf{0,80} ; $0,333^\circ\rightarrow\mathbf{0,267^\circ}$ & 0,85 $\rightarrow$ \textbf{0,68} ; $0,277^\circ\rightarrow\mathbf{0,111^\circ}$ \\
+Scan 1 & 2,00 $\rightarrow$ \textbf{1,14} ; $0,800^\circ\rightarrow\mathbf{0,600^\circ}$ & 1,58 ; $0,775^\circ$ (inchangé) \\
+Scan 2 & 5,18 $\rightarrow$ 5,51 ; $1,000^\circ$ (inchangé) & 2,94 ; $0,808^\circ$ (inchangé) \\
+Scan 3 & 2,44 $\rightarrow$ \textbf{2,11} ; $0,800^\circ$ (inchangé) & 2,70 ; $0,807^\circ$ (inchangé) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+En simulation, l'ICP en deux phases divise l'erreur angulaire par 2,5.
+Sur les points réels réservés, la recherche s'améliore sur Scan 1 et
+Scan 3 mais se dégrade légèrement en position sur Scan 2 (+3 mm) ; l'ICP
+garde ses valeurs, car la seconde phase n'abaisse pas le coût et sa pose
+est rejetée. Le coût de calcul de l'ICP passe de 0,02 à 0,03--0,07 s.
+
+\subsection{Artefact d'échantillonnage du protocole contrôlé}
+La figure~\ref{fig:artefact} trace le coût d'un scan réel autour de la pose
+vraie connue. Pour les trois mesures à base de points (champ de distance de
+la grille, point-à-point et point-à-ligne), \emph{la pose vraie est un
+maximum local} ; deux minima apparaissent vers $\pm0{,}8^\circ$, l'ordre de
+grandeur du pas angulaire du LD06 ($0{,}73^\circ$ en médiane sur ce scan).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\linewidth]{artefact_echantillonnage.png}
+\caption{Coût RMS borné de Scan 2 en fonction de l'écart angulaire à la
+pose vraie (première pose du protocole). Les pointillés marquent les
+multiples du pas angulaire du LiDAR.}
+\label{fig:artefact}
+\end{figure}
+
+La référence (4 points sur 5) et le test (1 point sur 5) proviennent
+\emph{du même scan} et partagent la même grille angulaire. Une rotation
+d'environ un pas rapproche chaque point de test de points de référence
+voisins, ce qui réduit le coût plus que la pose vraie elle-même. Les trois
+méthodes à base de points convergent donc vers $\approx0{,}8^\circ$, avec des
+valeurs presque identiques (l'ICP donne exactement $0{,}790^\circ$ sur Scan 2).
+La carte vectorielle, qui mesure la distance à des segments ajustés,
+n'est pas concernée ($0{,}0$ à $0{,}4^\circ$).
+
+Conséquence : l'erreur angulaire des méthodes à base de points sur les
+points réels réservés \emph{ne mesure pas leur précision réelle}. La distance
+point-à-ligne ne supprime pas l'artefact, car seuls 52\,\% des points de
+Scan 2 ont un voisinage rectiligne ; les autres gardent la distance
+point-à-point. Entre deux acquisitions prises à des poses différentes,
+les grilles angulaires ne coïncident pas et l'artefact disparaît :
+c'est la situation des paires réelles et du SLAM du TP n° 3. Un protocole
+plus juste réserverait des \emph{scans entiers} acquis à des poses mesurées.
 
 \section{Incertitudes, validation et limites}
 \subsection{Incertitude des références}
@@ -660,12 +757,17 @@ les erreurs de pose connues, les durées et les taux de réussite.
 Les trois volets du TP disposent d'outils fonctionnels : localisation sur
 grille d'occupation, sur carte vectorielle et entre scans. Deux méthodes
 ont été développées pour ce dernier volet, une recherche hiérarchique et
-un ICP point-à-point.
+un ICP. Dans la version améliorée, toutes deux utilisent la distance au mur
+local (point-à-ligne) et l'ICP fonctionne en deux phases ; l'erreur angulaire
+simulée de l'ICP passe de $0{,}277^\circ$ à $0{,}111^\circ$, et les deux méthodes
+s'accordent à $0{,}2^\circ$ près sur la paire réelle Scan 2/Scan 3.
 
 La comparaison commune de 144 essais utilise les mêmes requêtes et les
 mêmes poses initiales pour toutes les méthodes. Dans la plage étudiée,
 elles respectent toutes les seuils de 0,10 m et $1^\circ$ ; l'ICP est le
-plus rapide sur ces données. Les campagnes exploratoires révèlent aussi
+plus rapide sur ces données. L'erreur d'environ $0{,}8^\circ$ commune aux
+méthodes à base de points sur les points réels réservés est un artefact
+d'échantillonnage du protocole, démontré par le tracé du coût. Les campagnes exploratoires révèlent aussi
 les difficultés de la grille fusionnée, conservées dans les résultats.
 
 Les trois paires des acquisitions réelles ont été recalées et visualisées.
@@ -691,16 +793,19 @@ pour les validations est Python 3.9.6.
 python -m pip install -r requirements.txt
 python -m pytest -q
 
+cd version_amelioree
 python comparaison_localisation.py --scans \
-  "Scan 1.xlsx" "scan 2.xlsx" "scan 3.xlsx"
+  "donnees/Scan 1.xlsx" "donnees/scan 2.xlsx" "donnees/scan 3.xlsx"
 
-python localisation_scans.py "scan 2.xlsx" "scan 3.xlsx" \
+python localisation_scans.py "donnees/scan 2.xlsx" "donnees/scan 3.xlsx" \
   --initial 0 0 90 --output resultats/paire_2_3
 
 python localisation_paires.py \
-  "Scan 1.xlsx" "scan 2.xlsx" "scan 3.xlsx"
+  "donnees/Scan 1.xlsx" "donnees/scan 2.xlsx" "donnees/scan 3.xlsx"
+
+python figures_ameliorees.py   # tracé de l'artefact d'échantillonnage
 \end{lstlisting}
-Les chemins sont à adapter à l'emplacement des classeurs.
+Les commandes s'exécutent depuis le dossier \code{version_amelioree}.
 La comparaison sans option \code{--scans} évalue uniquement la simulation.
 
 Les principales sorties sont :
