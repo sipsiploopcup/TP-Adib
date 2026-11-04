@@ -29,7 +29,7 @@ def local_normals(reference, tree, neighbours=6, radius=0.15, max_flatness=0.15)
         if len(group) < 3:
             continue
         values, vectors = np.linalg.eigh(np.cov((group - group.mean(axis=0)).T))
-        if values[1] > 0 and np.sqrt(values[0] / values[1]) <= max_flatness:
+        if values[1] > 0 and np.sqrt(max(values[0], 0.0) / values[1]) <= max_flatness:
             normals[i] = vectors[:, 0]
     return normals
 
