@@ -1,5 +1,42 @@
 # Scan fusionné de la chambre
 
+## Nouveau — version améliorée des TP 1, 2 et 3
+
+Le dossier [upgrade code with IA](./upgrade%20code%20with%20IA/) regroupe le
+code amélioré des trois TP, les données nécessaires pour tout réexécuter
+(dont les 12 scans bruts), 98 tests et les trois rapports mis à jour.
+Les fichiers à la racine de ce dépôt restent la version d'origine.
+
+| TP | Rapport | Apport principal |
+| --- | --- | --- |
+| TP n° 1 | [PDF](./upgrade%20code%20with%20IA/rapports/tp1/TP1_Adib_OUAMOU.pdf) | Mise à jour de la grille d'occupation environ 3 fois plus rapide, cartes identiques bit à bit |
+| TP n° 2 | [PDF](./upgrade%20code%20with%20IA/rapports/tp2/TP2_Adib_OUAMOU.pdf) | Distance point-à-ligne et ICP en deux phases ; erreur angulaire simulée de l'ICP de 0,277° à 0,111° ; artefact d'échantillonnage du protocole démontré |
+| TP n° 3 | [PDF](./upgrade%20code%20with%20IA/rapports/tp3/TP3_Adib_OUAMOU.pdf) | SLAM à graphe de poses, carte complète de la salle de classe à partir des scans réels ; bonus : exploration automatique et pilotage Wi-Fi du robot |
+
+Résultats du SLAM du TP n° 3 avant et après correction, en simulation à
+poses connues (salle de classe simulée) :
+
+| Indicateur | Avant | Après |
+| --- | --- | --- |
+| Erreur moyenne de position | 15,3 cm | 5,3 cm |
+| Erreur moyenne d'angle | 2,22° | 0,47° |
+| Cellules occupées sur un vrai mur | 75 % | 96 % |
+| Surface couverte en exploration automatique | 76 % | 99 % |
+
+Les scans réels n'ont pas de poses mesurées : sur ces données, les écarts
+indiqués dans les rapports mesurent une cohérence entre méthodes, pas une
+précision physique. Le mode robot Wi-Fi a été validé avec un ESP32 simulé,
+pas encore sur le robot réel.
+
+```bash
+cd "upgrade code with IA"
+python -m pip install -r requirements.txt
+python -m pytest -q
+```
+
+Le [README du dossier](./upgrade%20code%20with%20IA/README.md) détaille
+l'organisation, les améliorations et toutes les commandes.
+
 ## Rapport du TP n° 1 — Adib OUAMOU
 
 - [Rapport PDF (14 pages)](./rapport/TP1_Adib_OUAMOU.pdf)
@@ -138,8 +175,8 @@ Pour Excel, tracer `y_m` en fonction de `x_m` dans un graphique XY.
 
 Les déplacements et rotations ont été estimés automatiquement par recalage.
 L'alignement reste à vérifier visuellement ; les zones non observées n'ont
-pas été complétées artificiellement. Les scans bruts sont conservés
-séparément sur le poste local.
+pas été complétées artificiellement. Les scans bruts sont publiés
+dans `upgrade code with IA/donnees/scans/`.
 
 ## Cartes d'occupation 2D
 
@@ -315,7 +352,7 @@ Utiliser les CSV d'acquisition locaux avec les colonnes `dist_mm`, `x_lib_mm`
 et `y_lib_mm`. Le CSV fusionné contient aussi ces colonnes locales, mais le
 visualiseur ne lit pas ses coordonnées globales `x_m`/`y_m` ; pour afficher
 directement la fusion, utiliser l'image ou tracer ces colonnes dans Excel.
-Les scans bruts ne sont pas ajoutés à ce dépôt.
+Les scans bruts sont publiés dans `upgrade code with IA/donnees/scans/`.
 
 Test de la sélection, de la réinitialisation et du centrage :
 
