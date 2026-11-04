@@ -5,7 +5,8 @@
 Le dossier [upgrade code with IA](./upgrade%20code%20with%20IA/) regroupe le
 code amélioré des trois TP, les données nécessaires pour tout réexécuter
 (dont les 12 scans bruts), 98 tests et les trois rapports mis à jour.
-Les fichiers à la racine de ce dépôt restent la version d'origine.
+Les fichiers à la racine de ce dépôt restent la version d'origine des trois
+TP : on peut ainsi comparer chaque TP avant et après amélioration.
 
 | TP | Rapport | Apport principal |
 | --- | --- | --- |
@@ -58,6 +59,49 @@ Le rapport présente les trois types de localisation, la comparaison de
 144 essais, la sensibilité à l'initialisation et les trois paires réelles.
 Il distingue les poses connues en simulation, les transformations contrôlées
 de points réels et les recalages physiques sans poses mesurées.
+
+## Rapport du TP n° 3 — Adib OUAMOU
+
+- [Rapport PDF (8 pages)](./rapport_tp3/TP3_Adib_OUAMOU.pdf)
+- [Sources LaTeX et figures — archive pour Overleaf](./rapport_tp3/TP3_Adib_OUAMOU_sources.zip)
+- [Fichier LaTeX](./rapport_tp3/TP3_Adib_OUAMOU.tex)
+- [Instructions de compilation](./rapport_tp3/README.txt)
+
+Le rapport présente le SLAM incrémental qui combine les outils des TP n° 1
+et n° 2, la carte de la salle de classe reconstruite à partir des scans
+réels, l'évaluation en simulation et le fonctionnement en direct (USB et
+Wi-Fi). Sa dernière section le compare à la version améliorée.
+
+## Jour 3 — SLAM : localisation et cartographie simultanées
+
+Le [programme](./slam_tp3.py) localise chaque scan par ICP sur une sous-carte
+d'images clés ([slam.py](./slam.py)), l'intègre à la grille d'occupation,
+corrige la dérive par un graphe de poses avec fermeture de boucle, puis
+extrait une carte vectorielle. Il fonctionne en rejeu de fichiers, en
+simulation, en direct par USB et sur le robot en Wi-Fi
+([explorateur et transport](./slam_robot.py), [firmware](./arduino/Robot_SLAM_WiFi/)).
+Le [guide du Jour 3](./JOUR3_SLAM.md) détaille la chaîne de traitement,
+les modes et les règles de sécurité.
+
+| Essai | Scans intégrés | Résultat | Fichiers |
+| --- | --- | --- | --- |
+| Salle de classe, 12 scans réels | 8/12 | 1 048 cellules occupées, 29 segments | [Image](./slam/salle/carte_slam.png), [trajectoire](./slam/salle/trajectoire.csv), [bilan](./slam/salle/bilan.json) |
+| Simulation, 160 acquisitions | 160/160 | erreur moyenne 0,49 cm et 0,095°, 96,4 % des murs retrouvés | [Image](./slam/simulation/carte_slam.png), [trajectoire](./slam/simulation/trajectoire.csv), [bilan](./slam/simulation/bilan.json) |
+
+Les scans réels n'ont pas de poses mesurées : aucune erreur physique n'est
+donnée sur la salle. La simulation utilise un biais d'odométrie fixe ; sur
+le banc commun à bruit aléatoire du dossier `upgrade code with IA`, cette
+version atteint 15,3 cm d'erreur moyenne dans la salle de classe simulée,
+contre 5,3 cm pour la version améliorée. L'acquisition en direct et le
+déplacement automatique n'ont pas été validés sur le robot.
+
+```bash
+D="upgrade code with IA/donnees/scans"
+python merge_scans.py "$D"/*.csv --reference "$D/scan_20261102_170438_115290.csv" --output resultats
+python slam_tp3.py --mode replay "$D"/*.csv --anchor "$D/scan_20261102_170438_115290.csv" --initial-poses resultats/poses_estimees.json --output slam/salle
+python slam_tp3.py --mode simulate --steps 160 --output slam/simulation
+python -m pytest tests/test_slam.py tests/test_slam_robot.py -q
+```
 
 ## Jour 2 — Localisation sur carte d'occupation
 

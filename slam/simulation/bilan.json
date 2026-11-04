@@ -1,0 +1,4469 @@
+{
+  "mode": "simulate",
+  "attempted_scans": 160,
+  "accepted_scans": 160,
+  "rejected_scans": 0,
+  "keyframes": 53,
+  "loop_constraints": 0,
+  "graph_optimizations": 0,
+  "mean_processing_time_s": 0.04145386003125,
+  "resolution_m": 0.05,
+  "configuration": {
+    "resolution": 0.05,
+    "voxel": 0.05,
+    "max_range": 20.0,
+    "matching_min_range": 0.6,
+    "min_overlap": 0.65,
+    "max_inlier_rmse": 0.1,
+    "max_step": 0.7,
+    "max_rotation": 35,
+    "keyframe_distance": 0.25,
+    "keyframe_angle": 12.0,
+    "loop_closure": true
+  },
+  "cell_counts": {
+    "-1": 1863,
+    "0": 31031,
+    "1": 1302
+  },
+  "physical_ground_truth": false,
+  "reference_uncertainty": "Poses physiques non mesurées ; incertitude non quantifiée.",
+  "complete_classroom_verified": false,
+  "note": "Les cellules inconnues restent inconnues. Une carte produite ne prouve pas une couverture complète.",
+  "events": [
+    {
+      "source": "simulation_0000",
+      "index": 0,
+      "points": 435,
+      "matching_points": 435,
+      "registration": "first_scan_anchor",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "overlap": null,
+      "inliers": 435,
+      "inlier_rmse_m": null,
+      "runtime_s": 0.04374368500000003
+    },
+    {
+      "source": "simulation_0001",
+      "index": 1,
+      "points": 435,
+      "matching_points": 435,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -8.576751320188597e-05,
+        -0.0003020920009264701,
+        -7.999770310963789
+      ],
+      "overlap": 1.0,
+      "inliers": 435,
+      "inlier_rmse_m": 0.010103345195760163,
+      "runtime_s": 0.03734633799999998
+    },
+    {
+      "source": "simulation_0002",
+      "index": 2,
+      "points": 434,
+      "matching_points": 434,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -9.739314489887908e-05,
+        -0.00012434744592765317,
+        -15.999951995327239
+      ],
+      "overlap": 1.0,
+      "inliers": 434,
+      "inlier_rmse_m": 0.009764672008919227,
+      "runtime_s": 0.0347428649999999
+    },
+    {
+      "source": "simulation_0003",
+      "index": 3,
+      "points": 437,
+      "matching_points": 437,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        3.167257687176574e-05,
+        -2.428801562729367e-05,
+        -23.999847883928002
+      ],
+      "overlap": 1.0,
+      "inliers": 437,
+      "inlier_rmse_m": 0.008943790178096912,
+      "runtime_s": 0.037153093000000026
+    },
+    {
+      "source": "simulation_0004",
+      "index": 4,
+      "points": 434,
+      "matching_points": 434,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.0002819771881284859,
+        0.00029116117550982934,
+        -32.00059511571348
+      ],
+      "overlap": 1.0,
+      "inliers": 434,
+      "inlier_rmse_m": 0.008973167502111799,
+      "runtime_s": 0.041092367999999935
+    },
+    {
+      "source": "simulation_0005",
+      "index": 5,
+      "points": 430,
+      "matching_points": 430,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.00015736857872239308,
+        0.00020970387830976711,
+        -39.99995870488731
+      ],
+      "overlap": 1.0,
+      "inliers": 430,
+      "inlier_rmse_m": 0.007385230268234941,
+      "runtime_s": 0.038499021999999994
+    },
+    {
+      "source": "simulation_0006",
+      "index": 6,
+      "points": 436,
+      "matching_points": 436,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.00036644709402558836,
+        -6.330449964259314e-05,
+        -48.00024486627457
+      ],
+      "overlap": 1.0,
+      "inliers": 436,
+      "inlier_rmse_m": 0.0075890469013872325,
+      "runtime_s": 0.04101629100000004
+    },
+    {
+      "source": "simulation_0007",
+      "index": 7,
+      "points": 435,
+      "matching_points": 435,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.00033439276732947755,
+        -0.00016835199577517097,
+        -56.00016006165326
+      ],
+      "overlap": 1.0,
+      "inliers": 435,
+      "inlier_rmse_m": 0.007044228280868086,
+      "runtime_s": 0.039655808000000015
+    },
+    {
+      "source": "simulation_0008",
+      "index": 8,
+      "points": 432,
+      "matching_points": 432,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.00023754368385995412,
+        -2.5707047330896638e-05,
+        -64.00005738321
+      ],
+      "overlap": 1.0,
+      "inliers": 432,
+      "inlier_rmse_m": 0.006220017648026167,
+      "runtime_s": 0.03665616599999999
+    },
+    {
+      "source": "simulation_0009",
+      "index": 9,
+      "points": 438,
+      "matching_points": 438,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.00031254391438105805,
+        -2.8266603854155528e-05,
+        -72.00022444555572
+      ],
+      "overlap": 1.0,
+      "inliers": 438,
+      "inlier_rmse_m": 0.007411442881492057,
+      "runtime_s": 0.039256170000000035
+    },
+    {
+      "source": "simulation_0010",
+      "index": 10,
+      "points": 436,
+      "matching_points": 436,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -4.8148615027887045e-05,
+        -7.239771932804643e-05,
+        -79.99997961886194
+      ],
+      "overlap": 1.0,
+      "inliers": 436,
+      "inlier_rmse_m": 0.006804188627661099,
+      "runtime_s": 0.03797349900000002
+    },
+    {
+      "source": "simulation_0011",
+      "index": 11,
+      "points": 438,
+      "matching_points": 438,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        4.545906271734881e-05,
+        0.0003068479078088844,
+        -88.00012560548915
+      ],
+      "overlap": 1.0,
+      "inliers": 438,
+      "inlier_rmse_m": 0.007052058844383381,
+      "runtime_s": 0.04177460099999997
+    },
+    {
+      "source": "simulation_0012",
+      "index": 12,
+      "points": 436,
+      "matching_points": 436,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.0025931775213941916,
+        -0.07757509646161166,
+        -88.08376532030393
+      ],
+      "overlap": 1.0,
+      "inliers": 436,
+      "inlier_rmse_m": 0.020882588278356214,
+      "runtime_s": 0.03986504199999996
+    },
+    {
+      "source": "simulation_0013",
+      "index": 13,
+      "points": 432,
+      "matching_points": 432,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.0032189226957816813,
+        -0.16665455822068403,
+        -87.9952328820218
+      ],
+      "overlap": 1.0,
+      "inliers": 432,
+      "inlier_rmse_m": 0.021571451507994003,
+      "runtime_s": 0.04753135899999994
+    },
+    {
+      "source": "simulation_0014",
+      "index": 14,
+      "points": 428,
+      "matching_points": 428,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.008545803001833505,
+        -0.24303828467638305,
+        -88.12719442822498
+      ],
+      "overlap": 0.9976635514018691,
+      "inliers": 427,
+      "inlier_rmse_m": 0.023239630425981723,
+      "runtime_s": 0.04135670899999999
+    },
+    {
+      "source": "simulation_0015",
+      "index": 15,
+      "points": 425,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.010203487572156241,
+        -0.324376411144097,
+        -88.09687571430709
+      ],
+      "overlap": 0.9976470588235294,
+      "inliers": 424,
+      "inlier_rmse_m": 0.02607627545084036,
+      "runtime_s": 0.041069972999999926
+    },
+    {
+      "source": "simulation_0016",
+      "index": 16,
+      "points": 425,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.012302830634417783,
+        -0.40228610353749683,
+        -88.15936008073152
+      ],
+      "overlap": 1.0,
+      "inliers": 425,
+      "inlier_rmse_m": 0.01640046389699158,
+      "runtime_s": 0.04219151199999982
+    },
+    {
+      "source": "simulation_0017",
+      "index": 17,
+      "points": 417,
+      "matching_points": 417,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.0145719000523004,
+        -0.48611303451182364,
+        -88.12412708443443
+      ],
+      "overlap": 1.0,
+      "inliers": 417,
+      "inlier_rmse_m": 0.01895167118700948,
+      "runtime_s": 0.04754197999999987
+    },
+    {
+      "source": "simulation_0018",
+      "index": 18,
+      "points": 416,
+      "matching_points": 416,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.0179682403497068,
+        -0.5604922134697473,
+        -88.16542561053684
+      ],
+      "overlap": 1.0,
+      "inliers": 416,
+      "inlier_rmse_m": 0.022383414932167375,
+      "runtime_s": 0.056231538000000025
+    },
+    {
+      "source": "simulation_0019",
+      "index": 19,
+      "points": 407,
+      "matching_points": 407,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.019958670382680295,
+        -0.6418769408440297,
+        -88.17282195636376
+      ],
+      "overlap": 0.9975429975429976,
+      "inliers": 406,
+      "inlier_rmse_m": 0.02164834683086506,
+      "runtime_s": 0.04344293399999977
+    },
+    {
+      "source": "simulation_0020",
+      "index": 20,
+      "points": 408,
+      "matching_points": 408,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.02029107890136622,
+        -0.6416510744138176,
+        -80.17178186515193
+      ],
+      "overlap": 1.0,
+      "inliers": 408,
+      "inlier_rmse_m": 0.008774916446868305,
+      "runtime_s": 0.04029694699999986
+    },
+    {
+      "source": "simulation_0021",
+      "index": 21,
+      "points": 412,
+      "matching_points": 412,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.020376764123207623,
+        -0.6418559731165773,
+        -72.17166662064385
+      ],
+      "overlap": 1.0,
+      "inliers": 412,
+      "inlier_rmse_m": 0.00915772910934586,
+      "runtime_s": 0.04227097800000035
+    },
+    {
+      "source": "simulation_0022",
+      "index": 22,
+      "points": 410,
+      "matching_points": 410,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.020615351026570125,
+        -0.6415719933258274,
+        -64.17070553379148
+      ],
+      "overlap": 1.0,
+      "inliers": 410,
+      "inlier_rmse_m": 0.007914344903953513,
+      "runtime_s": 0.03883522900000003
+    },
+    {
+      "source": "simulation_0023",
+      "index": 23,
+      "points": 411,
+      "matching_points": 411,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.020700255762620898,
+        -0.6416441070636264,
+        -56.17095342100569
+      ],
+      "overlap": 1.0,
+      "inliers": 411,
+      "inlier_rmse_m": 0.007876718487577376,
+      "runtime_s": 0.03838819299999985
+    },
+    {
+      "source": "simulation_0024",
+      "index": 24,
+      "points": 416,
+      "matching_points": 416,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.020603764034266146,
+        -0.6414499725886027,
+        -48.17113525487875
+      ],
+      "overlap": 1.0,
+      "inliers": 416,
+      "inlier_rmse_m": 0.008113430064463616,
+      "runtime_s": 0.03981131600000021
+    },
+    {
+      "source": "simulation_0025",
+      "index": 25,
+      "points": 407,
+      "matching_points": 407,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.020917816306947157,
+        -0.6416694706357667,
+        -40.16927328196758
+      ],
+      "overlap": 1.0,
+      "inliers": 407,
+      "inlier_rmse_m": 0.008304073084792377,
+      "runtime_s": 0.039911806000000105
+    },
+    {
+      "source": "simulation_0026",
+      "index": 26,
+      "points": 418,
+      "matching_points": 418,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.02108379970219543,
+        -0.6414947595655568,
+        -32.16943140464179
+      ],
+      "overlap": 1.0,
+      "inliers": 418,
+      "inlier_rmse_m": 0.007715276838306995,
+      "runtime_s": 0.039123674000000275
+    },
+    {
+      "source": "simulation_0027",
+      "index": 27,
+      "points": 414,
+      "matching_points": 414,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.02091264282148361,
+        -0.6420426515346003,
+        -24.16953042286507
+      ],
+      "overlap": 1.0,
+      "inliers": 414,
+      "inlier_rmse_m": 0.008262950919713997,
+      "runtime_s": 0.04231781200000029
+    },
+    {
+      "source": "simulation_0028",
+      "index": 28,
+      "points": 411,
+      "matching_points": 411,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.020992593406480742,
+        -0.6422805657477433,
+        -16.169300470705615
+      ],
+      "overlap": 1.0,
+      "inliers": 411,
+      "inlier_rmse_m": 0.007906532976431846,
+      "runtime_s": 0.041078428000000056
+    },
+    {
+      "source": "simulation_0029",
+      "index": 29,
+      "points": 409,
+      "matching_points": 409,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.02116161705605335,
+        -0.6425466804863225,
+        -8.169117412978663
+      ],
+      "overlap": 1.0,
+      "inliers": 409,
+      "inlier_rmse_m": 0.008346058772999158,
+      "runtime_s": 0.03867262600000032
+    },
+    {
+      "source": "simulation_0030",
+      "index": 30,
+      "points": 406,
+      "matching_points": 406,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.021138927652651324,
+        -0.6426281382638079,
+        -0.16953381822319954
+      ],
+      "overlap": 1.0,
+      "inliers": 406,
+      "inlier_rmse_m": 0.007077142226525998,
+      "runtime_s": 0.037301352999999704
+    },
+    {
+      "source": "simulation_0031",
+      "index": 31,
+      "points": 416,
+      "matching_points": 416,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.10011220451409149,
+        -0.6407569398780191,
+        -0.1954486944978123
+      ],
+      "overlap": 1.0,
+      "inliers": 416,
+      "inlier_rmse_m": 0.017729997411769397,
+      "runtime_s": 0.039876314999999884
+    },
+    {
+      "source": "simulation_0032",
+      "index": 32,
+      "points": 409,
+      "matching_points": 409,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.18300702499066127,
+        -0.6410528797261121,
+        -0.16482214538460024
+      ],
+      "overlap": 1.0,
+      "inliers": 409,
+      "inlier_rmse_m": 0.01886372163679968,
+      "runtime_s": 0.04023831400000022
+    },
+    {
+      "source": "simulation_0033",
+      "index": 33,
+      "points": 405,
+      "matching_points": 405,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.2614218597998375,
+        -0.6419892007910153,
+        -0.12001570014617025
+      ],
+      "overlap": 1.0,
+      "inliers": 405,
+      "inlier_rmse_m": 0.017517059776626903,
+      "runtime_s": 0.04444723599999989
+    },
+    {
+      "source": "simulation_0034",
+      "index": 34,
+      "points": 412,
+      "matching_points": 412,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.34317096980919504,
+        -0.6414552769837191,
+        -0.10394791367134108
+      ],
+      "overlap": 1.0,
+      "inliers": 412,
+      "inlier_rmse_m": 0.018747002531856394,
+      "runtime_s": 0.040426617000000054
+    },
+    {
+      "source": "simulation_0035",
+      "index": 35,
+      "points": 407,
+      "matching_points": 407,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.42092491984352376,
+        -0.6431409423733198,
+        -0.13490878899587855
+      ],
+      "overlap": 1.0,
+      "inliers": 407,
+      "inlier_rmse_m": 0.01911981626132169,
+      "runtime_s": 0.041092631999999796
+    },
+    {
+      "source": "simulation_0036",
+      "index": 36,
+      "points": 414,
+      "matching_points": 414,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.503759027324391,
+        -0.6422158334770167,
+        -0.15473934761837366
+      ],
+      "overlap": 1.0,
+      "inliers": 414,
+      "inlier_rmse_m": 0.019244267148639048,
+      "runtime_s": 0.042447517999999906
+    },
+    {
+      "source": "simulation_0037",
+      "index": 37,
+      "points": 414,
+      "matching_points": 413,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.5819516746060952,
+        -0.6417824810834103,
+        -0.1521452793646111
+      ],
+      "overlap": 0.9903147699757869,
+      "inliers": 409,
+      "inlier_rmse_m": 0.023724416025324463,
+      "runtime_s": 0.04093455600000029
+    },
+    {
+      "source": "simulation_0038",
+      "index": 38,
+      "points": 416,
+      "matching_points": 414,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.6626878511397611,
+        -0.6438230993101773,
+        -0.13335477459984563
+      ],
+      "overlap": 0.9710144927536232,
+      "inliers": 402,
+      "inlier_rmse_m": 0.02285856908541033,
+      "runtime_s": 0.03986940600000022
+    },
+    {
+      "source": "simulation_0039",
+      "index": 39,
+      "points": 422,
+      "matching_points": 418,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.7415198851193806,
+        -0.6440024437505305,
+        -0.15281988290584078
+      ],
+      "overlap": 0.9856459330143541,
+      "inliers": 412,
+      "inlier_rmse_m": 0.020529172068876743,
+      "runtime_s": 0.038127976000000174
+    },
+    {
+      "source": "simulation_0040",
+      "index": 40,
+      "points": 428,
+      "matching_points": 423,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.8224805270445111,
+        -0.6465358563550031,
+        -0.16587087584961127
+      ],
+      "overlap": 0.966903073286052,
+      "inliers": 409,
+      "inlier_rmse_m": 0.022949735363412396,
+      "runtime_s": 0.04040975599999985
+    },
+    {
+      "source": "simulation_0041",
+      "index": 41,
+      "points": 430,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.9033227174134603,
+        -0.6436606365774875,
+        -0.1510179028238388
+      ],
+      "overlap": 0.9436619718309859,
+      "inliers": 402,
+      "inlier_rmse_m": 0.023333178491645037,
+      "runtime_s": 0.040249780999999984
+    },
+    {
+      "source": "simulation_0042",
+      "index": 42,
+      "points": 430,
+      "matching_points": 428,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.9807587395654492,
+        -0.6421777979981873,
+        -0.19415923935283438
+      ],
+      "overlap": 0.9299065420560748,
+      "inliers": 398,
+      "inlier_rmse_m": 0.028168529272722655,
+      "runtime_s": 0.04191585199999981
+    },
+    {
+      "source": "simulation_0043",
+      "index": 43,
+      "points": 431,
+      "matching_points": 427,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.0611054307286611,
+        -0.6442342916976718,
+        -0.20288319840652044
+      ],
+      "overlap": 1.0,
+      "inliers": 427,
+      "inlier_rmse_m": 0.01784590195507582,
+      "runtime_s": 0.03899690699999958
+    },
+    {
+      "source": "simulation_0044",
+      "index": 44,
+      "points": 432,
+      "matching_points": 428,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.0627555071498276,
+        -0.6445514590712496,
+        7.809359467014108
+      ],
+      "overlap": 1.0,
+      "inliers": 428,
+      "inlier_rmse_m": 0.017939072921706597,
+      "runtime_s": 0.05576370200000014
+    },
+    {
+      "source": "simulation_0045",
+      "index": 45,
+      "points": 431,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1424429211884464,
+        -0.6339610695841236,
+        7.834637082090544
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.01760612494573004,
+      "runtime_s": 0.035666914000000105
+    },
+    {
+      "source": "simulation_0046",
+      "index": 46,
+      "points": 429,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1427688460230419,
+        -0.6343130140767701,
+        -0.147008081841007
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.017849919615484704,
+      "runtime_s": 0.04321106100000005
+    },
+    {
+      "source": "simulation_0047",
+      "index": 47,
+      "points": 430,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.142911417263896,
+        -0.6336437363558132,
+        -8.155098962786253
+      ],
+      "overlap": 1.0,
+      "inliers": 425,
+      "inlier_rmse_m": 0.0176052004020305,
+      "runtime_s": 0.04633580000000048
+    },
+    {
+      "source": "simulation_0048",
+      "index": 48,
+      "points": 429,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1421613405840239,
+        -0.6349836504943828,
+        -16.164360113046225
+      ],
+      "overlap": 1.0,
+      "inliers": 425,
+      "inlier_rmse_m": 0.01769855198447196,
+      "runtime_s": 0.047102554000000296
+    },
+    {
+      "source": "simulation_0049",
+      "index": 49,
+      "points": 429,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1418637088547874,
+        -0.6348394244461164,
+        -24.165333932809602
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.008433508421118745,
+      "runtime_s": 0.04040168400000077
+    },
+    {
+      "source": "simulation_0050",
+      "index": 50,
+      "points": 433,
+      "matching_points": 427,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1419815649952274,
+        -0.6351673993260714,
+        -32.165149304711086
+      ],
+      "overlap": 1.0,
+      "inliers": 427,
+      "inlier_rmse_m": 0.00883468963366981,
+      "runtime_s": 0.03828003499999966
+    },
+    {
+      "source": "simulation_0051",
+      "index": 51,
+      "points": 435,
+      "matching_points": 431,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1419912610659801,
+        -0.6349886396365534,
+        -40.16483845435156
+      ],
+      "overlap": 1.0,
+      "inliers": 431,
+      "inlier_rmse_m": 0.008847458260913486,
+      "runtime_s": 0.04099299300000059
+    },
+    {
+      "source": "simulation_0052",
+      "index": 52,
+      "points": 431,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.142108806501271,
+        -0.6347418113819391,
+        -48.164803070876054
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.008173511212400324,
+      "runtime_s": 0.03870204700000013
+    },
+    {
+      "source": "simulation_0053",
+      "index": 53,
+      "points": 428,
+      "matching_points": 423,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.14232354111725,
+        -0.6348141801165372,
+        -56.16363192319619
+      ],
+      "overlap": 1.0,
+      "inliers": 423,
+      "inlier_rmse_m": 0.008063982092223669,
+      "runtime_s": 0.04056199299999985
+    },
+    {
+      "source": "simulation_0054",
+      "index": 54,
+      "points": 428,
+      "matching_points": 423,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1423840882133565,
+        -0.6346404154044648,
+        -64.16368759085917
+      ],
+      "overlap": 1.0,
+      "inliers": 423,
+      "inlier_rmse_m": 0.008193974547221127,
+      "runtime_s": 0.039847282000000206
+    },
+    {
+      "source": "simulation_0055",
+      "index": 55,
+      "points": 431,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1426024178431864,
+        -0.6348677681872246,
+        -72.1633201184182
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.006805534848682531,
+      "runtime_s": 0.03964988099999989
+    },
+    {
+      "source": "simulation_0056",
+      "index": 56,
+      "points": 428,
+      "matching_points": 423,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1423036675061653,
+        -0.6350166945192548,
+        -80.16427738090603
+      ],
+      "overlap": 1.0,
+      "inliers": 423,
+      "inlier_rmse_m": 0.006619967144352147,
+      "runtime_s": 0.04242808199999981
+    },
+    {
+      "source": "simulation_0057",
+      "index": 57,
+      "points": 429,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1421688115871342,
+        -0.6348508283860886,
+        -88.16465743650677
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.007780075612057631,
+      "runtime_s": 0.03970607299999962
+    },
+    {
+      "source": "simulation_0058",
+      "index": 58,
+      "points": 431,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.142116078840485,
+        -0.6347135470260047,
+        -96.16470947541424
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.007472418974403125,
+      "runtime_s": 0.03962814099999967
+    },
+    {
+      "source": "simulation_0059",
+      "index": 59,
+      "points": 431,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1424166145789714,
+        -0.6345947276621031,
+        -104.16399446821838
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.007527625814379576,
+      "runtime_s": 0.04132419899999995
+    },
+    {
+      "source": "simulation_0060",
+      "index": 60,
+      "points": 425,
+      "matching_points": 419,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1295748904945122,
+        -0.7108922166086303,
+        -104.12420526018464
+      ],
+      "overlap": 1.0,
+      "inliers": 419,
+      "inlier_rmse_m": 0.01657087332655148,
+      "runtime_s": 0.04018145199999967
+    },
+    {
+      "source": "simulation_0061",
+      "index": 61,
+      "points": 427,
+      "matching_points": 421,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1297996148649638,
+        -0.7113029517519767,
+        -96.12406219814643
+      ],
+      "overlap": 1.0,
+      "inliers": 421,
+      "inlier_rmse_m": 0.017015974297309687,
+      "runtime_s": 0.043332186999999855
+    },
+    {
+      "source": "simulation_0062",
+      "index": 62,
+      "points": 429,
+      "matching_points": 423,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1297130728794427,
+        -0.7110756670372861,
+        -88.12258628114738
+      ],
+      "overlap": 1.0,
+      "inliers": 423,
+      "inlier_rmse_m": 0.016870376539168886,
+      "runtime_s": 0.0432201059999997
+    },
+    {
+      "source": "simulation_0063",
+      "index": 63,
+      "points": 429,
+      "matching_points": 422,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1291181578870888,
+        -0.7111971694453805,
+        -80.13182976317412
+      ],
+      "overlap": 1.0,
+      "inliers": 422,
+      "inlier_rmse_m": 0.016765569406606246,
+      "runtime_s": 0.04113656400000032
+    },
+    {
+      "source": "simulation_0064",
+      "index": 64,
+      "points": 431,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1286173699103301,
+        -0.7109896681103745,
+        -72.13250105855329
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.008091300432445301,
+      "runtime_s": 0.03777861699999985
+    },
+    {
+      "source": "simulation_0065",
+      "index": 65,
+      "points": 429,
+      "matching_points": 422,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1292643839142795,
+        -0.7110109782874536,
+        -64.1304491381373
+      ],
+      "overlap": 1.0,
+      "inliers": 422,
+      "inlier_rmse_m": 0.008084787760377757,
+      "runtime_s": 0.03999872199999999
+    },
+    {
+      "source": "simulation_0066",
+      "index": 66,
+      "points": 428,
+      "matching_points": 421,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1291307686169265,
+        -0.7111716337220471,
+        -56.13114143597289
+      ],
+      "overlap": 1.0,
+      "inliers": 421,
+      "inlier_rmse_m": 0.007323029171133187,
+      "runtime_s": 0.041385766000000324
+    },
+    {
+      "source": "simulation_0067",
+      "index": 67,
+      "points": 430,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1292591242957242,
+        -0.7114072128576681,
+        -48.13313077895765
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.00724476543212192,
+      "runtime_s": 0.042452293000000196
+    },
+    {
+      "source": "simulation_0068",
+      "index": 68,
+      "points": 425,
+      "matching_points": 418,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.128731399745062,
+        -0.7115073299165338,
+        -40.134511809643605
+      ],
+      "overlap": 1.0,
+      "inliers": 418,
+      "inlier_rmse_m": 0.007688992838477763,
+      "runtime_s": 0.039460419999999274
+    },
+    {
+      "source": "simulation_0069",
+      "index": 69,
+      "points": 434,
+      "matching_points": 427,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1292203508615781,
+        -0.7110715138286476,
+        -32.13186235709269
+      ],
+      "overlap": 1.0,
+      "inliers": 427,
+      "inlier_rmse_m": 0.008001262747992843,
+      "runtime_s": 0.04064090399999998
+    },
+    {
+      "source": "simulation_0070",
+      "index": 70,
+      "points": 428,
+      "matching_points": 421,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.129143684883476,
+        -0.7104900254749642,
+        -24.132244422149963
+      ],
+      "overlap": 1.0,
+      "inliers": 421,
+      "inlier_rmse_m": 0.006560589606624432,
+      "runtime_s": 0.04063955700000044
+    },
+    {
+      "source": "simulation_0071",
+      "index": 71,
+      "points": 431,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.129034126017773,
+        -0.7112857351840833,
+        -16.132017029358597
+      ],
+      "overlap": 1.0,
+      "inliers": 425,
+      "inlier_rmse_m": 0.006485375783228066,
+      "runtime_s": 0.03933511199999984
+    },
+    {
+      "source": "simulation_0072",
+      "index": 72,
+      "points": 431,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1294661809915658,
+        -0.7111019625630621,
+        -8.130806620900524
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.006716740298724664,
+      "runtime_s": 0.03703181299999958
+    },
+    {
+      "source": "simulation_0073",
+      "index": 73,
+      "points": 432,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1293225182008184,
+        -0.7108489686067485,
+        -0.13100711516246538
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.006917155355728704,
+      "runtime_s": 0.039172254999999545
+    },
+    {
+      "source": "simulation_0074",
+      "index": 74,
+      "points": 430,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1291403802991797,
+        -0.7109056206234,
+        7.868534616788565
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.007089099759108441,
+      "runtime_s": 0.04108831000000013
+    },
+    {
+      "source": "simulation_0075",
+      "index": 75,
+      "points": 431,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1287224100951114,
+        -0.711021176153352,
+        15.867749795035188
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.006610822576154353,
+      "runtime_s": 0.040664102000000035
+    },
+    {
+      "source": "simulation_0076",
+      "index": 76,
+      "points": 428,
+      "matching_points": 420,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.128812075138541,
+        -0.7109153628411404,
+        23.86817342530669
+      ],
+      "overlap": 1.0,
+      "inliers": 420,
+      "inlier_rmse_m": 0.007304332591892364,
+      "runtime_s": 0.039571668999999865
+    },
+    {
+      "source": "simulation_0077",
+      "index": 77,
+      "points": 430,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.128705157313859,
+        -0.7108774491528251,
+        31.8676209710273
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.0073227694962744545,
+      "runtime_s": 0.041273560000000487
+    },
+    {
+      "source": "simulation_0078",
+      "index": 78,
+      "points": 425,
+      "matching_points": 417,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1287812076422132,
+        -0.7107109342088536,
+        39.86792553945017
+      ],
+      "overlap": 1.0,
+      "inliers": 417,
+      "inlier_rmse_m": 0.007539993532741399,
+      "runtime_s": 0.03667809899999952
+    },
+    {
+      "source": "simulation_0079",
+      "index": 79,
+      "points": 432,
+      "matching_points": 426,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1282469144298382,
+        -0.7107439239903324,
+        47.866413497863256
+      ],
+      "overlap": 1.0,
+      "inliers": 426,
+      "inlier_rmse_m": 0.007635024541553128,
+      "runtime_s": 0.03922626200000057
+    },
+    {
+      "source": "simulation_0080",
+      "index": 80,
+      "points": 426,
+      "matching_points": 419,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1281668124305355,
+        -0.7104899822884114,
+        55.86669210630455
+      ],
+      "overlap": 1.0,
+      "inliers": 419,
+      "inlier_rmse_m": 0.007169820739967845,
+      "runtime_s": 0.039467634000000196
+    },
+    {
+      "source": "simulation_0081",
+      "index": 81,
+      "points": 425,
+      "matching_points": 421,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.175905522761989,
+        -0.6428729738861884,
+        55.84769511143196
+      ],
+      "overlap": 1.0,
+      "inliers": 421,
+      "inlier_rmse_m": 0.026218091837932778,
+      "runtime_s": 0.039991030999999566
+    },
+    {
+      "source": "simulation_0082",
+      "index": 82,
+      "points": 429,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1594825965815259,
+        -0.6433676526804054,
+        63.91591381708847
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.018030530876574618,
+      "runtime_s": 0.055113326999999934
+    },
+    {
+      "source": "simulation_0083",
+      "index": 83,
+      "points": 428,
+      "matching_points": 424,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1596611975343931,
+        -0.6435279026629901,
+        71.91683372663142
+      ],
+      "overlap": 1.0,
+      "inliers": 424,
+      "inlier_rmse_m": 0.007885554413034275,
+      "runtime_s": 0.042536516999999385
+    },
+    {
+      "source": "simulation_0084",
+      "index": 84,
+      "points": 430,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1596363384427488,
+        -0.6430736049231192,
+        79.91882949155422
+      ],
+      "overlap": 1.0,
+      "inliers": 425,
+      "inlier_rmse_m": 0.0076327285118529984,
+      "runtime_s": 0.05347101200000015
+    },
+    {
+      "source": "simulation_0085",
+      "index": 85,
+      "points": 434,
+      "matching_points": 431,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.170137529162065,
+        -0.5664750149648167,
+        79.87374515950366
+      ],
+      "overlap": 1.0,
+      "inliers": 431,
+      "inlier_rmse_m": 0.018160661248341276,
+      "runtime_s": 0.04367399900000013
+    },
+    {
+      "source": "simulation_0086",
+      "index": 86,
+      "points": 438,
+      "matching_points": 436,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1879401643492244,
+        -0.49073842148723223,
+        79.83745397699198
+      ],
+      "overlap": 1.0,
+      "inliers": 436,
+      "inlier_rmse_m": 0.024593022178650958,
+      "runtime_s": 0.04049503199999993
+    },
+    {
+      "source": "simulation_0087",
+      "index": 87,
+      "points": 435,
+      "matching_points": 434,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1920154512262702,
+        -0.48979545371474054,
+        87.81603871827942
+      ],
+      "overlap": 1.0,
+      "inliers": 434,
+      "inlier_rmse_m": 0.025380799628721022,
+      "runtime_s": 0.04554800100000023
+    },
+    {
+      "source": "simulation_0088",
+      "index": 88,
+      "points": 438,
+      "matching_points": 438,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1978546518097335,
+        -0.41119581638015235,
+        87.75679782847234
+      ],
+      "overlap": 0.997716894977169,
+      "inliers": 437,
+      "inlier_rmse_m": 0.025818179825379567,
+      "runtime_s": 0.0440189369999997
+    },
+    {
+      "source": "simulation_0089",
+      "index": 89,
+      "points": 440,
+      "matching_points": 440,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1971529746141971,
+        -0.3319744713670777,
+        87.84535078511365
+      ],
+      "overlap": 0.9977272727272727,
+      "inliers": 439,
+      "inlier_rmse_m": 0.029476714822814328,
+      "runtime_s": 0.04239917099999957
+    },
+    {
+      "source": "simulation_0090",
+      "index": 90,
+      "points": 441,
+      "matching_points": 441,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.1994434140900645,
+        -0.2529693017968593,
+        87.81905135168456
+      ],
+      "overlap": 1.0,
+      "inliers": 441,
+      "inlier_rmse_m": 0.018802746306426758,
+      "runtime_s": 0.03686975799999992
+    },
+    {
+      "source": "simulation_0091",
+      "index": 91,
+      "points": 441,
+      "matching_points": 441,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2035179871634083,
+        -0.17121985826551755,
+        87.87304569725404
+      ],
+      "overlap": 0.9977324263038548,
+      "inliers": 440,
+      "inlier_rmse_m": 0.018010580050908137,
+      "runtime_s": 0.0414031210000001
+    },
+    {
+      "source": "simulation_0092",
+      "index": 92,
+      "points": 441,
+      "matching_points": 441,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2028944163845028,
+        -0.09331265141736278,
+        87.8974079086471
+      ],
+      "overlap": 0.9954648526077098,
+      "inliers": 439,
+      "inlier_rmse_m": 0.023828786124142187,
+      "runtime_s": 0.04522477200000097
+    },
+    {
+      "source": "simulation_0093",
+      "index": 93,
+      "points": 441,
+      "matching_points": 441,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2061360544448976,
+        -0.012769656523999497,
+        87.9504312504179
+      ],
+      "overlap": 0.9909297052154195,
+      "inliers": 437,
+      "inlier_rmse_m": 0.022130258670187433,
+      "runtime_s": 0.04941950100000092
+    },
+    {
+      "source": "simulation_0094",
+      "index": 94,
+      "points": 441,
+      "matching_points": 441,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2086267630449121,
+        0.06568238464266728,
+        87.94350609163946
+      ],
+      "overlap": 1.0,
+      "inliers": 441,
+      "inlier_rmse_m": 0.020008089090474163,
+      "runtime_s": 0.038656042999999585
+    },
+    {
+      "source": "simulation_0095",
+      "index": 95,
+      "points": 444,
+      "matching_points": 444,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2152614480117678,
+        0.1482730843234262,
+        88.0045053207823
+      ],
+      "overlap": 0.9954954954954955,
+      "inliers": 442,
+      "inlier_rmse_m": 0.02066617618258538,
+      "runtime_s": 0.047739989000000094
+    },
+    {
+      "source": "simulation_0096",
+      "index": 96,
+      "points": 442,
+      "matching_points": 442,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2189754754112554,
+        0.22916946528690926,
+        88.02139726613049
+      ],
+      "overlap": 0.9932126696832579,
+      "inliers": 439,
+      "inlier_rmse_m": 0.022336672823780598,
+      "runtime_s": 0.042177233000000314
+    },
+    {
+      "source": "simulation_0097",
+      "index": 97,
+      "points": 443,
+      "matching_points": 443,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2237110792815629,
+        0.3107546805808914,
+        87.85396356511198
+      ],
+      "overlap": 0.9864559819413092,
+      "inliers": 437,
+      "inlier_rmse_m": 0.023507211936543083,
+      "runtime_s": 0.06403364800000055
+    },
+    {
+      "source": "simulation_0098",
+      "index": 98,
+      "points": 448,
+      "matching_points": 448,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.227646610259132,
+        0.38898768769271214,
+        87.88431796246873
+      ],
+      "overlap": 1.0,
+      "inliers": 448,
+      "inlier_rmse_m": 0.01838906729515221,
+      "runtime_s": 0.04313731699999934
+    },
+    {
+      "source": "simulation_0099",
+      "index": 99,
+      "points": 445,
+      "matching_points": 445,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2298593599328127,
+        0.46868567892429125,
+        87.84662359315324
+      ],
+      "overlap": 1.0,
+      "inliers": 445,
+      "inlier_rmse_m": 0.021518487920268912,
+      "runtime_s": 0.043123790000000994
+    },
+    {
+      "source": "simulation_0100",
+      "index": 100,
+      "points": 444,
+      "matching_points": 444,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.230377087290313,
+        0.5478943452407986,
+        87.84721150085899
+      ],
+      "overlap": 0.9932432432432432,
+      "inliers": 441,
+      "inlier_rmse_m": 0.02155844895050885,
+      "runtime_s": 0.04035884700000025
+    },
+    {
+      "source": "simulation_0101",
+      "index": 101,
+      "points": 447,
+      "matching_points": 447,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2350552027105657,
+        0.6317063543955059,
+        87.93296487687306
+      ],
+      "overlap": 0.9888143176733781,
+      "inliers": 442,
+      "inlier_rmse_m": 0.023283943783317915,
+      "runtime_s": 0.0532238980000006
+    },
+    {
+      "source": "simulation_0102",
+      "index": 102,
+      "points": 444,
+      "matching_points": 444,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2337174212973998,
+        0.7088701528439489,
+        87.84486543603565
+      ],
+      "overlap": 1.0,
+      "inliers": 444,
+      "inlier_rmse_m": 0.018824724820664183,
+      "runtime_s": 0.046976084999998946
+    },
+    {
+      "source": "simulation_0103",
+      "index": 103,
+      "points": 445,
+      "matching_points": 445,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2394347333748215,
+        0.7894647309306103,
+        87.92131793583091
+      ],
+      "overlap": 1.0,
+      "inliers": 445,
+      "inlier_rmse_m": 0.02107095627876772,
+      "runtime_s": 0.0414234579999988
+    },
+    {
+      "source": "simulation_0104",
+      "index": 104,
+      "points": 446,
+      "matching_points": 446,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2423359872968152,
+        0.8695551225317348,
+        87.95932628220945
+      ],
+      "overlap": 0.9910313901345291,
+      "inliers": 442,
+      "inlier_rmse_m": 0.020786854227450226,
+      "runtime_s": 0.04677891600000095
+    },
+    {
+      "source": "simulation_0105",
+      "index": 105,
+      "points": 448,
+      "matching_points": 448,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.245203785449502,
+        0.951404966988431,
+        87.96341013379428
+      ],
+      "overlap": 0.9866071428571429,
+      "inliers": 442,
+      "inlier_rmse_m": 0.02270214631517039,
+      "runtime_s": 0.040196842999998594
+    },
+    {
+      "source": "simulation_0106",
+      "index": 106,
+      "points": 444,
+      "matching_points": 444,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2504404509139526,
+        1.0331031903093983,
+        87.976209341672
+      ],
+      "overlap": 1.0,
+      "inliers": 444,
+      "inlier_rmse_m": 0.017145252244693595,
+      "runtime_s": 0.04274373500000017
+    },
+    {
+      "source": "simulation_0107",
+      "index": 107,
+      "points": 445,
+      "matching_points": 445,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2489535411357675,
+        1.1103040600333598,
+        87.98663961961714
+      ],
+      "overlap": 1.0,
+      "inliers": 445,
+      "inlier_rmse_m": 0.023415250453139004,
+      "runtime_s": 0.044861903000001035
+    },
+    {
+      "source": "simulation_0108",
+      "index": 108,
+      "points": 446,
+      "matching_points": 446,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.253076163754648,
+        1.1929438428493704,
+        87.93718625151116
+      ],
+      "overlap": 0.9932735426008968,
+      "inliers": 443,
+      "inlier_rmse_m": 0.02233780885279084,
+      "runtime_s": 0.0421026659999999
+    },
+    {
+      "source": "simulation_0109",
+      "index": 109,
+      "points": 441,
+      "matching_points": 441,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2567133606085963,
+        1.273688533172046,
+        88.00195863653916
+      ],
+      "overlap": 0.9841269841269841,
+      "inliers": 434,
+      "inlier_rmse_m": 0.021760952243476774,
+      "runtime_s": 0.04233640600000044
+    },
+    {
+      "source": "simulation_0110",
+      "index": 110,
+      "points": 445,
+      "matching_points": 445,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2619318440014604,
+        1.3540457935841528,
+        87.9352944987864
+      ],
+      "overlap": 1.0,
+      "inliers": 445,
+      "inlier_rmse_m": 0.017661215787370958,
+      "runtime_s": 0.04957375400000075
+    },
+    {
+      "source": "simulation_0111",
+      "index": 111,
+      "points": 440,
+      "matching_points": 440,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2639384556661202,
+        1.4340560570137892,
+        87.88765083089706
+      ],
+      "overlap": 0.9977272727272727,
+      "inliers": 439,
+      "inlier_rmse_m": 0.02049388876116788,
+      "runtime_s": 0.04416743099999998
+    },
+    {
+      "source": "simulation_0112",
+      "index": 112,
+      "points": 439,
+      "matching_points": 439,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.266672910981486,
+        1.5126052135326071,
+        87.90386873248664
+      ],
+      "overlap": 0.9931662870159453,
+      "inliers": 436,
+      "inlier_rmse_m": 0.020641635516258885,
+      "runtime_s": 0.04015968899999933
+    },
+    {
+      "source": "simulation_0113",
+      "index": 113,
+      "points": 439,
+      "matching_points": 439,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2672429048551934,
+        1.5942464564307561,
+        87.99295663398847
+      ],
+      "overlap": 0.9886104783599089,
+      "inliers": 434,
+      "inlier_rmse_m": 0.02040885324535844,
+      "runtime_s": 0.048022633000000425
+    },
+    {
+      "source": "simulation_0114",
+      "index": 114,
+      "points": 440,
+      "matching_points": 440,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2698439865631652,
+        1.6751922316718448,
+        87.9946538600983
+      ],
+      "overlap": 1.0,
+      "inliers": 440,
+      "inlier_rmse_m": 0.016059381751252495,
+      "runtime_s": 0.043255163999999624
+    },
+    {
+      "source": "simulation_0115",
+      "index": 115,
+      "points": 436,
+      "matching_points": 436,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2744538910953482,
+        1.7537478290258184,
+        87.98361888706539
+      ],
+      "overlap": 0.9977064220183486,
+      "inliers": 435,
+      "inlier_rmse_m": 0.017822476330130007,
+      "runtime_s": 0.04359405300000141
+    },
+    {
+      "source": "simulation_0116",
+      "index": 116,
+      "points": 437,
+      "matching_points": 437,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2773605670430834,
+        1.8352020728064962,
+        87.98948977852383
+      ],
+      "overlap": 0.9954233409610984,
+      "inliers": 435,
+      "inlier_rmse_m": 0.020812018508103068,
+      "runtime_s": 0.0418557909999997
+    },
+    {
+      "source": "simulation_0117",
+      "index": 117,
+      "points": 436,
+      "matching_points": 436,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2781059820903518,
+        1.9131748499126464,
+        87.93075932312176
+      ],
+      "overlap": 0.9931192660550459,
+      "inliers": 433,
+      "inlier_rmse_m": 0.020564476039130718,
+      "runtime_s": 0.0464562260000001
+    },
+    {
+      "source": "simulation_0118",
+      "index": 118,
+      "points": 432,
+      "matching_points": 432,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2817657411523595,
+        1.9947413475986249,
+        87.94268412518508
+      ],
+      "overlap": 1.0,
+      "inliers": 432,
+      "inlier_rmse_m": 0.015256707438707384,
+      "runtime_s": 0.04464765500000034
+    },
+    {
+      "source": "simulation_0119",
+      "index": 119,
+      "points": 432,
+      "matching_points": 432,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2857388742000548,
+        2.074480041569963,
+        87.94318141626502
+      ],
+      "overlap": 1.0,
+      "inliers": 432,
+      "inlier_rmse_m": 0.01890208590456319,
+      "runtime_s": 0.0455827339999999
+    },
+    {
+      "source": "simulation_0120",
+      "index": 120,
+      "points": 431,
+      "matching_points": 431,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.288293085851533,
+        2.154123231768338,
+        87.96376945152338
+      ],
+      "overlap": 0.9953596287703016,
+      "inliers": 429,
+      "inlier_rmse_m": 0.020684213163998925,
+      "runtime_s": 0.04175671200000153
+    },
+    {
+      "source": "simulation_0121",
+      "index": 121,
+      "points": 427,
+      "matching_points": 427,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2887052061457516,
+        2.2326356214438183,
+        87.97726647769747
+      ],
+      "overlap": 0.9882903981264637,
+      "inliers": 422,
+      "inlier_rmse_m": 0.018804988991218307,
+      "runtime_s": 0.0470753669999997
+    },
+    {
+      "source": "simulation_0122",
+      "index": 122,
+      "points": 427,
+      "matching_points": 427,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2907201410100826,
+        2.3122209260005144,
+        87.97422057567377
+      ],
+      "overlap": 1.0,
+      "inliers": 427,
+      "inlier_rmse_m": 0.016032496721301318,
+      "runtime_s": 0.039453439000000756
+    },
+    {
+      "source": "simulation_0123",
+      "index": 123,
+      "points": 428,
+      "matching_points": 428,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2936396303846749,
+        2.3925907521979553,
+        87.98568786105022
+      ],
+      "overlap": 0.9976635514018691,
+      "inliers": 427,
+      "inlier_rmse_m": 0.017611759526237874,
+      "runtime_s": 0.04081481100000062
+    },
+    {
+      "source": "simulation_0124",
+      "index": 124,
+      "points": 420,
+      "matching_points": 420,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.2963803038609893,
+        2.4721100898070256,
+        87.96902107283711
+      ],
+      "overlap": 0.9952380952380953,
+      "inliers": 418,
+      "inlier_rmse_m": 0.019891923327914042,
+      "runtime_s": 0.0400079980000001
+    },
+    {
+      "source": "simulation_0125",
+      "index": 125,
+      "points": 425,
+      "matching_points": 425,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3010713522031918,
+        2.5520166697503806,
+        87.9793635459557
+      ],
+      "overlap": 0.9882352941176471,
+      "inliers": 420,
+      "inlier_rmse_m": 0.02017508474779403,
+      "runtime_s": 0.042270845999999196
+    },
+    {
+      "source": "simulation_0126",
+      "index": 126,
+      "points": 422,
+      "matching_points": 422,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3045762750042176,
+        2.6324011000762395,
+        87.95239601090023
+      ],
+      "overlap": 1.0,
+      "inliers": 422,
+      "inlier_rmse_m": 0.014021630179346928,
+      "runtime_s": 0.03935240200000045
+    },
+    {
+      "source": "simulation_0127",
+      "index": 127,
+      "points": 422,
+      "matching_points": 422,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3083126085719736,
+        2.7125295648189143,
+        87.95684230015559
+      ],
+      "overlap": 0.9976303317535545,
+      "inliers": 421,
+      "inlier_rmse_m": 0.017195840073150715,
+      "runtime_s": 0.040161608000000015
+    },
+    {
+      "source": "simulation_0128",
+      "index": 128,
+      "points": 420,
+      "matching_points": 420,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3099105268582916,
+        2.792946448711013,
+        87.95487782728175
+      ],
+      "overlap": 0.9952380952380953,
+      "inliers": 418,
+      "inlier_rmse_m": 0.018831427011616685,
+      "runtime_s": 0.036489839999999774
+    },
+    {
+      "source": "simulation_0129",
+      "index": 129,
+      "points": 416,
+      "matching_points": 416,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.308708251359211,
+        2.8743262871606037,
+        88.00940073535732
+      ],
+      "overlap": 0.9903846153846154,
+      "inliers": 412,
+      "inlier_rmse_m": 0.019682928699809265,
+      "runtime_s": 0.04818729700000013
+    },
+    {
+      "source": "simulation_0130",
+      "index": 130,
+      "points": 414,
+      "matching_points": 414,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3134097414492198,
+        2.9524897103271255,
+        87.95544492556849
+      ],
+      "overlap": 1.0,
+      "inliers": 414,
+      "inlier_rmse_m": 0.014349097461889872,
+      "runtime_s": 0.040608297999998655
+    },
+    {
+      "source": "simulation_0131",
+      "index": 131,
+      "points": 410,
+      "matching_points": 410,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3182540158338254,
+        3.0329229922924217,
+        87.97831913753599
+      ],
+      "overlap": 1.0,
+      "inliers": 410,
+      "inlier_rmse_m": 0.01914190183477617,
+      "runtime_s": 0.043672582000001015
+    },
+    {
+      "source": "simulation_0132",
+      "index": 132,
+      "points": 409,
+      "matching_points": 409,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3204830311529536,
+        3.113298261530786,
+        88.00676091232678
+      ],
+      "overlap": 0.9975550122249389,
+      "inliers": 408,
+      "inlier_rmse_m": 0.021611460910814537,
+      "runtime_s": 0.040316557000000586
+    },
+    {
+      "source": "simulation_0133",
+      "index": 133,
+      "points": 409,
+      "matching_points": 409,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3224329575588896,
+        3.1939300747256834,
+        88.09037701857551
+      ],
+      "overlap": 0.9975550122249389,
+      "inliers": 408,
+      "inlier_rmse_m": 0.023731126527714606,
+      "runtime_s": 0.04905507800000031
+    },
+    {
+      "source": "simulation_0134",
+      "index": 134,
+      "points": 402,
+      "matching_points": 402,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3249920408070437,
+        3.2720674667304293,
+        88.03940919203048
+      ],
+      "overlap": 1.0,
+      "inliers": 402,
+      "inlier_rmse_m": 0.014233288816811867,
+      "runtime_s": 0.04668194599999964
+    },
+    {
+      "source": "simulation_0135",
+      "index": 135,
+      "points": 403,
+      "matching_points": 403,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3258102733330912,
+        3.3520635952465643,
+        88.05737546671044
+      ],
+      "overlap": 1.0,
+      "inliers": 403,
+      "inlier_rmse_m": 0.01532476320829827,
+      "runtime_s": 0.04838064399999986
+    },
+    {
+      "source": "simulation_0136",
+      "index": 136,
+      "points": 398,
+      "matching_points": 398,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3294198790403546,
+        3.4338471779741453,
+        88.05927008190426
+      ],
+      "overlap": 1.0,
+      "inliers": 398,
+      "inlier_rmse_m": 0.01743882584600562,
+      "runtime_s": 0.035978263999998816
+    },
+    {
+      "source": "simulation_0137",
+      "index": 137,
+      "points": 396,
+      "matching_points": 396,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.331932878052125,
+        3.5147718269582464,
+        88.04784025104497
+      ],
+      "overlap": 0.9974747474747475,
+      "inliers": 395,
+      "inlier_rmse_m": 0.017422748105115664,
+      "runtime_s": 0.03884483100000047
+    },
+    {
+      "source": "simulation_0138",
+      "index": 138,
+      "points": 396,
+      "matching_points": 396,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3343865195561657,
+        3.5931791432295483,
+        88.01791756441098
+      ],
+      "overlap": 1.0,
+      "inliers": 396,
+      "inlier_rmse_m": 0.013277507898242173,
+      "runtime_s": 0.04078954500000087
+    },
+    {
+      "source": "simulation_0139",
+      "index": 139,
+      "points": 392,
+      "matching_points": 392,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3393658937839994,
+        3.671918133758175,
+        88.05252803476823
+      ],
+      "overlap": 1.0,
+      "inliers": 392,
+      "inlier_rmse_m": 0.015333221473399439,
+      "runtime_s": 0.03834677000000042
+    },
+    {
+      "source": "simulation_0140",
+      "index": 140,
+      "points": 384,
+      "matching_points": 384,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3413483340863612,
+        3.7532209122953035,
+        88.07703850813932
+      ],
+      "overlap": 1.0,
+      "inliers": 384,
+      "inlier_rmse_m": 0.017222950275416066,
+      "runtime_s": 0.03772184299999992
+    },
+    {
+      "source": "simulation_0141",
+      "index": 141,
+      "points": 382,
+      "matching_points": 382,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3426847070856178,
+        3.8341232703542008,
+        88.11192509960786
+      ],
+      "overlap": 0.9973821989528796,
+      "inliers": 381,
+      "inlier_rmse_m": 0.016841992323143207,
+      "runtime_s": 0.03898468700000102
+    },
+    {
+      "source": "simulation_0142",
+      "index": 142,
+      "points": 378,
+      "matching_points": 378,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3447280093298517,
+        3.9118366188290223,
+        88.04709809094142
+      ],
+      "overlap": 1.0,
+      "inliers": 378,
+      "inlier_rmse_m": 0.012978167848905228,
+      "runtime_s": 0.04172729599999947
+    },
+    {
+      "source": "simulation_0143",
+      "index": 143,
+      "points": 371,
+      "matching_points": 371,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3493593902870427,
+        3.9922177393355556,
+        88.07491837864625
+      ],
+      "overlap": 1.0,
+      "inliers": 371,
+      "inlier_rmse_m": 0.016316506122171094,
+      "runtime_s": 0.036923596999999475
+    },
+    {
+      "source": "simulation_0144",
+      "index": 144,
+      "points": 367,
+      "matching_points": 367,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3488297827731457,
+        4.072995128895654,
+        88.09753801867778
+      ],
+      "overlap": 1.0,
+      "inliers": 367,
+      "inlier_rmse_m": 0.01930351448264785,
+      "runtime_s": 0.038169633999999064
+    },
+    {
+      "source": "simulation_0145",
+      "index": 145,
+      "points": 370,
+      "matching_points": 370,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3533722242823,
+        4.155666893985977,
+        88.07804735024479
+      ],
+      "overlap": 0.9972972972972973,
+      "inliers": 369,
+      "inlier_rmse_m": 0.018114125728443085,
+      "runtime_s": 0.03610168199999997
+    },
+    {
+      "source": "simulation_0146",
+      "index": 146,
+      "points": 359,
+      "matching_points": 359,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3599702844776709,
+        4.234304612137361,
+        87.99452129295895
+      ],
+      "overlap": 1.0,
+      "inliers": 359,
+      "inlier_rmse_m": 0.013756904419802951,
+      "runtime_s": 0.046596833000000615
+    },
+    {
+      "source": "simulation_0147",
+      "index": 147,
+      "points": 351,
+      "matching_points": 351,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3607779471103902,
+        4.312019203430639,
+        88.01347192386649
+      ],
+      "overlap": 1.0,
+      "inliers": 351,
+      "inlier_rmse_m": 0.016327525022509465,
+      "runtime_s": 0.03575923999999908
+    },
+    {
+      "source": "simulation_0148",
+      "index": 148,
+      "points": 343,
+      "matching_points": 342,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3646369358855543,
+        4.39393172212751,
+        88.02298055534762
+      ],
+      "overlap": 1.0,
+      "inliers": 342,
+      "inlier_rmse_m": 0.01736955602887806,
+      "runtime_s": 0.0335047339999992
+    },
+    {
+      "source": "simulation_0149",
+      "index": 149,
+      "points": 336,
+      "matching_points": 324,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3653966681875316,
+        4.476151781956106,
+        88.07852077770961
+      ],
+      "overlap": 0.9969135802469136,
+      "inliers": 323,
+      "inlier_rmse_m": 0.01680907559716055,
+      "runtime_s": 0.03367671300000019
+    },
+    {
+      "source": "simulation_0150",
+      "index": 150,
+      "points": 329,
+      "matching_points": 306,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3697508274833463,
+        4.552688515817572,
+        88.0235630858027
+      ],
+      "overlap": 1.0,
+      "inliers": 306,
+      "inlier_rmse_m": 0.014438426058045389,
+      "runtime_s": 0.03915977199999965
+    },
+    {
+      "source": "simulation_0151",
+      "index": 151,
+      "points": 329,
+      "matching_points": 310,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3693120143663753,
+        4.552284421456009,
+        80.0267923392662
+      ],
+      "overlap": 1.0,
+      "inliers": 310,
+      "inlier_rmse_m": 0.014468173610223282,
+      "runtime_s": 0.041112365999998346
+    },
+    {
+      "source": "simulation_0152",
+      "index": 152,
+      "points": 333,
+      "matching_points": 312,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.370007416010659,
+        4.552761438641587,
+        72.032203934289
+      ],
+      "overlap": 1.0,
+      "inliers": 312,
+      "inlier_rmse_m": 0.014410850107521675,
+      "runtime_s": 0.042275966000000054
+    },
+    {
+      "source": "simulation_0153",
+      "index": 153,
+      "points": 333,
+      "matching_points": 310,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3717173076446962,
+        4.552774922776514,
+        64.02388565551625
+      ],
+      "overlap": 1.0,
+      "inliers": 310,
+      "inlier_rmse_m": 0.006972972256255539,
+      "runtime_s": 0.0350124799999989
+    },
+    {
+      "source": "simulation_0154",
+      "index": 154,
+      "points": 330,
+      "matching_points": 309,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.369536698128998,
+        4.5531516212744565,
+        56.03624073095937
+      ],
+      "overlap": 1.0,
+      "inliers": 309,
+      "inlier_rmse_m": 0.006914220943188657,
+      "runtime_s": 0.03331788700000082
+    },
+    {
+      "source": "simulation_0155",
+      "index": 155,
+      "points": 331,
+      "matching_points": 312,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3691252815891044,
+        4.553157570693846,
+        48.037605707859775
+      ],
+      "overlap": 1.0,
+      "inliers": 312,
+      "inlier_rmse_m": 0.006057796408483296,
+      "runtime_s": 0.03340613499999989
+    },
+    {
+      "source": "simulation_0156",
+      "index": 156,
+      "points": 331,
+      "matching_points": 309,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3701639622306647,
+        4.55288390152928,
+        40.03229809198889
+      ],
+      "overlap": 1.0,
+      "inliers": 309,
+      "inlier_rmse_m": 0.005976564534973774,
+      "runtime_s": 0.03717264800000031
+    },
+    {
+      "source": "simulation_0157",
+      "index": 157,
+      "points": 335,
+      "matching_points": 313,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3705177837657925,
+        4.552952933341497,
+        32.030283724777
+      ],
+      "overlap": 1.0,
+      "inliers": 313,
+      "inlier_rmse_m": 0.00521753290400738,
+      "runtime_s": 0.031475431999998804
+    },
+    {
+      "source": "simulation_0158",
+      "index": 158,
+      "points": 333,
+      "matching_points": 310,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3704184449135348,
+        4.5529261052593055,
+        24.031244529584008
+      ],
+      "overlap": 1.0,
+      "inliers": 310,
+      "inlier_rmse_m": 0.00584012376402813,
+      "runtime_s": 0.03285212699999995
+    },
+    {
+      "source": "simulation_0159",
+      "index": 159,
+      "points": 330,
+      "matching_points": 310,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        1.3701560793083563,
+        4.553399350064749,
+        16.032876614008906
+      ],
+      "overlap": 1.0,
+      "inliers": 310,
+      "inlier_rmse_m": 0.00586908293625552,
+      "runtime_s": 0.033551585999999745
+    }
+  ],
+  "actions": [
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 0
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 1
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 2
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 3
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 4
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 5
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 6
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 7
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 8
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 9
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 10
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 11
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 12
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 13
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 14
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 15
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 16
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 17
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 18
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 19
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 20
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 21
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 22
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 23
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 24
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 25
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 26
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 27
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 28
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 29
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 30
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 31
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 32
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 33
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 34
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 35
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 36
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 37
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 38
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 39
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 40
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 41
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 42
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 43
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 44
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 45
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 46
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 47
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 48
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 49
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 50
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 51
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 52
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 53
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 54
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 55
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 56
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 57
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 58
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        2.5250000000000004,
+        -0.9750000000000001
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 59
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 60
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 61
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 62
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 63
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 64
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 65
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 66
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 67
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 68
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 69
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 70
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 71
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 72
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 73
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 74
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 75
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 76
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 77
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 78
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": null,
+      "reason": "degagement_orientation",
+      "index": 79
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": null,
+      "reason": "degagement_zone_libre",
+      "index": 80
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 81
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 82
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 83
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 84
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 85
+    },
+    {
+      "kind": "rotateleft",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 86
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 87
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 88
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 89
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 90
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 91
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 92
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 93
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 94
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 95
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 96
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 97
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 98
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 99
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 100
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 101
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 102
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 103
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 104
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 105
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 106
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 107
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 108
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 109
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 110
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 111
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 112
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 113
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 114
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 115
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 116
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 117
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 118
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 119
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 120
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 121
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 122
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 123
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 124
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 125
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 126
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 127
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 128
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 129
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 130
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 131
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 132
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 133
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 134
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 135
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 136
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 137
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 138
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 139
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 140
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 141
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 142
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 143
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 144
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 145
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 146
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 147
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 148
+    },
+    {
+      "kind": "forward",
+      "distance_m": 0.08,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "avance_dans_zone_libre",
+      "index": 149
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 150
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 151
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 152
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 153
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 154
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 155
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 156
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 157
+    },
+    {
+      "kind": "rotateright",
+      "turn_deg": 8,
+      "goal": [
+        5.324999999999999,
+        4.575
+      ],
+      "reason": "orientation_vers_frontiere",
+      "index": 158
+    },
+    {
+      "kind": "stop",
+      "reason": "budget_acquisitions_atteint",
+      "index": 159
+    }
+  ],
+  "simulation_evaluation": {
+    "known_poses_in_simulation": true,
+    "reference_uncertainty": "Poses simulées exactes ; bruit radial sigma=0,005 m.",
+    "mean_position_error_m": 0.0048516492400373125,
+    "max_position_error_m": 0.013050207102598452,
+    "mean_angle_error_deg": 0.09512603892082563,
+    "max_angle_error_deg": 0.24320217152765622,
+    "success_thresholds": {
+      "position_m": 0.15,
+      "angle_deg": 2
+    },
+    "success_rate": 1.0,
+    "wall_coverage_within_15cm": 0.9641170915958451
+  },
+  "vector_keyframes_used": 16,
+  "vector_segments": 14,
+  "initialization": "premier scan ancré, puis recalage sur le passé uniquement",
+  "anchor": null,
+  "acquisition_order": "ordre des fichiers ou ordre de réception",
+  "error": null
+}

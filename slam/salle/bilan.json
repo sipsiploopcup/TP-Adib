@@ -1,0 +1,242 @@
+{
+  "mode": "replay",
+  "attempted_scans": 12,
+  "accepted_scans": 8,
+  "rejected_scans": 4,
+  "keyframes": 6,
+  "loop_constraints": 0,
+  "graph_optimizations": 0,
+  "mean_processing_time_s": 0.03909554108333336,
+  "resolution_m": 0.05,
+  "configuration": {
+    "resolution": 0.05,
+    "voxel": 0.05,
+    "max_range": 20.0,
+    "matching_min_range": 0.6,
+    "min_overlap": 0.65,
+    "max_inlier_rmse": 0.1,
+    "max_step": 15,
+    "max_rotation": 180,
+    "keyframe_distance": 0.25,
+    "keyframe_angle": 12.0,
+    "loop_closure": true
+  },
+  "cell_counts": {
+    "-1": 31880,
+    "0": 45082,
+    "1": 1048
+  },
+  "physical_ground_truth": false,
+  "reference_uncertainty": "Poses physiques non mesurées ; incertitude non quantifiée.",
+  "complete_classroom_verified": false,
+  "note": "Les cellules inconnues restent inconnues. Une carte produite ne prouve pas une couverture complète.",
+  "events": [
+    {
+      "source": "scan_20261102_170438_115290.csv",
+      "index": 0,
+      "points": 387,
+      "matching_points": 387,
+      "registration": "first_scan_anchor",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "overlap": null,
+      "inliers": 387,
+      "inlier_rmse_m": null,
+      "runtime_s": 0.052865525999999996
+    },
+    {
+      "source": "scan_20261102_124403_644384.csv",
+      "index": 1,
+      "points": 215,
+      "matching_points": 180,
+      "accepted": false,
+      "reason": "insufficient_or_inconsistent_match",
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "runtime_s": 0.018390306999999995
+    },
+    {
+      "source": "scan_20261102_125238_358741.csv",
+      "index": 2,
+      "points": 352,
+      "matching_points": 346,
+      "accepted": false,
+      "reason": "insufficient_or_inconsistent_match",
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "runtime_s": 0.018046611000000046
+    },
+    {
+      "source": "scan_20261102_130244_385674.csv",
+      "index": 3,
+      "points": 384,
+      "matching_points": 378,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.3750872265967674,
+        2.507184529539386,
+        -0.1110114814045111
+      ],
+      "overlap": 0.7275132275132276,
+      "inliers": 275,
+      "inlier_rmse_m": 0.06857984616824246,
+      "runtime_s": 0.041681175999999986
+    },
+    {
+      "source": "scan_20261102_170036_490062.csv",
+      "index": 4,
+      "points": 303,
+      "matching_points": 282,
+      "accepted": false,
+      "reason": "insufficient_or_inconsistent_match",
+      "pose": [
+        0.3750872265967674,
+        2.507184529539386,
+        -0.1110114814045111
+      ],
+      "runtime_s": 0.02837548000000001
+    },
+    {
+      "source": "scan_20261102_170347_052425.csv",
+      "index": 5,
+      "points": 385,
+      "matching_points": 385,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.005452970543490144,
+        0.020454889357885604,
+        -87.87358946498328
+      ],
+      "overlap": 1.0,
+      "inliers": 385,
+      "inlier_rmse_m": 0.04437428134668452,
+      "runtime_s": 0.05276384200000006
+    },
+    {
+      "source": "scan_20261102_170547_135900.csv",
+      "index": 6,
+      "points": 381,
+      "matching_points": 381,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        0.01635789548044795,
+        0.014400082281224953,
+        90.19632668393561
+      ],
+      "overlap": 1.0,
+      "inliers": 381,
+      "inlier_rmse_m": 0.03896940563949633,
+      "runtime_s": 0.05282694099999996
+    },
+    {
+      "source": "scan_20261102_170622_894860.csv",
+      "index": 7,
+      "points": 381,
+      "matching_points": 381,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.05737908394455106,
+        -0.010440631660183853,
+        178.1897788630988
+      ],
+      "overlap": 1.0,
+      "inliers": 381,
+      "inlier_rmse_m": 0.04298606400236087,
+      "runtime_s": 0.04983604500000005
+    },
+    {
+      "source": "scan_20261102_170707_527011.csv",
+      "index": 8,
+      "points": 385,
+      "matching_points": 385,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        -0.05425379760450905,
+        -0.017132252493797132,
+        -178.89258224599004
+      ],
+      "overlap": 1.0,
+      "inliers": 385,
+      "inlier_rmse_m": 0.029064341435671416,
+      "runtime_s": 0.05932480600000001
+    },
+    {
+      "source": "scan_20261102_170743_662993.csv",
+      "index": 9,
+      "points": 342,
+      "matching_points": 314,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        2.7354319765714195,
+        -1.2216702982338536,
+        -174.39612534386936
+      ],
+      "overlap": 0.7707006369426752,
+      "inliers": 242,
+      "inlier_rmse_m": 0.039374946268804244,
+      "runtime_s": 0.03100319000000007
+    },
+    {
+      "source": "scan_20261102_170811_045727.csv",
+      "index": 10,
+      "points": 439,
+      "matching_points": 439,
+      "registration": "ICP_local_submap",
+      "accepted": true,
+      "reason": "accepted",
+      "pose": [
+        2.728799025594058,
+        -1.216719487016473,
+        -174.41194525293983
+      ],
+      "overlap": 0.8473804100227791,
+      "inliers": 372,
+      "inlier_rmse_m": 0.04212040892201604,
+      "runtime_s": 0.051351864000000025
+    },
+    {
+      "source": "scan_20261102_170911_554109.csv",
+      "index": 11,
+      "points": 384,
+      "matching_points": 384,
+      "accepted": false,
+      "reason": "insufficient_or_inconsistent_match",
+      "pose": [
+        2.728799025594058,
+        -1.216719487016473,
+        -174.41194525293983
+      ],
+      "runtime_s": 0.01268070500000007
+    }
+  ],
+  "actions": [],
+  "vector_keyframes_used": 6,
+  "vector_segments": 29,
+  "initialization": "poses déjà estimées ; pas une vérité terrain indépendante",
+  "anchor": "upgrade code with IA/donnees/scans/scan_20261102_170438_115290.csv",
+  "acquisition_order": "rejeu réordonné avec référence explicite ; pas une trajectoire temporelle mesurée",
+  "error": null
+}
